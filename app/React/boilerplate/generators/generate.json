@@ -1,0 +1,8 @@
+{
+	"location": "../app/React/components/Admin",
+	"components": [
+		"Generate",
+		"Generate1",
+		"Generate2"
+	]
+}
