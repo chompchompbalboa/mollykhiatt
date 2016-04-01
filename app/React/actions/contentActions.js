@@ -20,8 +20,12 @@ var adminActions = {
         this._action("CHANGE_CONTENT", change);
     },
 
-    fetchContent: function(){
-        this._ajax("react/content", {}, "UPDATE_CONTENT");
+    fetchInitial: function(){
+        this._ajax("react/content/initial", {}, "UPDATE_CONTENT");
+    },
+
+    fetchContent: function(content){
+        this._ajax("react/content/" + content, {}, "CHANGE_CONTENT");
     },
 
     //-----------------------------------------------------------------------------

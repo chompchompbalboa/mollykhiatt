@@ -35,17 +35,16 @@ class ReactController extends Controller
 
     public function home()
     {
-        $data['title'] = 'blank';
-        $data['app'] = 'true';
-        $data['site'] = 'false';
+        $data['title'] = 'Molly K. Hiatt';
         return view('react', $data);
     }
 
     public function react()
     {
         $action = $this->request->route('action');
+        $info = $this->request->route('info');
         $data = $this->request->input('data');
-        $response = $this->$action($data);
+        $response = $this->$action($data, $info);
         return json_encode($response);
     }
 
@@ -53,4 +52,16 @@ class ReactController extends Controller
     // Private functions
     //-------------------------------------------------------------------------
 
+    private function content($data, $type)
+    {
+        $function = "content_".$type;
+        $content = $this->$function();
+        return $content;
+    }
+
+    private function content_initial()
+    {
+        $initial['display'] = Helper::fetchJSON('/assets/display.json');
+        return $initial;
+    }
 }

@@ -9,7 +9,8 @@ var Radium = require('radium');
 var contentStore = require('../stores/contentStore');
 var contentActions = require('../actions/contentActions');
 
-var Child = require('./Content/Child.jsx');
+var Header = require('./Content/Header.jsx');
+var ContentContainer = require('./Content/ContentContainer.jsx');
 
 //-----------------------------------------------------------------------------
 // Module
@@ -57,7 +58,7 @@ var Content = React.createClass({
 
     componentDidMount: function() {
         contentStore.addChangeListener(this._onChange);
-        contentActions.fetchContent();
+        contentActions.fetchInitial();
     },
 
 	//---------------------------------------------------------------------------
@@ -128,7 +129,11 @@ var Content = React.createClass({
             return (
                 <StyleRoot>
                     <section id="content" style={style.section}>
-                        <Child
+                        <Header
+                            handleChangeContent={this.handleChangeContent}
+                        />
+                        <ContentContainer
+                            content={this.state.content}
                             handleChangeContent={this.handleChangeContent}
                         />
                     </section>
