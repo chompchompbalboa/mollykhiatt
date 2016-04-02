@@ -86,8 +86,8 @@ var ContentContainerHome = React.createClass({
             one: {
                 position: 'absolute',
                 top: '2vh',
-                left: '3vw',
-                width: '20vw',
+                left: '2vw',
+                width: '21vw',
                 height: '40vh'
             },
             two: {
@@ -108,14 +108,14 @@ var ContentContainerHome = React.createClass({
                 position: 'absolute',
                 top: '2vh',
                 left: '72vw',
-                width: '24vw',
+                width: '26vw',
                 height: '40vh'
             },
             five: {
                 position: 'absolute',
                 top: '44vh',
-                left: '3vw',
-                width: '93vw',
+                left: '2vw',
+                width: '96vw',
                 height: '30vh'
             },
             signature: {
