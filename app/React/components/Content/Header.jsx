@@ -89,15 +89,24 @@ var Header = React.createClass({
                 overflow: 'hidden'
             },
             menu: {
-                height: '7vh'
+                height: '7vh',
+                '@media (min-width: 64em)': {
+                    height: '5vh'    
+                }
             },
             menu_img: {
-                height: '7vh'
+                height: '7vh',
+                '@media (min-width: 64em)': {
+                    height: '5vh'    
+                }
             },
             name: {
-                margin: '0 3vw 0 0',
-                font: '400 4vh brandon-grotesque',
-                textTransform: 'uppercase'
+                margin: '0 2vw 0 0',
+                font: '400 7vw brandon-grotesque',
+                textTransform: 'uppercase',
+                '@media (min-width: 64em)': {
+                    fontSize: '3vw'   
+                }
             }
         };
 

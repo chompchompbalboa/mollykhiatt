@@ -5,12 +5,12 @@
 var React = require('react');
 var Radium = require('radium');
 
-var ContentContainerHome = require('./ContentContainerHome.jsx');
+//var ChildPlaceholder = require('./ChildPlaceholder.jsx');
 
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
-var ContentContainer = React.createClass({
+var ContentContainerHome = React.createClass({
     //---------------------------------------------------------------------------
     // Display Name
     //---------------------------------------------------------------------------
@@ -67,21 +67,6 @@ var ContentContainer = React.createClass({
     // Objects
     //---------------------------------------------------------------------------
 
-    container: function(content, component) {
-        var contents = [];
-        contents.push(
-            React.createElement(
-                eval(component), 
-                {
-                    key: component,
-                    content: content,
-                    handleChangeContent: this.props.handleChangeContent
-                }
-            )
-        );
-        return contents;
-    },
-
     //---------------------------------------------------------------------------
     // Handles
     //---------------------------------------------------------------------------
@@ -93,6 +78,52 @@ var ContentContainer = React.createClass({
     style: function() {
         var style = {
             section: {
+                position: 'absolute',
+                top: '7vh',
+                left: '0',
+                width: '100vw'
+            },
+            one: {
+                position: 'absolute',
+                top: '2vh',
+                left: '3vw',
+                width: '20vw',
+                height: '40vh'
+            },
+            two: {
+                position: 'absolute',
+                top: '2vh',
+                left: '26vw',
+                width: '20vw',
+                height: '40vh'
+            },
+            three: {
+                position: 'absolute',
+                top: '2vh',
+                left: '49vw',
+                width: '20vw',
+                height: '40vh'
+            },
+            four: {
+                position: 'absolute',
+                top: '2vh',
+                left: '72vw',
+                width: '20vw',
+                height: '40vh'
+            },
+            five: {
+                position: 'absolute',
+                top: '44vh',
+                left: '3vw',
+                width: '93vw',
+                height: '30vh'
+            },
+            signature: {
+                position: 'absolute',
+                top: '76vh',
+                left: '40vw',
+                width: '40vw',
+                height: '22vh'
             }
         };
 
@@ -105,13 +136,17 @@ var ContentContainer = React.createClass({
 
     render: function() {
         
-        var {content, ...other} = this.props;
+        var {...other} = this.props;
         var style = this.style();
-        var container = this.container(content, content.display.container);
 
         return (
-        <section id="content-container" style={style.section}>
-            {container}
+        <section id="content-container-home" style={style.section}>
+            <img style={style.one} src="/assets/ContentContainerHome/1.jpg" />
+            <img style={style.two} src="/assets/ContentContainerHome/2.jpg" />
+            <img style={style.three} src="/assets/ContentContainerHome/3.jpg" />
+            <img style={style.four} src="/assets/ContentContainerHome/4.jpg" />
+            <img style={style.five} src="/assets/ContentContainerHome/5.jpg" />
+            <img style={style.signature} src="/assets/ContentContainerHome/signature.jpg" />
         </section>
         )
     }
@@ -121,4 +156,4 @@ var ContentContainer = React.createClass({
 //-----------------------------------------------------------------------------
 // Export
 //-----------------------------------------------------------------------------
-module.exports = Radium(ContentContainer);
+module.exports = Radium(ContentContainerHome);
