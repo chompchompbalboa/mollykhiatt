@@ -78,11 +78,13 @@ var Header = React.createClass({
     style: function() {
         var style = {
             section: {
+                zIndex: '10',
                 position: 'fixed',
                 top: '0',
                 left: '0',
                 width: '100vw',
                 height: '7vh',
+                backgroundColor: 'white',
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',

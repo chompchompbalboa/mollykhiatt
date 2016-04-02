@@ -108,7 +108,7 @@ var ContentContainerHome = React.createClass({
                 position: 'absolute',
                 top: '2vh',
                 left: '72vw',
-                width: '20vw',
+                width: '24vw',
                 height: '40vh'
             },
             five: {
