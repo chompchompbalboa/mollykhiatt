@@ -8,36 +8,32 @@ use Session;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\ReactController;
 use App\Helpers\Helper;
 
 use App\Seed;
 use App\Invite;
 
-class AdminController extends Controller
+class SiteReactController extends ReactController
 {
+    protected $container = [
+        'width' => [
+            'sm'=> '1',
+            'md'=> '1',
+            'lg'=> '1'
+        ]
+    ];
     //-------------------------------------------------------------------------
     // Constructor
     //-------------------------------------------------------------------------
-
-    public function __construct(Request $request)
-    {
-        // Inject dependencies
-        $this->request = $request;
-    }
-
 
     //-------------------------------------------------------------------------
     // Public functions
     //-------------------------------------------------------------------------
 
-    public function home()
-    {
-        $data['bundle'] = '/js/admin-index.js';
-        return view('admin', $data);
-    }
-
     //-------------------------------------------------------------------------
     // Private functions
     //-------------------------------------------------------------------------
+
 
 }

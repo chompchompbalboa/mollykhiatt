@@ -13,7 +13,7 @@ use App\Helpers\Helper;
 use App\Seed;
 use App\Invite;
 
-class AdminController extends Controller
+class SiteController extends Controller
 {
     //-------------------------------------------------------------------------
     // Constructor
@@ -32,8 +32,8 @@ class AdminController extends Controller
 
     public function home()
     {
-        $data['bundle'] = '/js/admin-index.js';
-        return view('admin', $data);
+        $data['bundle'] = '/js/site-index.js';
+        return view('site', $data);
     }
 
     //-------------------------------------------------------------------------

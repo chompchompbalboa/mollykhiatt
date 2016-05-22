@@ -1,11 +1,37 @@
 <?php
-/*
-|--------------------------------------------------------------------------
-| React Group
-|--------------------------------------------------------------------------
-*/
-
 Route::group(['middleware' => ['web']], function () {
+
+    /*
+    |--------------------------------------------------------------------------
+    | Authentication
+    |--------------------------------------------------------------------------
+    */
+
+    //Route::auth();
+
+    //Route::get('/home', 'HomeController@index');
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Admin
+    |--------------------------------------------------------------------------
+    */
+
+    $admin = function() {
+        Route::any('/', [
+            "as" => "admin_home",
+            "uses" => "AdminController@home",
+        ]);
+
+        Route::post('/react/{action}/{info?}', [
+            "as" => "admin_react",
+            "uses" => "AdminReactController@react",
+        ]);
+    };
+
+    Route::group(['domain' => 'admin.mollykhiatt.com'], $admin);
+    Route::group(['domain' => 'admin.mollykhiatt.local'], $admin);
 
     /*
     |--------------------------------------------------------------------------
@@ -13,30 +39,18 @@ Route::group(['middleware' => ['web']], function () {
     |--------------------------------------------------------------------------
     */
 
-    Route::any('/', [
-        "as" => "home",
-        "uses" => "ReactController@home",
-    ]);
+    $site = function() {
+        Route::any('/', [
+            "as" => "site_home",
+            "uses" => "SiteController@home",
+        ]);
 
-    Route::post('/react/{action}/{info?}', [
-        "as" => "react",
-        "uses" => "ReactController@react",
-    ]);
+        Route::post('/react/{action}/{info?}', [
+            "as" => "site_react",
+            "uses" => "SiteReactController@react",
+        ]);
+    };
 
-    Route::any('/admin', [
-        "as" => "admin",
-        "uses" => "AdminController@home",
-    ]);
-
-    Route::post('/admin/{action}/{info?}', [
-        "as" => "admin_react",
-        "uses" => "AdminController@react",
-    ]);
-
-    /*
-    |--------------------------------------------------------------------------
-    | Sites
-    |--------------------------------------------------------------------------
-    */
-    
+    Route::group(['domain' => 'mollykhiatt.com'], $site);
+    Route::group(['domain' => 'mollykhiatt.local'], $site);
 });

@@ -1,0 +1,23 @@
+db.seeds.insert(
+    {
+        "version": "0.0",
+        "public": {
+            "public": "public"
+        },
+        "private": {
+            "private": "private"
+        }  
+    }
+)
+
+db.seeds.insert(
+    {
+        "version": "0.1",
+        "public": {
+            "public": "public"
+        },
+        "private": {
+            "private": "private"
+        }  
+    }
+)

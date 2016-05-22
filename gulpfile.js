@@ -1,14 +1,4 @@
-/*
- |--------------------------------------------------------------------------
- | Building React for the Browser
- |--------------------------------------------------------------------------
- |
- | I want to be able to immediately bundle my react modules and prepare them
- | for use in the browser.
- |
- */
-
- // Require dependencies
+// Require dependencies
 var babelify = require('babelify');
 var browserify = require('browserify');
 var buffer = require('vinyl-buffer');
@@ -18,30 +8,70 @@ var reactify = require('reactify');
 var source = require('vinyl-source-stream');
 var uglify = require('gulp-uglify');
 
+// Babelify transform
 var babelifyES6 = function(file) {
   return babelify(file, {presets: ["es2015", "react", "stage-0"]});
 };
 
- 
-gulp.task('content', function() {
+// Initialize the current build
+var build = function(index, output) {
+    if(process.env.NODE_ENV === 'dev') {
+        console.log('DEVELOPMENT build');
+        build_dev(index, output);
+    }
+    else {
+        console.log('PRODUCTION build')
+        build_prod(index, output);
+    }
+};
+
+// Production builds
+var build_prod = function(index, output) {
     browserify({
-        entries: ['./app/React/content-index.js'], // Only need initial file, browserify finds the deps
+        entries: [index],
         transform: [babelifyES6],
-        debug: true, // Gives us sourcemapping
-        cache: {}, packageCache: {}, fullPaths: false // Requirement of watchify
+        debug: true,
+        cache: {}, packageCache: {}, fullPaths: false 
     })
     .plugin(collapse)
-    .bundle() // Create the initial bundle when starting the task
-    .pipe(source('content-index.js'))
+    .bundle()
+    .pipe(source(output))
     .pipe(buffer())
     .pipe(uglify())
     .pipe(gulp.dest('./public/js/'));
-});
+};
 
+// Development builds
+var build_dev = function(index, output) {
+    browserify({
+        entries: [index],
+        transform: [babelifyES6],
+        debug: true,
+        cache: {}, packageCache: {}, fullPaths: true
+    })
+    .bundle()
+    .pipe(source(output))
+    .pipe(gulp.dest('./public/js/'));
+};
+
+// Build indexes
+gulp.task('all', function() {
+    build('./app/React/index/admin-index.js', 'admin-index.js');
+    build('./app/React/index/site-index.js', 'site-index.js');
+});
+gulp.task('Admin', function() {build('./app/React/index/admin-index.js', 'admin-index.js')});
+gulp.task('Site', function() {build('./app/React/index/site-index.js', 'site-index.js')});
+
+// Watch files for changes
 gulp.task('watch', function() {
-    gulp.watch('./app/React/components/**/*.jsx', ['content']);
-    gulp.watch('./app/React/components/**/*.js', ['content']);
+    gulp.watch('./app/React/actions/*.js', ['all']);
+    gulp.watch('./app/React/constants/*.js', ['all']);
+    gulp.watch('./app/React/store/*.js', ['all']);
+    gulp.watch('./app/React/components/Admin/*.js', ['Admin']);
+    gulp.watch('./app/React/components/Admin/*.jsx', ['Admin']);
+    gulp.watch('./app/React/components/Site/*.js', ['Admin', 'Site']);
+    gulp.watch('./app/React/components/Site/*.jsx', ['Admin', 'Site']);
 });
 
-// Just running the tasks
-gulp.task('default', ['content', 'watch']);
+// Default tasks
+gulp.task('default', ['Admin', 'Site', 'watch']);
