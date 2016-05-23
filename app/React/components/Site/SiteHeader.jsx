@@ -93,7 +93,6 @@ var SiteHeader = React.createClass({
 
     toggleHeader: function() {
         var display = (this.props.site.private.SiteHeader.display === "white" ? "black" : "white");
-        console.log(display);
         var changes = [
             {"key": "private.SiteHeader.display", "value": display}
         ];

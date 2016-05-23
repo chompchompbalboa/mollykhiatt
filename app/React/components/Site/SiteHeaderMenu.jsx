@@ -79,8 +79,8 @@ var SiteHeaderMenu = React.createClass({
                 width: '33%'
             },
             menu: {
-                width: '2vh',
-                height: '2vh',
+                width: '18px',
+                height: '18px',
                 margin: '0 0 0 2vw',
                 display: 'flex',
                 flexDirection: 'column',
