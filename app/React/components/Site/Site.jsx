@@ -5,6 +5,8 @@
 var React = require('react');
 var Radium = require('radium');
 
+var SiteContainer = require('./SiteContainer.jsx');
+var SiteCover = require('./SiteCover.jsx');
 var SiteHeader = require('./SiteHeader.jsx');
 
 //-----------------------------------------------------------------------------
@@ -77,18 +79,12 @@ var Site = React.createClass({
                 zIndex: '0',
                 position: 'relative',
                 width: Number(container.width.sm) * 100 + 'vw',
-                height: '100vh',
-                overflowY: 'scroll',
                 fontFamily: 'brandon-grotesque',
                 '@media (min-width: 48em) and (max-width: 64em)': {
-                    width: Number(container.width.md) * 100 + 'vw',
-                    height: '100vh',
-                    overflowY: 'scroll', 
+                    width: Number(container.width.md) * 100 + 'vw'
                 },
                 '@media (min-width: 64em)': {
-                    width: Number(container.width.lg) * 100 + 'vw',
-                    height: '100vh',
-                    overflowY: 'scroll',
+                    width: Number(container.width.lg) * 100 + 'vw'
                 }
             }
         };
@@ -108,6 +104,8 @@ var Site = React.createClass({
         return (
             <section id="site" style={style.section}>
                 <SiteHeader site={site} {...other} />
+                <SiteCover site={site} {...other} />
+                <SiteContainer site={site} {...other} />
             </section>
         )
     }

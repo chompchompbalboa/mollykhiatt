@@ -1,6 +1,8 @@
 {
     "private": {
-        "site": "site"
+        "SiteHeader": {
+            "display": "white"
+        }
     },
     "public": {
         "site": "site"

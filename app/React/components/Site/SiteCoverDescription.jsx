@@ -8,7 +8,7 @@ var Radium = require('radium');
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
-var SiteHeaderName = React.createClass({
+var SiteCoverDescription = React.createClass({
     //---------------------------------------------------------------------------
     // Display Name
     //---------------------------------------------------------------------------
@@ -65,33 +65,35 @@ var SiteHeaderName = React.createClass({
     // Handles
     //---------------------------------------------------------------------------
 
-    handleClick: function(e) {
-        e.preventDefault();
-    },
-
     //---------------------------------------------------------------------------
     // Style
     //---------------------------------------------------------------------------
 
-    style: function(display) {
+    style: function(container) {
         var style = {
-            div: {
-                width: '33%',
+            section: {
+                position: 'relative',
+                top: '63vh',
+                left: '0',
+                height: '12vh',
+                width: '100%',
+                backgroundColor: 'rgba(255,255,255,0.9)',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                '@media (max-width: 48em)': {
-                    justifyContent: 'flex-end' 
+                letterSpacing: '1px',
+                '@media (max-width: 24em)': {
+                    flexDirection: 'column',
                 }
             },
             name: {
-                display: (display === "white" ? 'inline' : 'none'),
-                fontSize: '20px',
-                letterSpacing: '1px',
-                color: 'white',
-                textDecoration: 'none',
-                textTransform: 'uppercase',
-                whiteSpace: 'nowrap'
+                margin: '0 4px 0 0',
+                color: 'black',
+                textTransform: 'uppercase'
+            },
+            category: {
+                color: 'gray',
+                textTransform: 'uppercase'
             }
         };
 
@@ -104,13 +106,14 @@ var SiteHeaderName = React.createClass({
 
     render: function() {
 
-        var {seed, site, ...other} = this.props;
-        var style = this.style(site.private.SiteHeader.display);
+        var {site, ...other} = this.props;
+        var style = this.style(site.private.container);
 
         return (
-            <div id="site-header-name" style={style.div}>
-                <a href="" style={style.name} onClick={this.handleClick}>{seed.public.name}</a>
-            </div>
+            <section key="section" id="site-cover-description" style={style.section}>
+                <div style={style.name}>Cabin in the Woods</div>
+                <div style={style.category}>Academic</div>
+            </section>
         )
     }
     
@@ -119,4 +122,4 @@ var SiteHeaderName = React.createClass({
 //-----------------------------------------------------------------------------
 // Export
 //-----------------------------------------------------------------------------
-module.exports = Radium(SiteHeaderName);
+module.exports = Radium(SiteCoverDescription);

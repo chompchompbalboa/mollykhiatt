@@ -73,13 +73,24 @@ var SiteHeaderMenu = React.createClass({
     // Style
     //---------------------------------------------------------------------------
 
-    style: function() {
+    style: function(display) {
         var style = {
             div: {
                 width: '33%'
             },
             menu: {
-                margin: '0 0 0 2vw'
+                width: '2vh',
+                height: '2vh',
+                margin: '0 0 0 2vw',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                alignItems: 'stretch'
+            },
+            span: {
+                width: '100%',
+                height: '1.5px',
+                backgroundColor: display
             },
             img: {
                 width: '3vh',
@@ -96,12 +107,16 @@ var SiteHeaderMenu = React.createClass({
 
     render: function() {
 
-        var {...other} = this.props;
-        var style = this.style();
+        var {site, ...other} = this.props;
+        var style = this.style(site.private.SiteHeader.display);
 
         return (
             <div id="site-header-menu" style={style.div}>
-                <a href="/menu" style={style.menu} onClick={this.handleClick}><img style={style.img} src="/assets/Site/SiteHeader/menu.png" /></a>
+                <a href="/menu" style={style.menu} onClick={this.handleClick}>
+                    <span style={style.span}></span>
+                    <span style={style.span}></span>
+                    <span style={style.span}></span>
+                </a>
             </div>
         )
     }

@@ -8,7 +8,7 @@ var Radium = require('radium');
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
-var SiteHeaderName = React.createClass({
+var SiteCoverImage = React.createClass({
     //---------------------------------------------------------------------------
     // Display Name
     //---------------------------------------------------------------------------
@@ -65,33 +65,24 @@ var SiteHeaderName = React.createClass({
     // Handles
     //---------------------------------------------------------------------------
 
-    handleClick: function(e) {
-        e.preventDefault();
-    },
-
     //---------------------------------------------------------------------------
     // Style
     //---------------------------------------------------------------------------
 
-    style: function(display) {
+    style: function(container) {
         var style = {
             div: {
-                width: '33%',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                '@media (max-width: 48em)': {
-                    justifyContent: 'flex-end' 
-                }
-            },
-            name: {
-                display: (display === "white" ? 'inline' : 'none'),
-                fontSize: '20px',
-                letterSpacing: '1px',
-                color: 'white',
-                textDecoration: 'none',
-                textTransform: 'uppercase',
-                whiteSpace: 'nowrap'
+                position: 'absolute',
+                top: '0',
+                left: '0',
+                width: '100%',
+                height: '100%',
+                backgroundColor: 'white',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center center',
+                backgroundSize: 'cover',
+                backgroundImage: 'url(/assets/Site/SiteCover/Cabin.jpg)',
+                transition: 'background-image 2.5s ease' 
             }
         };
 
@@ -104,12 +95,11 @@ var SiteHeaderName = React.createClass({
 
     render: function() {
 
-        var {seed, site, ...other} = this.props;
-        var style = this.style(site.private.SiteHeader.display);
+        var {site, ...other} = this.props;
+        var style = this.style(site.private.container);
 
         return (
-            <div id="site-header-name" style={style.div}>
-                <a href="" style={style.name} onClick={this.handleClick}>{seed.public.name}</a>
+            <div key="div" id="site-cover-image" style={style.div}>
             </div>
         )
     }
@@ -119,4 +109,4 @@ var SiteHeaderName = React.createClass({
 //-----------------------------------------------------------------------------
 // Export
 //-----------------------------------------------------------------------------
-module.exports = Radium(SiteHeaderName);
+module.exports = Radium(SiteCoverImage);

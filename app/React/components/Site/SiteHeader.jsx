@@ -5,6 +5,8 @@
 var React = require('react');
 var Radium = require('radium');
 
+var siteActions = require('../../actions/siteActions');
+
 var SiteHeaderMenu = require('./SiteHeaderMenu.jsx');
 var SiteHeaderName = require('./SiteHeaderName.jsx');
 var SiteHeaderShare = require('./SiteHeaderShare.jsx');
@@ -45,6 +47,10 @@ var SiteHeader = React.createClass({
     // Component Did Mount
     //---------------------------------------------------------------------------
 
+    componentDidMount: function() {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+
     //---------------------------------------------------------------------------
     // Component Will Recieve Props
     //---------------------------------------------------------------------------
@@ -65,9 +71,37 @@ var SiteHeader = React.createClass({
     // Component Will Unmount
     //---------------------------------------------------------------------------
 
+    componentWillUnmount: function() {
+        window.removeEventListener('scroll', this.handleScroll);
+    },
+
     //---------------------------------------------------------------------------
     // Handles
     //---------------------------------------------------------------------------
+
+    handleScroll: function() {
+        var display = this.props.site.private.SiteHeader.display;
+        var top = document.documentElement.scrollTop || document.body.scrollTop;
+        var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        console.log(display);
+        console.log('top: ' + top);
+        console.log('height: ' + height);
+        if(display === "white" && (top/height) > .7) {
+            this.toggleHeader();
+        }
+        else if(display === "black" && (top/height) <= .7) {
+            this.toggleHeader();
+        }
+    },
+
+    toggleHeader: function() {
+        var display = (this.props.site.private.SiteHeader.display === "white" ? "black" : "white");
+        console.log(display);
+        var changes = [
+            {"key": "private.SiteHeader.display", "value": display}
+        ];
+        siteActions.changeContent(changes);
+    },
 
     //---------------------------------------------------------------------------
     // Style
@@ -83,7 +117,7 @@ var SiteHeader = React.createClass({
                 left: '0',
                 height: '10vh',
                 width: Number(container.width.sm) * 100 + "vw",
-                backgroundColor: 'white',
+                backgroundColor: 'transparent',
                 display: 'flex',
                 justifyContent: 'space-around',
                 alignItems: 'center',
@@ -111,9 +145,9 @@ var SiteHeader = React.createClass({
 
         return (
             <nav id="site-header" style={style.nav}>
-                <SiteHeaderMenu {...other} />
-                <SiteHeaderName {...other} />
-                <SiteHeaderShare {...other} />
+                <SiteHeaderMenu site={site} {...other} />
+                <SiteHeaderName site={site} {...other} />
+                <SiteHeaderShare site={site} {...other} />
             </nav>
         )
     }
