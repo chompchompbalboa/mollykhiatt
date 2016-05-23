@@ -79,8 +79,8 @@ var SiteHeaderMenu = React.createClass({
                 width: '33%'
             },
             menu: {
-                width: '18px',
-                height: '18px',
+                width: '20px',
+                height: '20px',
                 margin: '0 0 0 2vw',
                 display: 'flex',
                 flexDirection: 'column',
@@ -88,14 +88,11 @@ var SiteHeaderMenu = React.createClass({
                 alignItems: 'stretch'
             },
             span: {
+                margin: '0.25px 0 0.25px 0',
                 width: '100%',
                 height: '1.5px',
                 backgroundColor: display,
                 transition: 'background-color 0.5s ease'
-            },
-            img: {
-                width: '3vh',
-                height: '3vh'
             }
         };
 
