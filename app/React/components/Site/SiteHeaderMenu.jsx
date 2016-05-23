@@ -90,7 +90,8 @@ var SiteHeaderMenu = React.createClass({
             span: {
                 width: '100%',
                 height: '1.5px',
-                backgroundColor: display
+                backgroundColor: display,
+                transition: 'background-color 0.5s ease'
             },
             img: {
                 width: '3vh',

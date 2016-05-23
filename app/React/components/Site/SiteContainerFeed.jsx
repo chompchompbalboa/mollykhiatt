@@ -75,7 +75,7 @@ var SiteContainerFeed = React.createClass({
         var style = {
             section: {
                 position: 'relative',
-                top: '63vh',
+                top: '65vh',
                 left: '0',
                 width: '100%',
                 height: '175vh',

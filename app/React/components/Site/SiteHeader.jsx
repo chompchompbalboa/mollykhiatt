@@ -83,9 +83,6 @@ var SiteHeader = React.createClass({
         var display = this.props.site.private.SiteHeader.display;
         var top = document.documentElement.scrollTop || document.body.scrollTop;
         var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-        console.log(display);
-        console.log('top: ' + top);
-        console.log('height: ' + height);
         if(display === "white" && (top/height) > .7) {
             this.toggleHeader();
         }

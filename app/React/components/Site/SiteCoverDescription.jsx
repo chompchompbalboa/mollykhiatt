@@ -73,9 +73,9 @@ var SiteCoverDescription = React.createClass({
         var style = {
             section: {
                 position: 'relative',
-                top: '63vh',
+                top: '65vh',
                 left: '0',
-                height: '12vh',
+                height: '10vh',
                 width: '100%',
                 backgroundColor: 'rgba(255,255,255,0.9)',
                 display: 'flex',
