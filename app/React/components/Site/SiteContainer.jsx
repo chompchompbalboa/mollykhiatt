@@ -75,6 +75,7 @@ var SiteContainer = React.createClass({
     style: function(container) {
         var style = {
             section: {
+                zIndex: '2',
                 position: 'relative',
                 top: '10vh',
                 left: '0',

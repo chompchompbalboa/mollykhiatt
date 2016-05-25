@@ -48,7 +48,7 @@ var SiteHeader = React.createClass({
     //---------------------------------------------------------------------------
 
     componentDidMount: function() {
-        window.addEventListener('scroll', this.handleScroll);
+        //window.addEventListener('scroll', this.handleScroll);
     },
 
     //---------------------------------------------------------------------------
@@ -72,7 +72,7 @@ var SiteHeader = React.createClass({
     //---------------------------------------------------------------------------
 
     componentWillUnmount: function() {
-        window.removeEventListener('scroll', this.handleScroll);
+        //window.removeEventListener('scroll', this.handleScroll);
     },
 
     //---------------------------------------------------------------------------
@@ -106,7 +106,7 @@ var SiteHeader = React.createClass({
     style: function(container) {
         var style = {
             nav: {
-                zIndex: '99',
+                zIndex: '1',
                 position: 'fixed',
                 backfaceVisibility: 'hidden',
                 top: '0',
