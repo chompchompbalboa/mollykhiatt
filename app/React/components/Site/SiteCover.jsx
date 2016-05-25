@@ -5,8 +5,9 @@
 var React = require('react');
 var Radium = require('radium');
 
-var SiteCoverImage = require('./SiteCoverImage.jsx');
 var SiteCoverDescription = require('./SiteCoverDescription.jsx');
+var SiteCoverImage = require('./SiteCoverImage.jsx');
+var SiteCoverOverlay = require('./SiteCoverOverlay.jsx');
 
 //-----------------------------------------------------------------------------
 // Module
@@ -99,6 +100,7 @@ var SiteCover = React.createClass({
 
         return (
             <section key="section" id="site-cover" style={style.section}>
+                <SiteCoverOverlay site={site} {...other} />
                 <SiteCoverImage site={site} {...other} />
                 <SiteCoverDescription site={site} {...other} />
             </section>

@@ -5,10 +5,12 @@
 var React = require('react');
 var Radium = require('radium');
 
+var siteActions = require('../../actions/siteActions');
+
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
-var SiteContainerFeedHeader = React.createClass({
+var SiteCoverOverlay = React.createClass({
     //---------------------------------------------------------------------------
     // Display Name
     //---------------------------------------------------------------------------
@@ -41,6 +43,10 @@ var SiteContainerFeedHeader = React.createClass({
     // Component Did Mount
     //---------------------------------------------------------------------------
 
+    componentDidMount: function() {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+
     //---------------------------------------------------------------------------
     // Component Will Recieve Props
     //---------------------------------------------------------------------------
@@ -61,31 +67,40 @@ var SiteContainerFeedHeader = React.createClass({
     // Component Will Unmount
     //---------------------------------------------------------------------------
 
+    componentWillUnmount: function() {
+        window.removeEventListener('scroll', this.handleScroll);
+    },
+
     //---------------------------------------------------------------------------
     // Handles
     //---------------------------------------------------------------------------
+
+    handleScroll: function() {
+        var top = document.documentElement.scrollTop || document.body.scrollTop;
+        var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        var opacity = (top/height) / 1.5;
+        if(opacity > 0 && opacity < 0.75){
+            var changes = [
+                {"key": "private.SiteCoverOverlay.opacity", "value": opacity}
+            ];
+            siteActions.changeContent(changes);
+        } 
+    },
 
     //---------------------------------------------------------------------------
     // Style
     //---------------------------------------------------------------------------
 
-    style: function(container) {
+    style: function(container, opacity) {
         var style = {
-            section: {
-                margin: '0 0 -3vh 0',
-                position: 'relative',
+            div: {
+                zIndex: '99',
+                position: 'absolute',
                 top: '0',
                 left: '0',
                 width: '100%',
-                height: '16vh',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-            },
-            header: {
-                letterSpacing: '0.1vh',
-                fontSize: '14px',
-                textTransform: 'uppercase'
+                height: '100%',
+                backgroundColor: 'rgba(0,0,0,' + opacity + ')'
             }
         };
 
@@ -99,12 +114,11 @@ var SiteContainerFeedHeader = React.createClass({
     render: function() {
 
         var {site, ...other} = this.props;
-        var style = this.style(site.private.container);
+        var style = this.style(site.private.container, site.private.SiteCoverOverlay.opacity);
 
         return (
-            <section key="section" id="site-container-feed-header" style={style.section}>
-                <div style={style.header}>Past Projects</div>
-            </section>
+            <div key="div" id="site-cover-overlay" style={style.div}>
+            </div>
         )
     }
     
@@ -113,4 +127,4 @@ var SiteContainerFeedHeader = React.createClass({
 //-----------------------------------------------------------------------------
 // Export
 //-----------------------------------------------------------------------------
-module.exports = Radium(SiteContainerFeedHeader);
+module.exports = Radium(SiteCoverOverlay);

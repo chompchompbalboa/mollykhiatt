@@ -8,7 +8,7 @@ var Radium = require('radium');
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
-var SiteContainerFeedHeader = React.createClass({
+var SiteContainerCoverLink = React.createClass({
     //---------------------------------------------------------------------------
     // Display Name
     //---------------------------------------------------------------------------
@@ -71,21 +71,26 @@ var SiteContainerFeedHeader = React.createClass({
 
     style: function(container) {
         var style = {
-            section: {
-                margin: '0 0 -3vh 0',
+            div: {
                 position: 'relative',
                 top: '0',
                 left: '0',
                 width: '100%',
-                height: '16vh',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
+                height: '65vh'
             },
-            header: {
-                letterSpacing: '0.1vh',
-                fontSize: '14px',
-                textTransform: 'uppercase'
+            a: {
+                position: 'relative',
+                top: '0',
+                left: '0',
+                width: '100%',
+                height: '100%'  
+            },
+            inner_div: {
+                position: 'relative',
+                top: '0',
+                left: '0',
+                width: '100%',
+                height: '100%'
             }
         };
 
@@ -102,9 +107,9 @@ var SiteContainerFeedHeader = React.createClass({
         var style = this.style(site.private.container);
 
         return (
-            <section key="section" id="site-container-feed-header" style={style.section}>
-                <div style={style.header}>Past Projects</div>
-            </section>
+            <div key="section" style={style.div}>
+                <a href="/" style={style.a}><div style={style.inner_div}></div></a>
+            </div>
         )
     }
     
@@ -113,4 +118,4 @@ var SiteContainerFeedHeader = React.createClass({
 //-----------------------------------------------------------------------------
 // Export
 //-----------------------------------------------------------------------------
-module.exports = Radium(SiteContainerFeedHeader);
+module.exports = Radium(SiteContainerCoverLink);

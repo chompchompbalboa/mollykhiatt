@@ -6,6 +6,7 @@ var React = require('react');
 var Radium = require('radium');
 
 var SiteContainerFeedHeader = require('./SiteContainerFeedHeader.jsx');
+var SiteContainerFeedItems = require('./SiteContainerFeedItems.jsx');
 
 //-----------------------------------------------------------------------------
 // Module
@@ -75,10 +76,9 @@ var SiteContainerFeed = React.createClass({
         var style = {
             section: {
                 position: 'relative',
-                top: '65vh',
+                top: '0',
                 left: '0',
                 width: '100%',
-                height: '175vh',
                 backgroundColor: 'white'
             }
         };
@@ -98,6 +98,7 @@ var SiteContainerFeed = React.createClass({
         return (
             <section key="section" id="site-container-feed" style={style.section}>
                 <SiteContainerFeedHeader site={site} {...other} />
+                <SiteContainerFeedItems site={site} {...other} />
             </section>
         )
     }

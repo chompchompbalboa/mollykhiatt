@@ -5,10 +5,12 @@
 var React = require('react');
 var Radium = require('radium');
 
+var SiteContainerFeedItemsItem = require('./SiteContainerFeedItemsItem.jsx');
+
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
-var SiteContainerFeedHeader = React.createClass({
+var SiteContainerFeedItems = React.createClass({
     //---------------------------------------------------------------------------
     // Display Name
     //---------------------------------------------------------------------------
@@ -62,6 +64,24 @@ var SiteContainerFeedHeader = React.createClass({
     //---------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------
+    // Items
+    //---------------------------------------------------------------------------
+
+    items: function(projects, site) {
+        var items = [];
+        for (var project in projects) {
+            items.push(
+                <SiteContainerFeedItemsItem 
+                    key={project}
+                    project={projects[project]} 
+                    site={site} 
+                />
+            )
+        }
+        return items;
+    },
+
+    //---------------------------------------------------------------------------
     // Handles
     //---------------------------------------------------------------------------
 
@@ -72,20 +92,14 @@ var SiteContainerFeedHeader = React.createClass({
     style: function(container) {
         var style = {
             section: {
-                margin: '0 0 -3vh 0',
                 position: 'relative',
                 top: '0',
                 left: '0',
                 width: '100%',
-                height: '16vh',
                 display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-            },
-            header: {
-                letterSpacing: '0.1vh',
-                fontSize: '14px',
-                textTransform: 'uppercase'
+                justifyContent: 'space-around',
+                alignItems: 'center',
+                flexWrap: 'wrap'
             }
         };
 
@@ -98,12 +112,13 @@ var SiteContainerFeedHeader = React.createClass({
 
     render: function() {
 
-        var {site, ...other} = this.props;
+        var {seed, site, ...other} = this.props;
         var style = this.style(site.private.container);
+        var items = this.items(seed.public.projects, site);
 
         return (
-            <section key="section" id="site-container-feed-header" style={style.section}>
-                <div style={style.header}>Past Projects</div>
+            <section key="section" id="site-container-feed-items" style={style.section}>
+                {items}
             </section>
         )
     }
@@ -113,4 +128,4 @@ var SiteContainerFeedHeader = React.createClass({
 //-----------------------------------------------------------------------------
 // Export
 //-----------------------------------------------------------------------------
-module.exports = Radium(SiteContainerFeedHeader);
+module.exports = Radium(SiteContainerFeedItems);

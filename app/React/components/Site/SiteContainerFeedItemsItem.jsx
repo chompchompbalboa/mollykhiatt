@@ -8,7 +8,7 @@ var Radium = require('radium');
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
-var SiteContainerFeedHeader = React.createClass({
+var SiteContainerFeedItemsItem = React.createClass({
     //---------------------------------------------------------------------------
     // Display Name
     //---------------------------------------------------------------------------
@@ -62,6 +62,18 @@ var SiteContainerFeedHeader = React.createClass({
     //---------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------
+    // Column
+    //---------------------------------------------------------------------------
+
+    column: function(project) {
+        return this.isEven(project.order.feed) ? "left" : "right";
+    },
+
+    isEven: function(number) {
+        return Number(number) % 2 == 0;
+    },
+
+    //---------------------------------------------------------------------------
     // Handles
     //---------------------------------------------------------------------------
 
@@ -69,23 +81,49 @@ var SiteContainerFeedHeader = React.createClass({
     // Style
     //---------------------------------------------------------------------------
 
-    style: function(container) {
+    style: function(column, container) {
         var style = {
             section: {
-                margin: '0 0 -3vh 0',
-                position: 'relative',
-                top: '0',
-                left: '0',
-                width: '100%',
-                height: '16vh',
+                margin: (column === "left" ? '3vh 0 3vh 5%' : '3vh 5% 3vh 0'),
+                width: '40%',
                 display: 'flex',
+                flexDirection: 'column',
                 justifyContent: 'center',
-                alignItems: 'center'
+                alignItems: 'center',
+                '@media (max-width: 48em)': {
+                    margin: '3vh 0 3vh 0',
+                    width: '80%'
+                }
             },
-            header: {
-                letterSpacing: '0.1vh',
-                fontSize: '14px',
-                textTransform: 'uppercase'
+            container: {
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: (column === "left" ? 'flex-end' : 'flex-start'),
+                '@media (max-width: 48em)': {
+                    alignItems: 'flex-start'
+                }
+            },
+            img: {
+                width: '100%',
+                height: 'auto'
+            },
+            title: {
+                margin: '8px 0 0 0',
+                fontFamily: 'futura-pt',
+                fontSize: '16px',
+                fontWeight: '300',
+                color: 'gray',
+                letterSpacing: '2px'
+            },
+            description: {
+                margin: '4px 0 0 0',
+                textAlign: (column === "left" ? 'right' : 'left'),
+                fontFamily: 'futura-pt',
+                textTransform: 'uppercase',
+                '@media (max-width: 48em)': {
+                    textAlign: 'left'
+                }
             }
         };
 
@@ -98,12 +136,17 @@ var SiteContainerFeedHeader = React.createClass({
 
     render: function() {
 
-        var {site, ...other} = this.props;
-        var style = this.style(site.private.container);
+        var {project, site, ...other} = this.props;
+        var column = this.column(project);
+        var style = this.style(column, site.private.container);
 
         return (
-            <section key="section" id="site-container-feed-header" style={style.section}>
-                <div style={style.header}>Past Projects</div>
+            <section key="section" style={style.section}>
+                <div style={style.container}>
+                    <img src={project.tiles['0'].img.src} style={style.img}></img>
+                    <div style={style.title}>{project.title}, {project.year}</div>
+                    <div style={style.description}>{project.description_short}</div>
+                </div>
             </section>
         )
     }
@@ -113,4 +156,4 @@ var SiteContainerFeedHeader = React.createClass({
 //-----------------------------------------------------------------------------
 // Export
 //-----------------------------------------------------------------------------
-module.exports = Radium(SiteContainerFeedHeader);
+module.exports = Radium(SiteContainerFeedItemsItem);

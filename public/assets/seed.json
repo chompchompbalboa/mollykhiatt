@@ -1,23 +1,33 @@
 db.seeds.insert(
     {
         "version": "0.0",
-        "public": {
-            "public": "public"
-        },
         "private": {
             "private": "private"
-        }  
-    }
-)
-
-db.seeds.insert(
-    {
-        "version": "0.1",
-        "public": {
-            "public": "public"
         },
-        "private": {
-            "private": "private"
-        }  
+        "public": {
+            "name": "Molly Hiatt",
+            "projects": {
+                "0": {
+                    "order": {
+                        "feed": "0"
+                    }
+                },
+                "1": {
+                    "order": {
+                        "feed": "1"
+                    }
+                },
+                "2": {
+                    "order": {
+                        "feed": "2"
+                    }
+                },
+                "3": {
+                    "order": {
+                        "feed": "3"
+                    }
+                }
+            }
+        }
     }
 )

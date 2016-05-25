@@ -5,6 +5,7 @@
 var React = require('react');
 var Radium = require('radium');
 
+var SiteContainerCoverLink = require('./SiteContainerCoverLink.jsx');
 var SiteContainerFeed = require('./SiteContainerFeed.jsx');
 
 //-----------------------------------------------------------------------------
@@ -77,7 +78,8 @@ var SiteContainer = React.createClass({
                 position: 'relative',
                 top: '10vh',
                 left: '0',
-                width: '100%'
+                width: '100%',
+                overflow: 'hidden'
             }
         };
 
@@ -95,6 +97,7 @@ var SiteContainer = React.createClass({
 
         return (
             <section key="section" id="site-container" style={style.section}>
+                <SiteContainerCoverLink site={site} {...other} />
                 <SiteContainerFeed site={site} {...other} />
             </section>
         )

@@ -1,5 +1,8 @@
 {
     "private": {
+        "SiteCoverOverlay": {
+            "opacity": "0"
+        },
         "SiteHeader": {
             "display": "white"
         }
