@@ -5,16 +5,14 @@
 var React = require('react');
 var Radium = require('radium');
 
-var siteActions = require('../../actions/siteActions');
-
-var SiteHeaderMenu = require('./SiteHeaderMenu.jsx');
-var SiteHeaderName = require('./SiteHeaderName.jsx');
-var SiteHeaderShare = require('./SiteHeaderShare.jsx');
+var SiteContainer = require('./SiteContainer.jsx');
+var SiteCover = require('./SiteCover.jsx');
+var SiteHeader = require('./SiteHeader.jsx');
 
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
-var SiteHeader = React.createClass({
+var SiteMain = React.createClass({
     //---------------------------------------------------------------------------
     // Display Name
     //---------------------------------------------------------------------------
@@ -75,32 +73,9 @@ var SiteHeader = React.createClass({
     // Style
     //---------------------------------------------------------------------------
 
-    style: function(container, color) {
+    style: function(container) {
         var style = {
-            nav: {
-                zIndex: '1',
-                position: 'fixed',
-                backfaceVisibility: 'hidden',
-                top: '0',
-                left: '0',
-                height: '10vh',
-                width: Number(container.width.sm) * 100 + "vw",
-                backgroundColor: (color === "black" ? 'white' : 'transparent'),
-                display: 'flex',
-                justifyContent: 'space-around',
-                alignItems: 'center',
-                transition: 'top .5s ease',
-                fontSize: '18px',
-                color: color,
-                textTransform: 'uppercase',
-                letterSpacing: '1px',
-                whiteSpace: 'nowrap',
-                '@media (min-width: 48em) and (max-width: 64em)': {
-                    width: Number(container.width.md) * 100 + 'vw',    
-                },
-                '@media (min-width: 64em)': {
-                    width: Number(container.width.lg) * 100 + 'vw',
-                }
+            section: {
             }
         };
 
@@ -114,14 +89,13 @@ var SiteHeader = React.createClass({
     render: function() {
 
         var {site, ...other} = this.props;
-        var style = this.style(site.private.container, site.private.SiteHeader.color);
+        var style = this.style(site.private.container);
 
         return (
-            <nav id="site-header" style={style.nav}>
-                <SiteHeaderMenu site={site} {...other} />
-                <SiteHeaderName site={site} {...other} />
-                <SiteHeaderShare site={site} {...other} />
-            </nav>
+            <section id="site-main" style={style.section}>
+                <SiteCover site={site} {...other} />
+                <SiteContainer site={site} {...other} />
+            </section>
         )
     }
     
@@ -130,4 +104,4 @@ var SiteHeader = React.createClass({
 //-----------------------------------------------------------------------------
 // Export
 //-----------------------------------------------------------------------------
-module.exports = Radium(SiteHeader);
+module.exports = Radium(SiteMain);

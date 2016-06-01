@@ -5,16 +5,11 @@
 var React = require('react');
 var Radium = require('radium');
 
-var siteActions = require('../../actions/siteActions');
-
-var SiteHeaderMenu = require('./SiteHeaderMenu.jsx');
-var SiteHeaderName = require('./SiteHeaderName.jsx');
-var SiteHeaderShare = require('./SiteHeaderShare.jsx');
 
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
-var SiteHeader = React.createClass({
+var SiteMenuMobile = React.createClass({
     //---------------------------------------------------------------------------
     // Display Name
     //---------------------------------------------------------------------------
@@ -75,32 +70,43 @@ var SiteHeader = React.createClass({
     // Style
     //---------------------------------------------------------------------------
 
-    style: function(container, color) {
+    style: function(container) {
         var style = {
-            nav: {
-                zIndex: '1',
-                position: 'fixed',
-                backfaceVisibility: 'hidden',
-                top: '0',
-                left: '0',
-                height: '10vh',
-                width: Number(container.width.sm) * 100 + "vw",
-                backgroundColor: (color === "black" ? 'white' : 'transparent'),
-                display: 'flex',
-                justifyContent: 'space-around',
-                alignItems: 'center',
-                transition: 'top .5s ease',
-                fontSize: '18px',
-                color: color,
-                textTransform: 'uppercase',
-                letterSpacing: '1px',
-                whiteSpace: 'nowrap',
-                '@media (min-width: 48em) and (max-width: 64em)': {
-                    width: Number(container.width.md) * 100 + 'vw',    
-                },
-                '@media (min-width: 64em)': {
-                    width: Number(container.width.lg) * 100 + 'vw',
+            section: {
+                display: 'none',
+                '@media (max-width: 64em)': {
+                    position: 'relative',
+                    top: '10vh',
+                    left: '0',
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    textTransform: 'uppercase'
                 }
+            },
+            ul: {
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                listStyle: 'none',
+                letterSpacing: '3px'
+            },
+            header: {
+                margin: '2vh 0 1.5vh 0',
+                fontSize: '12px'
+            },
+            li: {
+                margin: '1.5vh 0 1.5vh 0',
+                fontSize: '12px',
+                color: 'rgba(200, 200, 200, 1)'
+            },
+            divider: {
+                width: '100vw',
+                height: '1px',
+                backgroundColor: 'rgba(200, 200, 200, 1)'
             }
         };
 
@@ -114,14 +120,50 @@ var SiteHeader = React.createClass({
     render: function() {
 
         var {site, ...other} = this.props;
-        var style = this.style(site.private.container, site.private.SiteHeader.color);
+        var style = this.style(site.private.container);
 
         return (
-            <nav id="site-header" style={style.nav}>
-                <SiteHeaderMenu site={site} {...other} />
-                <SiteHeaderName site={site} {...other} />
-                <SiteHeaderShare site={site} {...other} />
-            </nav>
+            <section id="site-menu-mobile" style={style.section}>
+                <span style={style.divider}></span>
+                <ul style={[style.ul, style.academic]}>
+                    <li style={style.header}>Academic</li>
+                    <li style={style.li}>Cantagalo Learning Lab</li>
+                    <li style={style.li}>Cabin in the Woods</li>
+                    <li style={style.li}>Elementary</li>
+                    <li style={style.li}>Marine Center</li>
+                    <li style={style.li}>Student Housing</li>
+                    <li style={style.li}>Culinary School</li>
+                    <li style={style.li}>Shelter</li>
+                </ul>
+                <span style={style.divider}></span>
+                <ul style={[style.ul, style.professional]}>
+                    <li style={style.header}>Professional</li>
+                    <li style={style.li}>The Gambia Orphanage</li>
+                </ul>
+                <span style={style.divider}></span>
+                <ul style={[style.ul, style.art]}>
+                    <li style={style.header}>Art</li>
+                    <li style={style.li}>Built</li>
+                    <li style={style.li}>Organic</li>
+                </ul>
+                <span style={style.divider}></span>
+                <ul style={[style.ul, style.photography]}>
+                    <li style={style.header}>Photography</li>
+                    <li style={style.li}>Rio</li>
+                    <li style={style.li}>Portrait</li>
+                </ul>
+                <span style={style.divider}></span>
+                <ul style={[style.ul, style.film]}>
+                    <li style={style.header}>Film</li>
+                    <li style={style.li}>Cabin Essence</li>
+                </ul>
+                <span style={style.divider}></span>
+                <ul style={[style.ul, style.about]}>
+                    <li style={style.header}>About</li>
+                    <li style={style.li}>Bio</li>
+                    <li style={style.li}>CV</li>
+                </ul>
+            </section>
         )
     }
     
@@ -130,4 +172,4 @@ var SiteHeader = React.createClass({
 //-----------------------------------------------------------------------------
 // Export
 //-----------------------------------------------------------------------------
-module.exports = Radium(SiteHeader);
+module.exports = Radium(SiteMenuMobile);

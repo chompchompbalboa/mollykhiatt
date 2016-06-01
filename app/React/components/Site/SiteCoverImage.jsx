@@ -81,7 +81,7 @@ var SiteCoverImage = React.createClass({
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center center',
                 backgroundSize: 'cover',
-                backgroundImage: 'url(/assets/Site/SiteCover/Cabin.jpg)',
+                backgroundImage: 'url(/assets/Site/SiteCover/current.jpg)',
                 transition: 'background-image 2.5s ease' 
             }
         };

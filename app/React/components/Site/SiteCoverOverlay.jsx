@@ -100,7 +100,10 @@ var SiteCoverOverlay = React.createClass({
                 left: '0',
                 width: '100%',
                 height: '100%',
-                backgroundColor: 'rgba(0,0,0,' + opacity + ')'
+                backgroundColor: 'rgba(0,0,0,' + opacity + ')',
+                '@media (max-width: 48em)': {
+                    backgroundColor: 'transparent'
+                }
             }
         };
 

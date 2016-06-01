@@ -1,10 +1,18 @@
 {
     "private": {
+        "active": "main",
         "SiteCoverOverlay": {
             "opacity": "0"
         },
         "SiteHeader": {
-            "display": "white"
+            "color": "white"
+        },
+        "SiteMenuMobile": {
+            "art": "inactive",
+            "academic": "inactive",
+            "film": "inactive",
+            "photography": "inactive",
+            "professional": "inactive"
         }
     },
     "public": {

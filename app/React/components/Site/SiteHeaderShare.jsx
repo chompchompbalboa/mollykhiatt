@@ -71,12 +71,22 @@ var SiteHeaderShare = React.createClass({
 
     style: function() {
         var style = {
-            section: {
-                width: '33%',
+            div: {
+                width: '30vw',
+                padding: '0 3vw 0 0',
+                display: 'flex',
+                justifyContent: 'flex-end',
+                alignItems: 'center',
                 '@media (max-width: 48em)': {
-                    width: '0',    
+                    width: '0'    
                 }
-            } 
+            },
+            container: {
+                textTransform: 'uppercase',
+                '@media (max-width: 48em)': {
+                    display: 'none'   
+                }
+            }
         };
 
         return style;
@@ -92,8 +102,11 @@ var SiteHeaderShare = React.createClass({
         var style = this.style();
 
         return (
-            <section id="site-header-share" style={style.section}>
-            </section>
+            <div id="site-header-share" style={style.div}>
+                <div style={style.container}>
+                    Contact
+                </div>
+            </div>
         )
     }
     

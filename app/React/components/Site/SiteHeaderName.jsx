@@ -73,10 +73,10 @@ var SiteHeaderName = React.createClass({
     // Style
     //---------------------------------------------------------------------------
 
-    style: function(display) {
+    style: function(color, container) {
         var style = {
             div: {
-                width: '33%',
+                width: '33vw',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -85,13 +85,8 @@ var SiteHeaderName = React.createClass({
                 }
             },
             name: {
-                display: (display === "white" ? 'inline' : 'none'),
-                fontSize: '20px',
-                letterSpacing: '1px',
-                color: 'white',
-                textDecoration: 'none',
-                textTransform: 'uppercase',
-                whiteSpace: 'nowrap'
+                color: color,
+                textDecoration: 'none'
             }
         };
 
@@ -105,7 +100,7 @@ var SiteHeaderName = React.createClass({
     render: function() {
 
         var {seed, site, ...other} = this.props;
-        var style = this.style(site.private.SiteHeader.display);
+        var style = this.style(site.private.SiteHeader.color, site.private.container);
 
         return (
             <div id="site-header-name" style={style.div}>
