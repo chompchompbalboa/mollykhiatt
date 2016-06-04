@@ -100,6 +100,7 @@ var SiteContainerCoverLink = React.createClass({
     //---------------------------------------------------------------------------
     // Render
     //---------------------------------------------------------------------------
+    //<a href="/" style={style.a}><div style={style.inner_div}></div></a>
 
     render: function() {
 
@@ -107,8 +108,7 @@ var SiteContainerCoverLink = React.createClass({
         var style = this.style(site.private.container);
 
         return (
-            <div key="section" style={style.div}>
-                <a href="/" style={style.a}><div style={style.inner_div}></div></a>
+            <div key="section" style={style.div}>  
             </div>
         )
     }

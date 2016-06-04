@@ -5,6 +5,8 @@
 var React = require('react');
 var Radium = require('radium');
 
+var siteActions = require('../../actions/siteActions');
+
 var SiteMenuMobile = require('./SiteMenuMobile.jsx');
 var SiteMenuWeb = require('./SiteMenuWeb.jsx');
 
@@ -65,8 +67,89 @@ var SiteMenu = React.createClass({
     //---------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------
+    // About List
+    //---------------------------------------------------------------------------
+
+    aboutList: function(style) {
+        var list = [];
+        list.push(this.li(0, style, "Bio", "about/bio"));
+        list.push(this.li(1, style, "CV", "about/cv"));
+        return list;
+    },
+
+    //---------------------------------------------------------------------------
+    // Current Projects
+    //---------------------------------------------------------------------------
+
+    currentProjects: function(category, projects) {
+        var current = [];
+        for (var project in projects) {
+            if(projects[project].category === category) {
+                current.push(projects[project]);
+            }
+        }
+        return current;
+    },
+
+    //---------------------------------------------------------------------------
+    // li
+    //---------------------------------------------------------------------------
+
+    li: function(key, style, title, url) {
+        return (
+            <li key={key} style={style.li}>
+                <a key={url} href={url} style={style.a} onClick={(event) => this.handleLinkClick(event, url)}>
+                    {title}
+                </a>
+            </li>
+        )
+        
+    },
+
+    //---------------------------------------------------------------------------
+    // List
+    //---------------------------------------------------------------------------
+
+    list: function(category, seed, style) {
+        var list;
+        switch(category) {
+            case "about":
+                list = this.aboutList(style);
+            break;
+            default:
+                list = this.projectList(category, seed, style);
+            break;
+        }
+        return list;
+    },
+
+    //---------------------------------------------------------------------------
+    // Project List
+    //---------------------------------------------------------------------------
+
+    projectList: function(category, seed, style) {
+        var list = [];
+        var projects = this.currentProjects(category, seed.public.projects);
+        for (var i = 0; i < projects.length; i++) {
+            var title = projects[i].title;
+            var url = projects[i].url;
+            list.push(this.li(i, style, title, url));
+        }
+        return list;
+    },
+
+    //---------------------------------------------------------------------------
     // Handles
     //---------------------------------------------------------------------------
+
+    handleLinkClick: function(e, url) {
+        e.preventDefault();
+        var changes = [
+            {"key": "private.active", "value": "project"},
+            {"key": "private.url", "value": url}
+        ];
+        siteActions.changeContent(changes);
+    },
 
     //---------------------------------------------------------------------------
     // Style
@@ -89,11 +172,12 @@ var SiteMenu = React.createClass({
 
         var {site, ...other} = this.props;
         var style = this.style(site.private.container);
+        var list = this.list;
 
         return (
             <section id="site-menu" style={style.section}>
-                <SiteMenuMobile site={site} {...other} />
-                <SiteMenuWeb site={site} {...other} />
+                <SiteMenuMobile list={list} site={site} {...other} />
+                <SiteMenuWeb list={list} site={site} {...other} />
             </section>
         )
     }

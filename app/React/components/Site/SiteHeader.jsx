@@ -89,7 +89,6 @@ var SiteHeader = React.createClass({
                 display: 'flex',
                 justifyContent: 'space-around',
                 alignItems: 'center',
-                transition: 'top .5s ease',
                 fontSize: '18px',
                 color: color,
                 textTransform: 'uppercase',

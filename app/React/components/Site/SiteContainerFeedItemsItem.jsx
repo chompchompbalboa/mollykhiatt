@@ -66,7 +66,7 @@ var SiteContainerFeedItemsItem = React.createClass({
     //---------------------------------------------------------------------------
 
     column: function(project) {
-        return this.isEven(project.order.feed) ? "left" : "right";
+        return this.isEven(project.order.feed) ? "right" : "left";
     },
 
     isEven: function(number) {
@@ -96,6 +96,7 @@ var SiteContainerFeedItemsItem = React.createClass({
                 }
             },
             container: {
+                width: '100%',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
@@ -143,7 +144,7 @@ var SiteContainerFeedItemsItem = React.createClass({
         return (
             <section key="section" style={style.section}>
                 <div style={style.container}>
-                    <img src={project.tiles['0'].img.src} style={style.img}></img>
+                    <img src={project.tiles['1'].img.src} style={style.img}></img>
                     <div style={style.title}>{project.title}, {project.year}</div>
                     <div style={style.description}>{project.description_short}</div>
                 </div>

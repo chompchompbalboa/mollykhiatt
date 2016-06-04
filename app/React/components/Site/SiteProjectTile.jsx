@@ -5,14 +5,10 @@
 var React = require('react');
 var Radium = require('radium');
 
-var SiteContainer = require('./SiteContainer.jsx');
-var SiteCover = require('./SiteCover.jsx');
-var SiteHeader = require('./SiteHeader.jsx');
-
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
-var SiteMain = React.createClass({
+var SiteProjectTile = React.createClass({
     //---------------------------------------------------------------------------
     // Display Name
     //---------------------------------------------------------------------------
@@ -75,7 +71,13 @@ var SiteMain = React.createClass({
 
     style: function(container) {
         var style = {
-            section: {
+            div: {
+                margin: '0 0 0 5vw',
+                height: '100%'
+            },
+            img: {
+                height: '100%',
+                width: 'auto'
             }
         };
 
@@ -88,14 +90,13 @@ var SiteMain = React.createClass({
 
     render: function() {
 
-        var {site, ...other} = this.props;
+        var {site, tile, ...other} = this.props;
         var style = this.style(site.private.container);
 
         return (
-            <section id="site-main" style={style.section}>
-                <SiteCover site={site} {...other} />
-                <SiteContainer site={site} {...other} />
-            </section>
+            <div style={style.div}>
+                <img style={style.img} src={tile.img.src} />
+            </div>
         )
     }
     
@@ -104,4 +105,4 @@ var SiteMain = React.createClass({
 //-----------------------------------------------------------------------------
 // Export
 //-----------------------------------------------------------------------------
-module.exports = Radium(SiteMain);
+module.exports = Radium(SiteProjectTile);

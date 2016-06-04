@@ -5,7 +5,6 @@
 var React = require('react');
 var Radium = require('radium');
 
-
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
@@ -103,6 +102,13 @@ var SiteMenuMobile = React.createClass({
                 fontSize: '12px',
                 color: 'rgba(200, 200, 200, 1)'
             },
+            a: {
+                textDecoration: 'none',
+                color: 'rgba(200, 200, 200, 1)',
+                ':hover': {
+                    color: 'rgba(150, 150, 150, 1)'
+                }
+            },
             divider: {
                 width: '100vw',
                 height: '1px',
@@ -119,49 +125,46 @@ var SiteMenuMobile = React.createClass({
 
     render: function() {
 
-        var {site, ...other} = this.props;
+        var {list, seed, site, ...other} = this.props;
         var style = this.style(site.private.container);
+        var academic = list('academic', seed, style);
+        var professional = list('professional', seed, style);
+        var art = list('art', seed, style);
+        var photography = list('photography', seed, style);
+        var film = list('film', seed, style);
+        var about = list('about', seed, style);
 
         return (
             <section id="site-menu-mobile" style={style.section}>
                 <span style={style.divider}></span>
                 <ul style={[style.ul, style.academic]}>
                     <li style={style.header}>Academic</li>
-                    <li style={style.li}>Cantagalo Learning Lab</li>
-                    <li style={style.li}>Cabin in the Woods</li>
-                    <li style={style.li}>Elementary</li>
-                    <li style={style.li}>Marine Center</li>
-                    <li style={style.li}>Student Housing</li>
-                    <li style={style.li}>Culinary School</li>
-                    <li style={style.li}>Shelter</li>
+                    {academic}
                 </ul>
                 <span style={style.divider}></span>
                 <ul style={[style.ul, style.professional]}>
                     <li style={style.header}>Professional</li>
-                    <li style={style.li}>The Gambia Orphanage</li>
+                    {professional}
                 </ul>
                 <span style={style.divider}></span>
                 <ul style={[style.ul, style.art]}>
                     <li style={style.header}>Art</li>
-                    <li style={style.li}>Built</li>
-                    <li style={style.li}>Organic</li>
+                    {art}
                 </ul>
                 <span style={style.divider}></span>
                 <ul style={[style.ul, style.photography]}>
                     <li style={style.header}>Photography</li>
-                    <li style={style.li}>Rio</li>
-                    <li style={style.li}>Portrait</li>
+                    {photography}
                 </ul>
                 <span style={style.divider}></span>
                 <ul style={[style.ul, style.film]}>
                     <li style={style.header}>Film</li>
-                    <li style={style.li}>Cabin Essence</li>
+                    {film}
                 </ul>
                 <span style={style.divider}></span>
                 <ul style={[style.ul, style.about]}>
                     <li style={style.header}>About</li>
-                    <li style={style.li}>Bio</li>
-                    <li style={style.li}>CV</li>
+                    {about}
                 </ul>
             </section>
         )

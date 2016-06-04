@@ -5,6 +5,8 @@
 var React = require('react');
 var Radium = require('radium');
 
+var siteActions = require('../../actions/siteActions');
+
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
@@ -67,6 +69,12 @@ var SiteHeaderName = React.createClass({
 
     handleClick: function(e) {
         e.preventDefault();
+        var changes = [
+            {"key": "private.active", "value": "home"},
+            {"key": "private.SiteHeader.color", "value": "white"},
+            {"key": "private.SiteCoverOverlay.opacity", "value": "0"}
+        ];
+        siteActions.changeContent(changes);
     },
 
     //---------------------------------------------------------------------------

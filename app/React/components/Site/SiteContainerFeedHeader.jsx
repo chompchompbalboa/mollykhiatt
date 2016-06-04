@@ -103,7 +103,7 @@ var SiteContainerFeedHeader = React.createClass({
 
         return (
             <section key="section" id="site-container-feed-header" style={style.section}>
-                <div style={style.header}>Past Projects</div>
+                <div style={style.header}>Project Feed</div>
             </section>
         )
     }

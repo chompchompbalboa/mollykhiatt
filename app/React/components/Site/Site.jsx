@@ -6,8 +6,9 @@ var React = require('react');
 var Radium = require('radium');
 
 var SiteHeader = require('./SiteHeader.jsx');
-var SiteMain = require('./SiteMain.jsx');
+var SiteHome = require('./SiteHome.jsx');
 var SiteMenu = require('./SiteMenu.jsx');
+var SiteProject = require('./SiteProject.jsx');
 
 //-----------------------------------------------------------------------------
 // Module
@@ -70,21 +71,31 @@ var Site = React.createClass({
     //---------------------------------------------------------------------------
 
     active: function(seed, site) {
-        if (site.private.active === "menu") {
-            return (
-                <SiteMenu
-                    seed={seed}
-                    site={site}
-                />
-            )
-        }
-        else {
-            return (
-                <SiteMain
-                    seed={seed}
-                    site={site}
-                />
-            )
+        switch(site.private.active) {
+            case "menu":
+                return (
+                    <SiteMenu
+                        seed={seed}
+                        site={site}
+                    />
+                )
+            break;
+            case "project":
+                return (
+                    <SiteProject
+                        seed={seed}
+                        site={site}
+                    />
+                )
+            break;
+            default:
+                return (
+                    <SiteHome
+                        seed={seed}
+                        site={site}
+                    />
+                )
+            break;
         }
     },
 

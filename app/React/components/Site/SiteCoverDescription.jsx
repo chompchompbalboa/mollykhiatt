@@ -74,7 +74,7 @@ var SiteCoverDescription = React.createClass({
             section: {
                 zIndex: '0',
                 position: 'relative',
-                top: '65vh',
+                top: '75vh',
                 left: '0',
                 height: '10vh',
                 width: '100%',
@@ -112,7 +112,7 @@ var SiteCoverDescription = React.createClass({
 
         return (
             <section key="section" id="site-cover-description" style={style.section}>
-                <div style={style.name}>Cabin in the Woods</div>
+                <div style={style.name}>Cantagalo Learning Lab</div>
                 <div style={style.category}>Academic</div>
             </section>
         )

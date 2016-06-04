@@ -77,7 +77,7 @@ var SiteContainer = React.createClass({
             section: {
                 zIndex: '2',
                 position: 'relative',
-                top: '10vh',
+                top: '84vh',
                 left: '0',
                 width: '100%',
                 overflow: 'hidden'
@@ -98,7 +98,6 @@ var SiteContainer = React.createClass({
 
         return (
             <section key="section" id="site-container" style={style.section}>
-                <SiteContainerCoverLink site={site} {...other} />
                 <SiteContainerFeed site={site} {...other} />
             </section>
         )

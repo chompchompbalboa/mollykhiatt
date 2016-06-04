@@ -78,8 +78,8 @@ var SiteCoverOverlay = React.createClass({
     handleScroll: function() {
         var top = document.documentElement.scrollTop || document.body.scrollTop;
         var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-        var opacity = (top/height) / 1.5;
-        if(opacity > 0 && opacity < 0.75){
+        var opacity = ((top/height) / 1.5) + 0.25;
+        if(opacity > 0.24 && opacity < 0.75){
             var changes = [
                 {"key": "private.SiteCoverOverlay.opacity", "value": opacity}
             ];

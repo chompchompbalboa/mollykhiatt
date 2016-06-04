@@ -5,7 +5,6 @@
 var React = require('react');
 var Radium = require('radium');
 
-
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
@@ -302,7 +301,8 @@ var SiteMenuWeb = React.createClass({
                 justifyContent: 'center',
                 alignItems: 'center',
                 listStyle: 'none',
-                letterSpacing: '1px'
+                letterSpacing: '1px',
+                fontSize: '0px'
             },
             header: {
                 margin: '0 0 1.5vh 0',
@@ -310,8 +310,17 @@ var SiteMenuWeb = React.createClass({
             },
             li: {
                 fontSize: '12px',
+                display: 'inline',
                 color: 'rgba(200, 200, 200, 1)'
             },
+            a: {
+                textDecoration: 'none',
+                fontWeight: '300',
+                color: 'rgba(200, 200, 200, 1)',
+                ':hover': {
+                    color: 'rgba(150, 150, 150, 1)'
+                }
+            }
         };
 
         return style;
@@ -323,8 +332,14 @@ var SiteMenuWeb = React.createClass({
 
     render: function() {
 
-        var {site, ...other} = this.props;
+        var {list, seed, site, ...other} = this.props;
         var style = this.style(site.private.container);
+        var academic = list('academic', seed, style);
+        var professional = list('professional', seed, style);
+        var art = list('art', seed, style);
+        var photography = list('photography', seed, style);
+        var film = list('film', seed, style);
+        var about = list('about', seed, style);
 
         return (
             <section id="site-menu-mobile" style={style.section}>
@@ -337,8 +352,7 @@ var SiteMenuWeb = React.createClass({
                             <div style={[style.list, style.photography_list]}>
                                 <ul style={[style.ul]}>
                                     <li style={style.header}>Photography</li>
-                                    <li style={style.li}>Rio</li>
-                                    <li style={style.li}>Portrait</li>
+                                    {photography}
                                 </ul>
                             </div>
                         </div>
@@ -349,8 +363,7 @@ var SiteMenuWeb = React.createClass({
                             <div style={[style.list, style.art_list]}>
                                 <ul style={[style.ul]}>
                                     <li style={style.header}>Art</li>
-                                    <li style={style.li}>Built</li>
-                                    <li style={style.li}>Organic</li>
+                                    {art}
                                 </ul>
                             </div>
                         </div>
@@ -363,13 +376,7 @@ var SiteMenuWeb = React.createClass({
                             <div style={[style.list, style.academic_list]}>
                                 <ul style={[style.ul]}>
                                     <li style={style.header}>Academic</li>
-                                    <li style={style.li}>Cantagalo Learning Lab</li>
-                                    <li style={style.li}>Cabin in the Woods</li>
-                                    <li style={style.li}>Elementary</li>
-                                    <li style={style.li}>Marine Center</li>
-                                    <li style={style.li}>Student Housing</li>
-                                    <li style={style.li}>Culinary School</li>
-                                    <li style={style.li}>Shelter</li>
+                                    {academic}
                                 </ul>
                             </div>
                         </div>
@@ -382,7 +389,7 @@ var SiteMenuWeb = React.createClass({
                             <div style={[style.list, style.professional_list]}>
                                 <ul style={[style.ul]}>
                                     <li style={style.header}>Professional</li>
-                                    <li style={style.li}>The Gambia Orphanage</li>
+                                    {professional}
                                 </ul>
                             </div>
                         </div>
@@ -393,7 +400,7 @@ var SiteMenuWeb = React.createClass({
                             <div style={[style.list, style.film_list]}>
                                 <ul style={[style.ul]}>
                                     <li style={style.header}>Film</li>
-                                    <li style={style.li}>Cabin Essence</li>
+                                    {film}
                                 </ul>
                             </div>
                         </div>
@@ -406,8 +413,7 @@ var SiteMenuWeb = React.createClass({
                             <div style={[style.list, style.about_list]}>
                                 <ul style={[style.ul]}>
                                     <li style={style.header}>About</li>
-                                    <li style={style.li}>Bio</li>
-                                    <li style={style.li}>CV</li>
+                                    {about}
                                 </ul>
                             </div>
                         </div>

@@ -81,7 +81,7 @@ var SiteCover = React.createClass({
                 backfaceVisibility: 'hidden',
                 top: '0',
                 left: '0',
-                height: '75vh',
+                height: '85vh',
                 width: '100%'
             }
         };

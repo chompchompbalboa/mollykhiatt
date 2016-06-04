@@ -64,6 +64,21 @@ var SiteHeaderMenu = React.createClass({
     //---------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------
+    // Color
+    //---------------------------------------------------------------------------
+
+    color: function(active) {
+        switch (active) {
+            case "home":
+                return "white";
+            break;
+            default:
+                return "black";
+            break;
+        }
+    },
+
+    //---------------------------------------------------------------------------
     // Graphic
     //---------------------------------------------------------------------------
 
@@ -91,11 +106,14 @@ var SiteHeaderMenu = React.createClass({
 
     handleClick: function(e) {
         e.preventDefault();
-        var display = (this.props.site.private.active === "menu" ? "main" : "menu");
-        var color = (this.props.site.private.SiteHeader.color === "white" ? "black" : "white");
+        var active = (this.props.site.private.active === "menu" ? this.props.site.private.previous : "menu");
+        var previous = (this.props.site.private.active === "menu" ? this.props.site.private.previous : this.props.site.private.active);
+        var color = this.color(active);
         var changes = [
-            {"key": "private.active", "value": display},
-            {"key": "private.SiteHeader.color", "value": color}
+            {"key": "private.active", "value": active},
+            {"key": "private.previous", "value": previous},
+            {"key": "private.SiteHeader.color", "value": color},
+            {"key": "private.SiteCoverOverlay.opacity", "value": "0"}
         ];
         siteActions.changeContent(changes);
     },
@@ -110,19 +128,21 @@ var SiteHeaderMenu = React.createClass({
                 width: '33vw'
             },
             a: {
-                width: '20px',
-                height: '20px',
+                width: '100%',
+                height: '100%',
                 textDecoration: 'none'
             },
             container: {
+                width: '20px',
+                height: '20px',
                 padding: '0 0 0 3vw',
                 display: 'flex',
                 justifyContent: 'flex-start',
                 alignItems: 'center'
             },
             graphic: {
-                width: '20px',
-                height: '20px',
+                width: '100%',
+                height: '100%',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: (this.props.site.private.active === "menu" ? 'center' : 'space-between'),
@@ -142,7 +162,7 @@ var SiteHeaderMenu = React.createClass({
                 position: 'absolute',
                 width: '28.3px', 
                 height: '28.3px',
-                height: '1.5px',
+                height: '1px',
                 backgroundColor: color,
             },
             icon_back_pos: {
@@ -178,16 +198,16 @@ var SiteHeaderMenu = React.createClass({
 
         return (
             <div id="site-header-menu" style={style.div}>
-                <a href="/menu" style={style.a} onClick={this.handleClick}>
-                    <div style={style.container}>
+                <div style={style.container}>
+                    <a href="/menu" style={style.a} onClick={this.handleClick}>
                         <div style={style.graphic}>
                             {graphic}
                         </div>
                         <div style={style.text}>
                             {text}
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         )
     }

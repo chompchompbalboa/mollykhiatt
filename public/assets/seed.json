@@ -5,27 +5,385 @@ db.seeds.insert(
             "private": "private"
         },
         "public": {
-            "name": "Molly Hiatt",
+            "name": "Molly Kay Hiatt",
             "projects": {
-                "0": {
-                    "order": {
-                        "feed": "0"
-                    }
-                },
                 "1": {
+                    "category": "academic",
+                    "description_long": "Mega events such as the Rio Olympics give a spotlight to troubled areas within the city like the slums. When that spotlight shifts elsewhere the people remain, in poverty. This project aims to use the emergence of technology to develop an education system. A network of people using sensory behaviors and thoughts create the Learning Lab, enabling empowerment, supported by Identity and place of the Cantagalo Favela. By appropriating this to a community in need of education and opportunity, The Cantagalo Learning Lab provides a source of knowledge in the form of direct community interaction to transfer skills and strengthen student learning.",
+                    "description_short": "The Cantagalo Learning Lab provides a source of knowledge in the form of direct community interaction to transfer skills and strengthen student learning.",
+                    "location": "Rio De Janeiro, Br",
                     "order": {
-                        "feed": "1"
-                    }
+                        "feed": "1",
+                        "menu": "1"
+                    },
+                    "tiles": {
+                        "1": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(1)NIGHT_VIEW.jpg"
+                            }
+                        },
+                        "2": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(2)BALCONY_VIEW.jpg"
+                            }
+                        },
+                        "3": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(3)SITE_PLAN.jpg"
+                            }
+                        },
+                        "4": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(4)SITE_GRID.jpg"
+                            }
+                        },
+                        "5": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(5)TOWN_SQUARE.jpg"
+                            }
+                        },
+                        "6": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(6)MODEL_IMAGES.jpg"
+                            }
+                        },
+                        "7": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(7)DAY_VIEW.jpg"
+                            }
+                        },
+                        "8": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(8)SECTION_PERSPECTIVE.jpg"
+                            }
+                        },
+                        "9": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(9)LEVEL_ONE.jpg"
+                            }
+                        },
+                        "10": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(10)LEVEL_TWO.jpg"
+                            }
+                        },
+                        "11": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(11)LEVEL_THREE.jpg"
+                            }
+                        },
+                        "12": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(12)LEVEL_FOUR.jpg"
+                            }
+                        },
+                        "13": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(13)LEVEL_FIVE.jpg"
+                            }
+                        },
+                        "14": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(14)LEVEL_SIX.jpg"
+                            }
+                        },
+                        "15": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(15)LEVEL_SEVEN.jpg"
+                            }
+                        },
+                        "16": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(16)SITE_MODEL.jpg"
+                            }
+                        },
+                        "17": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(17)DETAIL_MODEL.jpg"
+                            }
+                        },
+                        "18": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(18)SITE_SECTION.jpg"
+                            }
+                        },
+                        "19": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(19)SUNSET_PLATFORM.jpg"
+                            }
+                        },
+                        "20": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(20)LEARNING_LAB.jpg"
+                            }
+                        },
+                        "21": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(21)EXPLODED_STRUCTURE.jpg"
+                            }
+                        },
+                        "22": {
+                            "img": {
+                                "src": "/assets/projects/cantagalo-learning-lab/(22)MATERIAL_BUILD-UP.jpg"
+                            }
+                        }
+                    },
+                    "title": "Cantagalo Learning Lab",
+                    "tag": "Graduate Studio",
+                    "url": "academic/cantagalo-learning-lab",
+                    "year": "2016"    
                 },
                 "2": {
+                    "category": "academic",
+                    "description_long": "Long Description",
+                    "description_short": "Short Description",
+                    "location": "Somewhere, UK",
                     "order": {
-                        "feed": "2"
-                    }
+                        "feed": "2",
+                        "menu": "2"
+                    },
+                    "tiles": {
+                        "1": {
+                            "img": {
+                                "src": "/assets/projects/cabin-in-the-woods/cabin_interior.jpg"
+                            }
+                        }
+                    },
+                    "title": "Cabin in the Woods",
+                    "tag": "Graduate Studio",
+                    "url": "academic/cabin-in-the-woods",
+                    "year": "2015"
                 },
                 "3": {
+                    "category": "academic",
+                    "description_long": "Long Description",
+                    "description_short": "Short Description",
+                    "location": "Seattle, WA",
                     "order": {
-                        "feed": "3"
-                    }
+                        "feed": "3",
+                        "menu": "3"
+                    },
+                    "tiles": {
+                        "1": {
+                            "img": {
+                                "src": "/assets/projects/belltown-elementary/placeholder.jpg"
+                            }
+                        }
+                    },
+                    "title": "Belltown Elementary",
+                    "tag": "Graduate Studio",
+                    "url": "academic/belltown-elementary",
+                    "year": "2012"
+                },
+                "4": {
+                    "category": "academic",
+                    "description_long": "Long Description",
+                    "description_short": "Short Description",
+                    "location": "Near the sea, OK",
+                    "order": {
+                        "feed": "4",
+                        "menu": "4"
+                    },
+                    "tiles": {
+                        "1": {
+                            "img": {
+                                "src": "/assets/projects/marine-center/placeholder.jpg"
+                            }
+                        }
+                    },
+                    "title": "Marine Center",
+                    "tag": "Graduate Studio",
+                    "url": "academic/marine-center",
+                    "year": "2012"
+                },
+                "5": {
+                    "category": "academic",
+                    "description_long": "Long Description",
+                    "description_short": "Short Description",
+                    "location": "Seattle, WA",
+                    "order": {
+                        "feed": "5",
+                        "menu": "5"
+                    },
+                    "tiles": {
+                        "1": {
+                            "img": {
+                                "src": "/assets/projects/student-housing/placeholder.jpg"
+                            }
+                        }
+                    },
+                    "title": "Student Housing",
+                    "tag": "Graduate Studio",
+                    "url": "academic/student-housing",
+                    "year": "2012"
+                },
+                "6": {
+                    "category": "academic",
+                    "description_long": "Long Description",
+                    "description_short": "Short Description",
+                    "location": "Seattle, WA",
+                    "order": {
+                        "feed": "6",
+                        "menu": "6"
+                    },
+                    "tiles": {
+                        "1": {
+                            "img": {
+                                "src": "/assets/projects/culinary-school/placeholder.jpg"
+                            }
+                        }
+                    },
+                    "title": "Culinary School",
+                    "tag": "Graduate Studio",
+                    "url": "academic/culinary-school",
+                    "year": "2012"
+                },
+                "7": {
+                    "category": "academic",
+                    "description_long": "Long Description",
+                    "description_short": "Short Description",
+                    "location": "Seattle, WA",
+                    "order": {
+                        "feed": "7",
+                        "menu": "7"
+                    },
+                    "tiles": {
+                        "1": {
+                            "img": {
+                                "src": "/assets/projects/shelter/placeholder.jpg"
+                            }
+                        }
+                    },
+                    "title": "Shelter",
+                    "tag": "Graduate Studio",
+                    "url": "academic/shelter",
+                    "year": "2012"
+                },
+                "8": {
+                    "category": "photography",
+                    "description_long": "Long Description",
+                    "description_short": "Short Description",
+                    "location": "Seattle, WA",
+                    "order": {
+                        "feed": "8",
+                        "menu": "1"
+                    },
+                    "tiles": {
+                        "1": {
+                            "img": {
+                                "src": "/assets/projects/rio/placeholder.jpg"
+                            }
+                        }
+                    },
+                    "title": "Rio",
+                    "tag": "Graduate Studio",
+                    "url": "photography/rio",
+                    "year": "2012"
+                },
+                "9": {
+                    "category": "photography",
+                    "description_long": "Long Description",
+                    "description_short": "Short Description",
+                    "location": "Seattle, WA",
+                    "order": {
+                        "feed": "9",
+                        "menu": "2"
+                    },
+                    "tiles": {
+                        "1": {
+                            "img": {
+                                "src": "/assets/projects/portrait/placeholder.jpg"
+                            }
+                        }
+                    },
+                    "title": "Portrait",
+                    "tag": "Graduate Studio",
+                    "url": "photography/portrait",
+                    "year": "2012"
+                },
+                "10": {
+                    "category": "art",
+                    "description_long": "Long Description",
+                    "description_short": "Short Description",
+                    "location": "Seattle, WA",
+                    "order": {
+                        "feed": "11",
+                        "menu": "1"
+                    },
+                    "tiles": {
+                        "1": {
+                            "img": {
+                                "src": "/assets/projects/built/placeholder.jpg"
+                            }
+                        }
+                    },
+                    "title": "Built",
+                    "tag": "Graduate Studio",
+                    "url": "art/built",
+                    "year": "2012"
+                },
+                "11": {
+                    "category": "art",
+                    "description_long": "Long Description",
+                    "description_short": "Short Description",
+                    "location": "Seattle, WA",
+                    "order": {
+                        "feed": "12",
+                        "menu": "2"
+                    },
+                    "tiles": {
+                        "1": {
+                            "img": {
+                                "src": "/assets/projects/organic/placeholder.jpg"
+                            }
+                        }
+                    },
+                    "title": "Organic",
+                    "tag": "Graduate Studio",
+                    "url": "art/organic",
+                    "year": "2012"
+                },
+                "12": {
+                    "category": "professional",
+                    "description_long": "Long Description",
+                    "description_short": "Short Description",
+                    "location": "Gambia",
+                    "order": {
+                        "feed": "11",
+                        "menu": "1"
+                    },
+                    "tiles": {
+                        "1": {
+                            "img": {
+                                "src": "/assets/projects/gambia-orphanage/placeholder.jpg"
+                            }
+                        }
+                    },
+                    "title": "The Gambia Orphanage",
+                    "tag": "Graduate Studio",
+                    "url": "professional/gambia-orphanage",
+                    "year": "2012"
+                },
+                "13": {
+                    "category": "film",
+                    "description_long": "Long Description",
+                    "description_short": "Short Description",
+                    "location": "Oxford, UK",
+                    "order": {
+                        "feed": "false",
+                        "menu": "1"
+                    },
+                    "tiles": {
+                        "1": {
+                            "img": {
+                                "src": "/assets/projects/gambia-orphanage/placeholder.jpg"
+                            }
+                        }
+                    },
+                    "title": "Cabin Essence",
+                    "tag": "Graduate Studio",
+                    "url": "film/cabin-essence",
+                    "year": "2012"
                 }
             }
         }
