@@ -69,21 +69,22 @@ var SiteProjectDescription = React.createClass({
     // Style
     //---------------------------------------------------------------------------
 
-    style: function(container) {
+    style: function(container, dimensions) {
         var style = {
             div: {
                 position: 'relative',
-                margin: '0 3vw 0 8vw',
+                marginLeft: dimensions.margin.lg.left + 'px',
+                marginRight: dimensions.margin.lg.right + 'px',
                 display: 'inline-flex',
                 float: 'left',
                 height: '100%',
-                width: '30vw',
+                width: dimensions.width.lg + 'px',
                 flexDirection: 'column',
                 justifyContent: 'flex-end',
                 alignItems: 'center',
                 textAlign: 'center',
                 '@media (max-width: 48em)': {
-                    width: '60vw'
+                    width: dimensions.width.sm + 'px'
                 }
             },
             title: {
@@ -118,8 +119,8 @@ var SiteProjectDescription = React.createClass({
 
     render: function() {
 
-        var {project, seed, site, ...other} = this.props;
-        var style = this.style(site.private.container);
+        var {dimensions, project, seed, site, ...other} = this.props;
+        var style = this.style(site.private.container, dimensions.width.description);
 
         return (
             <div style={style.div}>

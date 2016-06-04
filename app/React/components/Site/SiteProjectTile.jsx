@@ -69,14 +69,14 @@ var SiteProjectTile = React.createClass({
     // Style
     //---------------------------------------------------------------------------
 
-    style: function(container) {
+    style: function(container, dimensions) {
         var style = {
             div: {
                 position: 'relative',
                 display: 'inline-block',
                 float: 'left',
-                height: '75vh',
-                margin: '0 0 0 5vw'
+                height: dimensions.height,
+                marginLeft: dimensions.margin.lg,
             },
             img: {
                 position: 'relative',
@@ -94,8 +94,8 @@ var SiteProjectTile = React.createClass({
 
     render: function() {
 
-        var {site, tile, ...other} = this.props;
-        var style = this.style(site.private.container);
+        var {dimensions, site, tile, ...other} = this.props;
+        var style = this.style(site.private.container, dimensions.width.tiles);
 
         return (
             <div style={style.div}>

@@ -62,6 +62,7 @@ var SiteBundle = React.createClass({
         siteStore.addChangeListener(this._onChange);
         seedActions.fetchSeed();
         siteActions.fetchSite();
+        window.addEventListener('resize', this.handleResize);
     },
 
     //-------------------------------------------------------------------------
@@ -87,6 +88,7 @@ var SiteBundle = React.createClass({
     componentWillUnmount: function() {
         seedStore.removeChangeListener(this._onChange);
         siteStore.removeChangeListener(this._onChange);
+        window.removeEventListener('resize', this.handleResize);
     },
 
     //-------------------------------------------------------------------------
@@ -101,8 +103,12 @@ var SiteBundle = React.createClass({
     },
 
     //-------------------------------------------------------------------------
-    // Handle Change Content
+    // Handle Resize
     //-------------------------------------------------------------------------
+
+    handleResize: function() {
+        this.forceUpdate();
+    },
 
     //-------------------------------------------------------------------------
     // Objects

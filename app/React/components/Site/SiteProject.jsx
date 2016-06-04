@@ -92,12 +92,50 @@ var SiteProject = React.createClass({
         };
         // The multiplier for the following two calculations comes from
         // description container width + margins + 0.01
-        var containerWidthLg = dimensions.width * 0.42;
-        var containerWidthSm = dimensions.width * 0.72;
-        var marginWidth = count * 0.05 * dimensions.width;
-        var widthLg = width + marginWidth + containerWidthLg;
-        var widthSm = width + marginWidth + containerWidthSm;
-        return {lg: widthLg, sm: widthSm};
+        var descriptionWidthLg = dimensions.width * 0.3;
+        var descriptionWidthSm = dimensions.width * 0.6;
+        var descriptionMarginLgLeft = dimensions.width * 0.08;
+        var descriptionMarginLgRight = dimensions.width * 0.03;
+        var descriptionMarginSmLeft = dimensions.width * 0.08;
+        var descriptionMarginSmRight = dimensions.width * 0.03;
+        var tilesMarginLg = dimensions.width * 0.05;
+        var tilesMarginSm = dimensions.width * 0.05
+        var marginWidthLg = count * tilesMarginLg;
+        var marginWidthSm = count * tilesMarginSm;
+        var containerExtra = dimensions.width * 0.01;
+        var containerWidthLg = width + marginWidthLg + descriptionWidthLg + descriptionMarginLgLeft + descriptionMarginLgRight + containerExtra;
+        var containerWidthSm = width + marginWidthSm + descriptionWidthSm + descriptionMarginSmLeft + descriptionMarginSmRight + containerExtra;
+        return ({
+            container: {
+                width: {
+                    lg: containerWidthLg,
+                    sm: containerWidthSm
+                }
+            },
+            description: {
+                width: {
+                    lg: descriptionWidthLg,
+                    sm: descriptionWidthSm
+                },
+                margin: {
+                    lg: {
+                        left: descriptionMarginLgLeft,
+                        right: descriptionMarginLgRight
+                    },
+                    sm: {
+                        left: descriptionMarginSmLeft,
+                        right: descriptionMarginSmRight
+                    }
+                }
+            },
+            tiles: {
+                height: height,
+                margin: {
+                    lg: tilesMarginLg,
+                    sm: tilesMarginSm
+                }
+            }
+        });
     },
 
     //---------------------------------------------------------------------------
@@ -127,11 +165,11 @@ var SiteProject = React.createClass({
     // Tiles
     //---------------------------------------------------------------------------
 
-    tiles: function(seed, site) {
+    tiles: function(dimensions, seed, site) {
         var tiles = [];
         for (var tile in seed) {
             tiles.push(
-                <SiteProjectTile key={tile} site={site} tile={seed[tile]} />
+                <SiteProjectTile key={tile} dimensions={dimensions} site={site} tile={seed[tile]} />
             );
         };
         return tiles;
@@ -159,10 +197,10 @@ var SiteProject = React.createClass({
             },
             container: {
                 height: dimensions.height + 'px',
-                width: dimensions.width.lg + 'px',
+                width: dimensions.width.container.width.lg + 'px',
                 display: 'block',
                 '@media (max-width: 48em)': {
-                    width: dimensions.width.sm + 'px'
+                    width: dimensions.width.container.width.sm + 'px'
                 }
             }
         };
@@ -178,13 +216,15 @@ var SiteProject = React.createClass({
 
         var {seed, site, ...other} = this.props;
         var project = this.project(seed.public.projects, site.private.url);
-        var tiles = this.tiles(seed.public.projects[project].tiles, site);
-        var style = this.style(site.private.container, this.containerDimensions(seed.public.projects[project].tiles));
+        var dimensions = this.containerDimensions(seed.public.projects[project].tiles);
+        console.log(dimensions);
+        var tiles = this.tiles(dimensions, seed.public.projects[project].tiles, site);
+        var style = this.style(site.private.container, dimensions);
 
         return (
             <section id="site-project" style={style.section}>
                 <div style={style.container}>
-                    <SiteProjectDescription project={project} seed={seed} site={site} {...other} />
+                    <SiteProjectDescription dimensions={dimensions} project={project} seed={seed} site={site} {...other} />
                     {tiles}
                 </div>
             </section>
