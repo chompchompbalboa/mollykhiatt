@@ -5,10 +5,12 @@
 var React = require('react');
 var Radium = require('radium');
 
+var SiteProjectTile = require('./SiteProjectTile.jsx');
+
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
-var SiteCoverDescription = React.createClass({
+var SiteProjectTiles = React.createClass({
     //---------------------------------------------------------------------------
     // Display Name
     //---------------------------------------------------------------------------
@@ -62,6 +64,22 @@ var SiteCoverDescription = React.createClass({
     //---------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------
+    // Tiles
+    //---------------------------------------------------------------------------
+
+    tiles: function(seed, site) {
+        console.log(seed);
+        var tiles = [];
+        for (var tile in seed) {
+            tiles.push(
+                <SiteProjectTile key={tile} site={site} tile={seed[tile]} />
+            );
+        }
+        console.log(tiles);
+        return tiles;
+    },
+
+    //---------------------------------------------------------------------------
     // Handles
     //---------------------------------------------------------------------------
 
@@ -71,31 +89,6 @@ var SiteCoverDescription = React.createClass({
 
     style: function(container) {
         var style = {
-            section: {
-                zIndex: '0',
-                position: 'relative',
-                top: '80vh',
-                left: '0',
-                height: '10vh',
-                width: '100%',
-                backgroundColor: 'rgba(255,255,255,0.9)',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                letterSpacing: '1px',
-                '@media (max-width: 24em)': {
-                    flexDirection: 'column',
-                }
-            },
-            name: {
-                margin: '0 4px 0 0',
-                color: 'black',
-                textTransform: 'uppercase'
-            },
-            category: {
-                color: 'gray',
-                textTransform: 'uppercase'
-            }
         };
 
         return style;
@@ -107,14 +100,12 @@ var SiteCoverDescription = React.createClass({
 
     render: function() {
 
-        var {site, ...other} = this.props;
+        var {project, seed, site, ...other} = this.props;
         var style = this.style(site.private.container);
+        var tiles = this.tiles(seed.public.projects[project].tiles, site);
 
         return (
-            <section key="section" id="site-cover-description" style={style.section}>
-                <div style={style.name}>Cantagalo Learning Lab</div>
-                <div style={style.category}>Academic</div>
-            </section>
+            {tiles}
         )
     }
     
@@ -123,4 +114,4 @@ var SiteCoverDescription = React.createClass({
 //-----------------------------------------------------------------------------
 // Export
 //-----------------------------------------------------------------------------
-module.exports = Radium(SiteCoverDescription);
+module.exports = Radium(SiteProjectTiles);

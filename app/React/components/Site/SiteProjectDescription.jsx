@@ -72,13 +72,19 @@ var SiteProjectDescription = React.createClass({
     style: function(container) {
         var style = {
             div: {
+                position: 'relative',
+                margin: '0 3vw 0 8vw',
+                display: 'inline-flex',
+                float: 'left',
                 height: '100%',
-                display: 'flex',
+                width: '30vw',
                 flexDirection: 'column',
                 justifyContent: 'flex-end',
                 alignItems: 'center',
                 textAlign: 'center',
-                padding: '0 3vw 0 6vw'
+                '@media (max-width: 48em)': {
+                    width: '60vw'
+                }
             },
             title: {
                 textTransform: 'uppercase',
@@ -90,20 +96,16 @@ var SiteProjectDescription = React.createClass({
                 fontSize: '11px',
                 color: 'rgba(200, 200, 200, 1)'
             },
-            span: {
+            span_inner: {
                 margin: '0 0.5vw 0 0.5vw'
             },
             description: {
                 margin: '4vh 0 0 0',
-                width: '30vw',
                 minHeight: '20vh',
                 textAlign: 'justify',
                 fontFamily: 'Arial',
                 fontSize: '13px',
-                letterSpacing: 'normal',
-                '@media (max-width: 48em)': {
-                    width: '50vw'
-                }
+                letterSpacing: 'normal'
             }
         };
 
@@ -125,7 +127,7 @@ var SiteProjectDescription = React.createClass({
                     {seed.public.projects[project].title}
                 </div>
                 <div style={style.subtitle}>
-                    {seed.public.projects[project].tag}<span style={style.span}>|</span>{seed.public.projects[project].location}
+                    {seed.public.projects[project].tag}<span style={style.span_inner}>|</span>{seed.public.projects[project].location}
                 </div>
                 <div style={style.description}>
                     {seed.public.projects[project].description_long}

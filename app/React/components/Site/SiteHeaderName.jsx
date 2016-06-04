@@ -72,7 +72,7 @@ var SiteHeaderName = React.createClass({
         var changes = [
             {"key": "private.active", "value": "home"},
             {"key": "private.SiteHeader.color", "value": "white"},
-            {"key": "private.SiteCoverOverlay.opacity", "value": "0"}
+            {"key": "private.SiteCoverOverlay.opacity", "value": "0.25"}
         ];
         siteActions.changeContent(changes);
     },

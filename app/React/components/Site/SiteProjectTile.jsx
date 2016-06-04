@@ -72,12 +72,16 @@ var SiteProjectTile = React.createClass({
     style: function(container) {
         var style = {
             div: {
-                margin: '0 0 0 5vw',
-                height: '100%'
+                position: 'relative',
+                display: 'inline-block',
+                float: 'left',
+                height: '75vh',
+                margin: '0 0 0 5vw'
             },
             img: {
-                height: '100%',
-                width: 'auto'
+                position: 'relative',
+                width: 'auto',
+                height: '100%'
             }
         };
 

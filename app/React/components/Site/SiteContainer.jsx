@@ -77,7 +77,7 @@ var SiteContainer = React.createClass({
             section: {
                 zIndex: '2',
                 position: 'relative',
-                top: '84vh',
+                top: '89vh',
                 left: '0',
                 width: '100%',
                 overflow: 'hidden'

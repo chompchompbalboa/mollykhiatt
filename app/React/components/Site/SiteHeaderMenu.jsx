@@ -113,7 +113,7 @@ var SiteHeaderMenu = React.createClass({
             {"key": "private.active", "value": active},
             {"key": "private.previous", "value": previous},
             {"key": "private.SiteHeader.color", "value": color},
-            {"key": "private.SiteCoverOverlay.opacity", "value": "0"}
+            {"key": "private.SiteCoverOverlay.opacity", "value": "0.25"}
         ];
         siteActions.changeContent(changes);
     },
