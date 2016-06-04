@@ -74,7 +74,7 @@ var SiteCoverDescription = React.createClass({
             section: {
                 zIndex: '0',
                 position: 'relative',
-                top: '80vh',
+                top: '81vh',
                 left: '0',
                 height: '10vh',
                 width: '100%',
