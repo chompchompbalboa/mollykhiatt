@@ -154,7 +154,8 @@ var SiteProject = React.createClass({
                 height: dimensions.height + 'px',
                 overflowX: 'scroll',
                 overflowY: 'hidden',
-                whiteSpace: 'nowrap'
+                whiteSpace: 'nowrap',
+                overflowScrolling: 'touch'
             },
             container: {
                 height: dimensions.height + 'px',
