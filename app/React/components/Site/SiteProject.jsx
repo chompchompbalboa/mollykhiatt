@@ -153,14 +153,12 @@ var SiteProject = React.createClass({
                 width: '100vw',
                 height: dimensions.height + 'px',
                 overflowX: 'scroll',
-                overflowY: 'hidden',
                 whiteSpace: 'nowrap',
-                overflowScrolling: 'touch'
+                WebkitOverflowScrolling: 'touch'
             },
             container: {
                 height: dimensions.height + 'px',
                 width: dimensions.width.lg + 'px',
-                overflowX: 'visible',
                 display: 'block',
                 '@media (max-width: 48em)': {
                     width: dimensions.width.sm + 'px'
