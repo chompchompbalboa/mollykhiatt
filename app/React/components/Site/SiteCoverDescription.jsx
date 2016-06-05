@@ -91,10 +91,6 @@ var SiteCoverDescription = React.createClass({
                 margin: '0 4px 0 0',
                 color: 'black',
                 textTransform: 'uppercase'
-            },
-            category: {
-                color: 'gray',
-                textTransform: 'uppercase'
             }
         };
 
@@ -113,7 +109,6 @@ var SiteCoverDescription = React.createClass({
         return (
             <section key="section" id="site-cover-description" style={style.section}>
                 <div style={style.name}>Cantagalo Learning Lab</div>
-                <div style={style.category}>Academic</div>
             </section>
         )
     }

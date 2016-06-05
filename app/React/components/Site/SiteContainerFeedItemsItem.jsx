@@ -110,7 +110,7 @@ var SiteContainerFeedItemsItem = React.createClass({
                 height: 'auto'
             },
             title: {
-                margin: '8px 0 0 0',
+                margin: '16px 0 0 0',
                 fontFamily: 'futura-pt',
                 fontSize: '16px',
                 fontWeight: '300',
@@ -144,8 +144,8 @@ var SiteContainerFeedItemsItem = React.createClass({
         return (
             <section key="section" style={style.section}>
                 <div style={style.container}>
-                    <img src={project.tiles['1'].img.src} style={style.img}></img>
-                    <div style={style.title}>{project.title}, {project.year}</div>
+                    <img src={project.feed_photo} style={style.img}></img>
+                    <div style={style.title}>{project.title}</div>
                     <div style={style.description}>{project.description_short}</div>
                 </div>
             </section>

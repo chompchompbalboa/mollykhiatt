@@ -6,11 +6,14 @@ db.seeds.insert(
         },
         "public": {
             "name": "Molly Kay Hiatt",
+            "phone": "+1 206 307 5405",
+            "email": "mollykhiatt@gmail.com",
             "projects": {
                 "1": {
                     "category": "academic",
                     "description_long": "",
                     "description_short": "",
+                    "feed_photo": "/assets/projects/cantagalo-learning-lab/(8)SECTION_PERSPECTIVE.jpg",
                     "location": "Rio De Janeiro, Br",
                     "order": {
                         "feed": "1",
@@ -27,147 +30,147 @@ db.seeds.insert(
                         "2": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(2)BALCONY_VIEW.jpg",
-                                "width": "922",
+                                "width": "1100",
                                 "height": "620"
                             }
                         },
                         "3": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(3)SITE_PLAN.jpg",
-                                "width": "922",
+                                "width": "600",
                                 "height": "620"
                             }
                         },
                         "4": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(4)SITE_GRID.jpg",
-                                "width": "922",
+                                "width": "770",
                                 "height": "620"
                             }
                         },
                         "5": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(5)TOWN_SQUARE.jpg",
-                                "width": "922",
+                                "width": "999",
                                 "height": "620"
                             }
                         },
                         "6": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(6)MODEL_IMAGES.jpg",
-                                "width": "922",
+                                "width": "1366",
                                 "height": "620"
                             }
                         },
                         "7": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(7)DAY_VIEW.jpg",
-                                "width": "922",
+                                "width": "1101",
                                 "height": "620"
                             }
                         },
                         "8": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(8)SECTION_PERSPECTIVE.jpg",
-                                "width": "922",
+                                "width": "1169",
                                 "height": "620"
                             }
                         },
                         "9": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(9)LEVEL_ONE.jpg",
-                                "width": "922",
+                                "width": "950",
                                 "height": "620"
                             }
                         },
                         "10": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(10)LEVEL_TWO.jpg",
-                                "width": "922",
+                                "width": "950",
                                 "height": "620"
                             }
                         },
                         "11": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(11)LEVEL_THREE.jpg",
-                                "width": "922",
+                                "width": "950",
                                 "height": "620"
                             }
                         },
                         "12": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(12)LEVEL_FOUR.jpg",
-                                "width": "922",
+                                "width": "950",
                                 "height": "620"
                             }
                         },
                         "13": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(13)LEVEL_FIVE.jpg",
-                                "width": "922",
+                                "width": "950",
                                 "height": "620"
                             }
                         },
                         "14": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(14)LEVEL_SIX.jpg",
-                                "width": "922",
+                                "width": "950",
                                 "height": "620"
                             }
                         },
                         "15": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(15)LEVEL_SEVEN.jpg",
-                                "width": "922",
+                                "width": "950",
                                 "height": "620"
                             }
                         },
                         "16": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(16)SITE_MODEL.jpg",
-                                "width": "922",
+                                "width": "1153",
                                 "height": "620"
                             }
                         },
                         "17": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(17)DETAIL_MODEL.jpg",
-                                "width": "922",
+                                "width": "997",
                                 "height": "620"
                             }
                         },
                         "18": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(18)SITE_SECTION.jpg",
-                                "width": "922",
+                                "width": "1366",
                                 "height": "620"
                             }
                         },
                         "19": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(19)SUNSET_PLATFORM.jpg",
-                                "width": "922",
+                                "width": "1004",
                                 "height": "620"
                             }
                         },
                         "20": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(20)LEARNING_LAB.jpg",
-                                "width": "922",
+                                "width": "1082",
                                 "height": "620"
                             }
                         },
                         "21": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(21)EXPLODED_STRUCTURE.jpg",
-                                "width": "922",
+                                "width": "624",
                                 "height": "620"
                             }
                         },
                         "22": {
                             "img": {
                                 "src": "/assets/projects/cantagalo-learning-lab/(22)MATERIAL_BUILD-UP.jpg",
-                                "width": "922",
+                                "width": "782",
                                 "height": "620"
                             }
                         }
@@ -181,52 +184,53 @@ db.seeds.insert(
                     "category": "academic",
                     "description_long": "",
                     "description_short": "",
+                    "feed_photo": "/assets/projects/cabin-in-the-woods/(3)Front_Porch.jpg",
                     "location": "United Kingdom",
                     "order": {
-                        "feed": "2",
+                        "feed": "3",
                         "menu": "2"
                     },
                     "tiles": {
                         "1": {
                             "img": {
                                 "src": "/assets/projects/cabin-in-the-woods/(1) Interior_Entrance.jpg",
-                                "width": "922",
-                                "height": "620"
+                                "width": "2002",
+                                "height": "1074"
                             }
                         },
                         "2": {
                             "img": {
                                 "src": "/assets/projects/cabin-in-the-woods/(2)Interior_Room.jpg",
-                                "width": "922",
-                                "height": "620"
+                                "width": "1293",
+                                "height": "878"
                             }
                         },
                         "3": {
                             "img": {
                                 "src": "/assets/projects/cabin-in-the-woods/(3)Front_Porch.jpg",
-                                "width": "922",
-                                "height": "620"
+                                "width": "425",
+                                "height": "647"
                             }
                         },
                         "4": {
                             "img": {
                                 "src": "/assets/projects/cabin-in-the-woods/Cabin_In the woods.jpg",
-                                "width": "922",
-                                "height": "620"
+                                "width": "501",
+                                "height": "285"
                             }
                         },
                         "5": {
                             "img": {
                                 "src": "/assets/projects/cabin-in-the-woods/Cabin_skylight.jpg",
-                                "width": "922",
-                                "height": "620"
+                                "width": "1320",
+                                "height": "1776"
                             }
                         },
                         "6": {
                             "img": {
                                 "src": "/assets/projects/cabin-in-the-woods/car lights_distance.jpg",
-                                "width": "922",
-                                "height": "620"
+                                "width": "429",
+                                "height": "210"
                             }
                         }
                     },
@@ -239,54 +243,67 @@ db.seeds.insert(
                     "category": "academic",
                     "description_long": "",
                     "description_short": "",
+                    "feed_photo": "/assets/projects/belltown-elementary/(7)South_Section.jpg",
                     "location": "Seattle, WA",
                     "order": {
-                        "feed": "3",
+                        "feed": "4",
                         "menu": "3"
                     },
                     "tiles": {
                         "1": {
                             "img": {
                                 "src": "/assets/projects/belltown-elementary/(1)Exterior_View.jpg",
-                                "width": "922",
+                                "width": "959",
                                 "height": "620"
                             }
                         },
                         "2": {
                             "img": {
                                 "src": "/assets/projects/belltown-elementary/(2) Gym_Entrance.jpg",
-                                "width": "922",
+                                "width": "920",
                                 "height": "620"
                             }
                         },
                         "3": {
                             "img": {
-                                "src": "/assets/projects/belltown-elementary/(3) Floor plans.jpg"
+                                "src": "/assets/projects/belltown-elementary/(3) Floor plans.jpg",
+                                "width": "955",
+                                "height": "620"
                             }
                         },
                         "4": {
                             "img": {
-                                "src": "/assets/projects/belltown-elementary/(4)Atrium.jpg"
+                                "src": "/assets/projects/belltown-elementary/(4)Atrium.jpg",
+                                "width": "887",
+                                "height": "620"
                             }
                         },
                         "5": {
                             "img": {
-                                "src": "/assets/projects/belltown-elementary/(5)Wall_Construction_Diagram.jpg"
+                                "src": "/assets/projects/belltown-elementary/(5)Wall_Construction_Diagram.jpg",
+                                "width": "405",
+                                "height": "620"
                             }
                         },
                         "6": {
                             "img": {
-                                "src": "/assets/projects/belltown-elementary/(6) Diagrammatic_Studies.jpg"
+                                "src": "/assets/projects/belltown-elementary/(6) Diagrammatic_Studies.jpg",
+                                "width": "977",
+                                "height": "620"
                             }
                         },
                         "7": {
                             "img": {
-                                "src": "/assets/projects/belltown-elementary/(7)South_Section.jpg"
+                                "src": "/assets/projects/belltown-elementary/(7)South_Section.jpg",
+                                "width": "1094",
+                                "height": "620"
                             }
                         },
                         "8": {
                             "img": {
-                                "src": "/assets/projects/belltown-elementary/(8)Programmatic_Diagram.jpg"
+                                "src": "/assets/projects/belltown-elementary/(8)Programmatic_Diagram.jpg",
+                                "width": "347",
+                                "height": "620"
                             }
                         },
                     },
@@ -299,35 +316,46 @@ db.seeds.insert(
                     "category": "academic",
                     "description_long": "",
                     "description_short": "",
+                    "feed_photo": "/assets/projects/marine-center/(5)Concept_Sketch and model.jpg",
                     "location": "Seattle, WA",
                     "order": {
-                        "feed": "4",
+                        "feed": "5",
                         "menu": "4"
                     },
                     "tiles": {
                         "1": {
                             "img": {
-                                "src": "/assets/projects/marine-center/(1)Street_Entrance.jpg"
+                                "src": "/assets/projects/marine-center/(1)Street_Entrance.jpg",
+                                "width": "992",
+                                "height": "620"
                             }
                         },
                         "2": {
                             "img": {
-                                "src": "/assets/projects/marine-center/(2)First Floor.jpg"
+                                "src": "/assets/projects/marine-center/(2)First Floor.jpg",
+                                "width": "841",
+                                "height": "457"
                             }
                         },
                         "3": {
                             "img": {
-                                "src": "/assets/projects/marine-center/(3)Second Floor.jpg"
+                                "src": "/assets/projects/marine-center/(3)Second Floor.jpg",
+                                "width": "841",
+                                "height": "457"
                             }
                         },
                         "4": {
                             "img": {
-                                "src": "/assets/projects/marine-center/(4)View from Puget Sound.jpg"
+                                "src": "/assets/projects/marine-center/(4)View from Puget Sound.jpg",
+                                "width": "1366",
+                                "height": "620"
                             }
                         },
                         "5": {
                             "img": {
-                                "src": "/assets/projects/marine-center/(5)Concept_Sketch and model.jpg"
+                                "src": "/assets/projects/marine-center/(5)Concept_Sketch and model.jpg",
+                                "width": "566",
+                                "height": "620"
                             }
                         }
                     },
@@ -340,35 +368,46 @@ db.seeds.insert(
                     "category": "academic",
                     "description_long": "",
                     "description_short": "",
+                    "feed_photo": "/assets/projects/student-housing/(1)East_Section.jpg",
                     "location": "Liverpool, UK",
                     "order": {
-                        "feed": "5",
+                        "feed": "2",
                         "menu": "5"
                     },
                     "tiles": {
                         "1": {
                             "img": {
-                                "src": "/assets/projects/student-housing/(1)East_Section.jpg"
+                                "src": "/assets/projects/student-housing/(1)East_Section.jpg",
+                                "width": "1250",
+                                "height": "620"
                             }
                         },
                         "2": {
                             "img": {
-                                "src": "/assets/projects/student-housing/(2)eXTERIOR.jpg"
+                                "src": "/assets/projects/student-housing/(2)eXTERIOR.jpg",
+                                "width": "1287",
+                                "height": "620"
                             }
                         },
                         "3": {
                             "img": {
-                                "src": "/assets/projects/student-housing/(3)Site_Context.jpg"
+                                "src": "/assets/projects/student-housing/(3)Site_Context.jpg",
+                                "width": "333",
+                                "height": "620"
                             }
                         },
                         "4": {
                             "img": {
-                                "src": "/assets/projects/student-housing/(4)Multi-faith room.jpg"
+                                "src": "/assets/projects/student-housing/(4)Multi-faith room.jpg",
+                                "width": "815",
+                                "height": "620"
                             }
                         },
                         "5": {
                             "img": {
-                                "src": "/assets/projects/student-housing/(5)South_elevation.jpg"
+                                "src": "/assets/projects/student-housing/(5)South_elevation.jpg",
+                                "width": "687",
+                                "height": "620"
                             }
                         }
                     },
@@ -381,6 +420,7 @@ db.seeds.insert(
                     "category": "academic",
                     "description_long": "",
                     "description_short": "",
+                    "feed_photo": "/assets/projects/culinary-school/(5)Site_Materials.jpg",
                     "location": "Seattle, WA",
                     "order": {
                         "feed": "6",
@@ -389,27 +429,37 @@ db.seeds.insert(
                     "tiles": {
                         "1": {
                             "img": {
-                                "src": "/assets/projects/culinary-school/(1)Main_Entrance.jpg"
+                                "src": "/assets/projects/culinary-school/(1)Main_Entrance.jpg",
+                                "width": "1167",
+                                "height": "620"
                             }
                         },
                         "2": {
                             "img": {
-                                "src": "/assets/projects/culinary-school/(2)Floor_Plans.jpg"
+                                "src": "/assets/projects/culinary-school/(2)Floor_Plans.jpg",
+                                "width": "275",
+                                "height": "620"
                             }
                         },
                         "3": {
                             "img": {
-                                "src": "/assets/projects/culinary-school/(3)Interior_Views.jpg"
+                                "src": "/assets/projects/culinary-school/(3)Interior_Views.jpg",
+                                "width": "595",
+                                "height": "620"
                             }
                         },
                         "4": {
                             "img": {
-                                "src": "/assets/projects/culinary-school/(4)Exploded Diagram.jpg"
+                                "src": "/assets/projects/culinary-school/(4)Exploded Diagram.jpg",
+                                "width": "284",
+                                "height": "620"
                             }
                         },
                         "5": {
                             "img": {
-                                "src": "/assets/projects/culinary-school/(5)Site_Materials.jpg"
+                                "src": "/assets/projects/culinary-school/(5)Site_Materials.jpg",
+                                "width": "699",
+                                "height": "620"
                             }
                         }
                     },
@@ -422,6 +472,7 @@ db.seeds.insert(
                     "category": "academic",
                     "description_long": "",
                     "description_short": "",
+                    "feed_photo": "/assets/projects/shelter/(1)Shelter_entrance.jpg",
                     "location": "Seattle, WA",
                     "order": {
                         "feed": "7",
@@ -430,17 +481,23 @@ db.seeds.insert(
                     "tiles": {
                         "1": {
                             "img": {
-                                "src": "/assets/projects/shelter/(1)Shelter_entrance.jpg"
+                                "src": "/assets/projects/shelter/(1)Shelter_entrance.jpg",
+                                "width": "847",
+                                "height": "620"
                             }
                         },
                         "2": {
                             "img": {
-                                "src": "/assets/projects/shelter/(2)Interior and elevation.jpg"
+                                "src": "/assets/projects/shelter/(2)Interior and elevation.jpg",
+                                "width": "483",
+                                "height": "620"
                             }
                         },
                         "3": {
                             "img": {
-                                "src": "/assets/projects/shelter/(3)Physical model.jpg"
+                                "src": "/assets/projects/shelter/(3)Physical model.jpg",
+                                "width": "604",
+                                "height": "620"
                             }
                         }
                     },
@@ -453,6 +510,7 @@ db.seeds.insert(
                     "category": "academic",
                     "description_long": "",
                     "description_short": "",
+                    "feed_photo": "/assets/projects/photo-studio/(1)Exterior_Entrance.jpg",
                     "location": "Seattle, WA",
                     "order": {
                         "feed": "8",
@@ -461,17 +519,23 @@ db.seeds.insert(
                     "tiles": {
                         "1": {
                             "img": {
-                                "src": "/assets/projects/photo-studio/(1)Exterior_Entrance.jpg"
+                                "src": "/assets/projects/photo-studio/(1)Exterior_Entrance.jpg",
+                                "width": "788",
+                                "height": "620"
                             }
                         },
                         "2": {
                             "img": {
-                                "src": "/assets/projects/photo-studio/(2)Interior_Views.jpg"
+                                "src": "/assets/projects/photo-studio/(2)Interior_Views.jpg",
+                                "width": "463",
+                                "height": "620"
                             }
                         },
                         "3": {
                             "img": {
-                                "src": "/assets/projects/photo-studio/(3)Section and Roof plan.jpg"
+                                "src": "/assets/projects/photo-studio/(3)Section and Roof plan.jpg",
+                                "width": "570",
+                                "height": "620"
                             }
                         }
                     },
@@ -484,6 +548,7 @@ db.seeds.insert(
                     "category": "photography",
                     "description_long": "",
                     "description_short": "",
+                    "feed_photo": "/assets/projects/rio/photography_vidigal.jpg",
                     "location": "Rio De Janeiro, BR",
                     "order": {
                         "feed": "9",
@@ -492,52 +557,72 @@ db.seeds.insert(
                     "tiles": {
                         "1": {
                             "img": {
-                                "src": "/assets/projects/rio/Photography_favela_dog.jpg"
+                                "src": "/assets/projects/rio/Photography_favela_dog.jpg",
+                                "width": "768",
+                                "height": "1137"
                             }
                         },
                         "2": {
                             "img": {
-                                "src": "/assets/projects/rio/Photography_graffiti.jpg"
+                                "src": "/assets/projects/rio/Photography_graffiti.jpg",
+                                "width": "1137",
+                                "height": "768"
                             }
                         },
                         "3": {
                             "img": {
-                                "src": "/assets/projects/rio/Photography_kids_.jpg"
+                                "src": "/assets/projects/rio/Photography_kids_.jpg",
+                                "width": "1137",
+                                "height": "768"
                             }
                         },
                         "4": {
                             "img": {
-                                "src": "/assets/projects/rio/photography_mist.jpg"
+                                "src": "/assets/projects/rio/photography_mist.jpg",
+                                "width": "1228",
+                                "height": "1818"
                             }
                         },
                         "5": {
                             "img": {
-                                "src": "/assets/projects/rio/photography_mototaxi 2.jpg"
+                                "src": "/assets/projects/rio/photography_mototaxi 2.jpg",
+                                "width": "1818",
+                                "height": "1228"
                             }
                         },
                         "6": {
                             "img": {
-                                "src": "/assets/projects/rio/Photography_mototaxi.jpg"
+                                "src": "/assets/projects/rio/Photography_mototaxi.jpg",
+                                "width": "1818",
+                                "height": "1228"
                             }
                         },
                         "7": {
                             "img": {
-                                "src": "/assets/projects/rio/photography_rochina.jpg"
+                                "src": "/assets/projects/rio/photography_rochina.jpg",
+                                "width": "1818",
+                                "height": "1228"
                             }
                         },
                         "8": {
                             "img": {
-                                "src": "/assets/projects/rio/photography_vidigal.jpg"
+                                "src": "/assets/projects/rio/photography_vidigal.jpg",
+                                "width": "1818",
+                                "height": "1228"
                             }
                         },
                         "9": {
                             "img": {
-                                "src": "/assets/projects/rio/Photography_workers.jpg"
+                                "src": "/assets/projects/rio/Photography_workers.jpg",
+                                "width": "768",
+                                "height": "1137"
                             }
                         },
                         "10": {
                             "img": {
-                                "src": "/assets/projects/rio/photograpy_vidogal_view.jpg"
+                                "src": "/assets/projects/rio/photograpy_vidogal_view.jpg",
+                                "width": "1818",
+                                "height": "1228"
                             }
                         }
                     },
@@ -550,6 +635,7 @@ db.seeds.insert(
                     "category": "photography",
                     "description_long": "",
                     "description_short": "",
+                    "feed_photo": "/assets/projects/portrait/RED.jpg",
                     "location": "London, UK",
                     "order": {
                         "feed": "10",
@@ -558,22 +644,30 @@ db.seeds.insert(
                     "tiles": {
                         "1": {
                             "img": {
-                                "src": "/assets/projects/portrait/RED.jpg"
+                                "src": "/assets/projects/portrait/RED.jpg",
+                                "width": "2136",
+                                "height": "2977"
                             }
                         },
                         "2": {
                             "img": {
-                                "src": "/assets/projects/portrait/PURPLE.jpg"
+                                "src": "/assets/projects/portrait/PURPLE.jpg",
+                                "width": "2101",
+                                "height": "2977"
                             }
                         },
                         "3": {
                             "img": {
-                                "src": "/assets/projects/portrait/BRICK.jpg"
+                                "src": "/assets/projects/portrait/BRICK.jpg",
+                                "width": "1965",
+                                "height": "2921"
                             }
                         },
                         "4": {
                             "img": {
-                                "src": "/assets/projects/portrait/YELLOW.jpg"
+                                "src": "/assets/projects/portrait/YELLOW.jpg",
+                                "width": "2277",
+                                "height": "2921"
                             }
                         }
                     },
@@ -586,6 +680,7 @@ db.seeds.insert(
                     "category": "art",
                     "description_long": "",
                     "description_short": "",
+                    "feed_photo": "/assets/projects/built/BLDG_BAR.jpg",
                     "location": "Assorted Locations",
                     "order": {
                         "feed": "11",
@@ -594,32 +689,44 @@ db.seeds.insert(
                     "tiles": {
                         "1": {
                             "img": {
-                                "src": "/assets/projects/built/BLD_BLUFF.jpg"
+                                "src": "/assets/projects/built/BLD_BLUFF.jpg",
+                                "width": "169",
+                                "height": "212"
                             }
                         },
                         "2": {
                             "img": {
-                                "src": "/assets/projects/built/BLDG_AFTERNOON.jpg"
+                                "src": "/assets/projects/built/BLDG_AFTERNOON.jpg",
+                                "width": "163",
+                                "height": "277"
                             }
                         },
                         "3": {
                             "img": {
-                                "src": "/assets/projects/built/BLDG_ALLEY.jpg"
+                                "src": "/assets/projects/built/BLDG_ALLEY.jpg",
+                                "width": "186",
+                                "height": "245"
                             }
                         },
                         "4": {
                             "img": {
-                                "src": "/assets/projects/built/BLDG_ARCH.jpg"
+                                "src": "/assets/projects/built/BLDG_ARCH.jpg",
+                                "width": "182",
+                                "height": "258"
                             }
                         },
                         "5": {
                             "img": {
-                                "src": "/assets/projects/built/BLDG_BAR.jpg"
+                                "src": "/assets/projects/built/BLDG_BAR.jpg",
+                                "width": "167",
+                                "height": "219"
                             }
                         },
                         "6": {
                             "img": {
-                                "src": "/assets/projects/built/BLDG_RUE.jpg"
+                                "src": "/assets/projects/built/BLDG_RUE.jpg",
+                                "width": "162",
+                                "height": "246"
                             }
                         }
                     },
@@ -632,6 +739,7 @@ db.seeds.insert(
                     "category": "art",
                     "description_long": "",
                     "description_short": "",
+                    "feed_photo": "/assets/projects/organic/LANDSCAPE_FIELD.jpg",
                     "location": "Assorted Locations",
                     "order": {
                         "feed": "12",
@@ -640,17 +748,23 @@ db.seeds.insert(
                     "tiles": {
                         "1": {
                             "img": {
-                                "src": "/assets/projects/organic/LANDSCAPE_FIELD.jpg"
+                                "src": "/assets/projects/organic/LANDSCAPE_FIELD.jpg",
+                                "width": "139",
+                                "height": "182"
                             }
                         },
                         "2": {
                             "img": {
-                                "src": "/assets/projects/organic/LANDSCAPE_BLUFF.jpg"
+                                "src": "/assets/projects/organic/LANDSCAPE_BLUFF.jpg",
+                                "width": "360",
+                                "height": "288"
                             }
                         },
                         "3": {
                             "img": {
-                                "src": "/assets/projects/organic/LANDSCAPE_SAIL.jpg"
+                                "src": "/assets/projects/organic/LANDSCAPE_SAIL.jpg",
+                                "width": "162",
+                                "height": "267"
                             }
                         }
                     },
@@ -663,6 +777,7 @@ db.seeds.insert(
                     "category": "professional",
                     "description_long": "",
                     "description_short": "",
+                    "feed_photo": "/assets/projects/gambia-orphanage/(2)_Floorplans.jpg",
                     "location": "Gambia",
                     "order": {
                         "feed": "13",
@@ -671,27 +786,37 @@ db.seeds.insert(
                     "tiles": {
                         "1": {
                             "img": {
-                                "src": "/assets/projects/gambia-orphanage/(1)Community Mosque.jpg"
+                                "src": "/assets/projects/gambia-orphanage/(1)Community Mosque.jpg",
+                                "width": "1025",
+                                "height": "620"
                             }
                         },
                         "2": {
                             "img": {
-                                "src": "/assets/projects/gambia-orphanage/(2)_Floorplans.jpg"
+                                "src": "/assets/projects/gambia-orphanage/(2)_Floorplans.jpg",
+                                "width": "790",
+                                "height": "620"
                             }
                         },
                         "3": {
                             "img": {
-                                "src": "/assets/projects/gambia-orphanage/(3)South_Entrance.jpg"
+                                "src": "/assets/projects/gambia-orphanage/(3)South_Entrance.jpg",
+                                "width": "855",
+                                "height": "620"
                             }
                         },
                         "4": {
                             "img": {
-                                "src": "/assets/projects/gambia-orphanage/(4)Master_Plan.jpg"
+                                "src": "/assets/projects/gambia-orphanage/(4)Master_Plan.jpg",
+                                "width": "356",
+                                "height": "620"
                             }
                         },
                         "5": {
                             "img": {
-                                "src": "/assets/projects/gambia-orphanage/(5)Classroom Floor Plan.jpg"
+                                "src": "/assets/projects/gambia-orphanage/(5)Classroom Floor Plan.jpg",
+                                "width": "520",
+                                "height": "620"
                             }
                         }
                     },
@@ -704,6 +829,7 @@ db.seeds.insert(
                     "category": "professional",
                     "description_long": "",
                     "description_short": "",
+                    "feed_photo": "/assets/projects/oita-museum/Mixed_To_Organize25.jpg",
                     "location": "Oita, JP",
                     "order": {
                         "feed": "14",
@@ -712,17 +838,23 @@ db.seeds.insert(
                     "tiles": {
                         "1": {
                             "img": {
-                                "src": "/assets/projects/oita-museum/Mixed_To_Organize24.jpg"
+                                "src": "/assets/projects/oita-museum/Mixed_To_Organize24.jpg",
+                                "width": "955",
+                                "height": "620"
                             }
                         },
                         "2": {
                             "img": {
-                                "src": "/assets/projects/oita-museum/Mixed_To_Organize25.jpg"
+                                "src": "/assets/projects/oita-museum/Mixed_To_Organize25.jpg",
+                                "width": "443",
+                                "height": "620"
                             }
                         },
                         "3": {
                             "img": {
-                                "src": "/assets/projects/oita-museum/Mixed_To_Organize26.jpg"
+                                "src": "/assets/projects/oita-museum/Mixed_To_Organize26.jpg",
+                                "width": "947",
+                                "height": "620"
                             }
                         }
                     },
@@ -735,6 +867,7 @@ db.seeds.insert(
                     "category": "professional",
                     "description_long": "",
                     "description_short": "",
+                    "feed_photo": "/assets/projects/olympia-brewery/(1)Olympia_Brewery.jpg",
                     "location": "Olympia, WA",
                     "order": {
                         "feed": "15",
@@ -743,12 +876,16 @@ db.seeds.insert(
                     "tiles": {
                         "1": {
                             "img": {
-                                "src": "/assets/projects/olympia-brewery/(1)Olympia_Brewery.jpg"
+                                "src": "/assets/projects/olympia-brewery/(1)Olympia_Brewery.jpg",
+                                "width": "892",
+                                "height": "620"
                             }
                         },
                         "2": {
                             "img": {
-                                "src": "/assets/projects/olympia-brewery/(2)Brewery entrance.jpg"
+                                "src": "/assets/projects/olympia-brewery/(2)Brewery entrance.jpg",
+                                "width": "1253",
+                                "height": "620"
                             }
                         }
                     },
@@ -761,6 +898,7 @@ db.seeds.insert(
                     "category": "professional",
                     "description_long": "",
                     "description_short": "",
+                    "feed_photo": "/assets/projects/reo-flats/(1)_15th_Street_View.jpg",
                     "location": "Seattle, WA",
                     "order": {
                         "feed": "16",
@@ -769,17 +907,23 @@ db.seeds.insert(
                     "tiles": {
                         "1": {
                             "img": {
-                                "src": "/assets/projects/reo-flats/(1)_15th_Street_View.jpg"
+                                "src": "/assets/projects/reo-flats/(1)_15th_Street_View.jpg",
+                                "width": "900",
+                                "height": "620"
                             }
                         },
                         "2": {
                             "img": {
-                                "src": "/assets/projects/reo-flats/(2)Exterior views.jpg"
+                                "src": "/assets/projects/reo-flats/(2)Exterior views.jpg",
+                                "width": "374",
+                                "height": "620"
                             }
                         },
                         "3": {
                             "img": {
-                                "src": "/assets/projects/reo-flats/(3)Interior_Shell.jpg"
+                                "src": "/assets/projects/reo-flats/(3)Interior_Shell.jpg",
+                                "width": "773",
+                                "height": "620"
                             }
                         }
                     },
