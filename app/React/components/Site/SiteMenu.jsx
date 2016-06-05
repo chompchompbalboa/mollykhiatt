@@ -92,6 +92,9 @@ var SiteMenu = React.createClass({
             case "contact":
                 active = "contact"
             break;
+            case "film":
+                active = "film"
+            break;
             default:
                 active = "project"
             break;
@@ -111,6 +114,23 @@ var SiteMenu = React.createClass({
             }
         }
         return current;
+    },
+
+    //---------------------------------------------------------------------------
+    // Film List
+    //---------------------------------------------------------------------------
+
+    filmList: function(seed, style) {
+        var film = [];
+        var films = seed.public.films;
+        for (var current in films) {
+            var title = films[current].title;
+            var url = films[current].url;
+            film.push(
+                this.li(current, style, title, url)
+            );
+        }
+        return film;
     },
 
     //---------------------------------------------------------------------------
@@ -140,6 +160,9 @@ var SiteMenu = React.createClass({
             break;
             case "contact":
                 list = this.contactList(style);
+            break;
+            case "film":
+                list = this.filmList(seed, style);
             break;
             default:
                 list = this.projectList(category, seed, style);

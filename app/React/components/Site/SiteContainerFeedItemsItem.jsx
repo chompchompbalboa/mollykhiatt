@@ -5,6 +5,7 @@
 var React = require('react');
 var Radium = require('radium');
 
+var siteActions = require('../../actions/siteActions');
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
@@ -62,6 +63,30 @@ var SiteContainerFeedItemsItem = React.createClass({
     //---------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------
+    // Active
+    //---------------------------------------------------------------------------
+
+    active: function(url) {
+        var active;
+        var splitUrl = url.split('/');
+        switch(splitUrl[0]) {
+            case "about":
+                active = (splitUrl[1] === "bio" ? "bio" : "cv");
+            break;
+            case "contact":
+                active = "contact"
+            break;
+            case "film":
+                active = "film"
+            break;
+            default:
+                active = "project"
+            break;
+        }
+        return active;
+    },
+
+    //---------------------------------------------------------------------------
     // Column
     //---------------------------------------------------------------------------
 
@@ -76,6 +101,18 @@ var SiteContainerFeedItemsItem = React.createClass({
     //---------------------------------------------------------------------------
     // Handles
     //---------------------------------------------------------------------------
+
+    handleLinkClick: function(e, url) {
+        e.preventDefault();
+        var active = this.active(url);
+        var changes = [
+            {"key": "private.active", "value": active},
+            {"key": "private.url", "value": url},
+            {"key": "private.SiteHeader.color", "value": "black"},
+            {"key": "private.SiteCoverOverlay.opacity", "value": "0.25"}
+        ];
+        siteActions.changeContent(changes);
+    },
 
     //---------------------------------------------------------------------------
     // Style
@@ -100,9 +137,13 @@ var SiteContainerFeedItemsItem = React.createClass({
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
+                textDecoration: 'none',
                 alignItems: (column === "left" ? 'flex-end' : 'flex-start'),
                 '@media (max-width: 48em)': {
                     alignItems: 'flex-start'
+                },
+                ':hover': {
+                    opacity: '0.7'
                 }
             },
             img: {
@@ -143,11 +184,11 @@ var SiteContainerFeedItemsItem = React.createClass({
 
         return (
             <section key="section" style={style.section}>
-                <div style={style.container}>
+                <a href={project.url} style={style.container} onClick={(event) => this.handleLinkClick(event, project.url)}>
                     <img src={project.feed_photo} style={style.img}></img>
                     <div style={style.title}>{project.title}</div>
                     <div style={style.description}>{project.description_short}</div>
-                </div>
+                </a>
             </section>
         )
     }

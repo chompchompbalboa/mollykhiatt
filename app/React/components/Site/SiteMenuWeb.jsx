@@ -342,7 +342,7 @@ var SiteMenuWeb = React.createClass({
         var about = list('about', seed, style);
 
         return (
-            <section id="site-menu-mobile" style={style.section}>
+            <section id="site-menu-web" style={style.section}>
                 <div style={style.container}>
                     <div style={style.one}>
                         <div style={[style.image, style.photography]} onMouseEnter={this.handleMouseEnter.bind(this, 'photography')} onMouseLeave={this.handleMouseLeave.bind(this, 'photography')}>

@@ -8,6 +8,7 @@ var Radium = require('radium');
 var SiteBio = require('./SiteBio.jsx');
 var SiteContact = require('./SiteContact.jsx');
 var SiteCV = require('./SiteCV.jsx');
+var SiteFilm = require('./SiteFilm.jsx');
 var SiteHeader = require('./SiteHeader.jsx');
 var SiteHome = require('./SiteHome.jsx');
 var SiteMenu = require('./SiteMenu.jsx');
@@ -94,6 +95,14 @@ var Site = React.createClass({
             case "cv":
                 return (
                     <SiteCV
+                        seed={seed}
+                        site={site}
+                    />
+                )
+            break;
+            case "film":
+                return (
+                    <SiteFilm
                         seed={seed}
                         site={site}
                     />
