@@ -8,7 +8,7 @@ var Radium = require('radium');
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
-var SiteContact = React.createClass({
+var SiteBio = React.createClass({
     //---------------------------------------------------------------------------
     // Display Name
     //---------------------------------------------------------------------------
@@ -76,29 +76,43 @@ var SiteContact = React.createClass({
     style: function(container) {
         var style = {
             section: {
-                position: 'fixed',
+                position: 'relative',
                 top: '10vh',
                 left: '0',
                 width: '100vw',
                 height: '90vh',
                 display: 'flex',
-                flexDirection: 'column',
+                flexDirection: 'row',
                 justifyContent: 'center',
-                alignItems: 'center'
+                alignItems: 'center',
+                '@media (max-width: 48em)': {
+                    flexDirection: 'column'
+                }
             },
-            header: {
-                margin: '-5vh 0 1.5vh 0',
+            img: {
+                width: 'auto',
+                height: '70vh',
+                margin: '0 7vw 0 0',
+                '@media (max-width: 48em)': {
+                    height: '55vh',
+                    margin: '5vh 0 4vh 0',
+                },
+                '@media (min-width: 48em) and (max-width: 64em)': {
+                    height: '55vh',
+                    margin: '0 4vw 0 5vw'
+                } 
+            },
+            about: {
+                width: '50vw',
+                textAlign: 'justify',
                 fontSize: '15px',
                 color: 'black',
-                textTransform: 'uppercase'
-            },
-            info: {
-                fontSize: '15px',
-                color: 'rgba(150, 150, 150, 1)'
-            },
-            a: {
-                textDecoration: 'none',
-                color: 'rgba(150, 150, 150, 1)'
+                '@media (max-width: 48em)': {
+                    width: '80vw'
+                },
+                '@media (min-width: 48em) and (max-width: 64em)': {
+                    margin: '0 4vw 0 0'
+                } 
             }
         };
 
@@ -115,15 +129,10 @@ var SiteContact = React.createClass({
         var style = this.style(site.private.container);
 
         return (
-            <section id="site-contact" style={style.section}>
-                <div id="site-contact-header" style={style.header}>
-                    Contact
-                </div>
-                <div id="site-contact-phone" style={style.info}>
-                    PHONE: <a href={"tel: " + seed.public.phone} style={style.a}>{seed.public.phone}</a>
-                </div>
-                <div id="site-contact-email" style={style.info}>
-                    EMAIL: <a href={"mailto: " + seed.public.email} style={style.a}>{seed.public.email}</a>
+            <section id="site-bio" style={style.section}>
+                <img src="assets/Site/SiteBio/about.jpg" style={style.img}/>
+                <div id="site-bio-about" style={style.about}>
+                    {seed.public.bio.about}
                 </div>
             </section>
         )
@@ -134,4 +143,4 @@ var SiteContact = React.createClass({
 //-----------------------------------------------------------------------------
 // Export
 //-----------------------------------------------------------------------------
-module.exports = Radium(SiteContact);
+module.exports = Radium(SiteBio);

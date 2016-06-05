@@ -79,6 +79,27 @@ var SiteMenu = React.createClass({
     },
 
     //---------------------------------------------------------------------------
+    // Active
+    //---------------------------------------------------------------------------
+
+    active: function(url) {
+        var active;
+        var splitUrl = url.split('/');
+        switch(splitUrl[0]) {
+            case "about":
+                active = (splitUrl[1] === "bio" ? "bio" : "cv");
+            break;
+            case "contact":
+                active = "contact"
+            break;
+            default:
+                active = "project"
+            break;
+        }
+        return active;
+    },
+
+    //---------------------------------------------------------------------------
     // Current Projects
     //---------------------------------------------------------------------------
 
@@ -148,8 +169,9 @@ var SiteMenu = React.createClass({
 
     handleLinkClick: function(e, url) {
         e.preventDefault();
+        var active = this.active(url);
         var changes = [
-            {"key": "private.active", "value": "project"},
+            {"key": "private.active", "value": active},
             {"key": "private.url", "value": url}
         ];
         siteActions.changeContent(changes);

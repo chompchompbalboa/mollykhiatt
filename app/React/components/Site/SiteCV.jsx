@@ -8,7 +8,7 @@ var Radium = require('radium');
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
-var SiteContact = React.createClass({
+var SiteCV = React.createClass({
     //---------------------------------------------------------------------------
     // Display Name
     //---------------------------------------------------------------------------
@@ -86,18 +86,11 @@ var SiteContact = React.createClass({
                 justifyContent: 'center',
                 alignItems: 'center'
             },
-            header: {
+            img: {
                 margin: '-5vh 0 1.5vh 0',
-                fontSize: '15px',
-                color: 'black',
-                textTransform: 'uppercase'
             },
-            info: {
+            about: {
                 fontSize: '15px',
-                color: 'rgba(150, 150, 150, 1)'
-            },
-            a: {
-                textDecoration: 'none',
                 color: 'rgba(150, 150, 150, 1)'
             }
         };
@@ -115,16 +108,8 @@ var SiteContact = React.createClass({
         var style = this.style(site.private.container);
 
         return (
-            <section id="site-contact" style={style.section}>
-                <div id="site-contact-header" style={style.header}>
-                    Contact
-                </div>
-                <div id="site-contact-phone" style={style.info}>
-                    PHONE: <a href={"tel: " + seed.public.phone} style={style.a}>{seed.public.phone}</a>
-                </div>
-                <div id="site-contact-email" style={style.info}>
-                    EMAIL: <a href={"mailto: " + seed.public.email} style={style.a}>{seed.public.email}</a>
-                </div>
+            <section id="site-cv" style={style.section}>
+                CV
             </section>
         )
     }
@@ -134,4 +119,4 @@ var SiteContact = React.createClass({
 //-----------------------------------------------------------------------------
 // Export
 //-----------------------------------------------------------------------------
-module.exports = Radium(SiteContact);
+module.exports = Radium(SiteCV);
