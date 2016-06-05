@@ -5,6 +5,7 @@
 var React = require('react');
 var Radium = require('radium');
 
+var SiteContact = require('./SiteContact.jsx');
 var SiteHeader = require('./SiteHeader.jsx');
 var SiteHome = require('./SiteHome.jsx');
 var SiteMenu = require('./SiteMenu.jsx');
@@ -72,6 +73,14 @@ var Site = React.createClass({
 
     active: function(seed, site) {
         switch(site.private.active) {
+            case "contact":
+                return (
+                    <SiteContact
+                        seed={seed}
+                        site={site}
+                    />
+                )
+            break;
             case "menu":
                 return (
                     <SiteMenu

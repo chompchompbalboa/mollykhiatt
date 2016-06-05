@@ -5,12 +5,10 @@
 var React = require('react');
 var Radium = require('radium');
 
-var siteActions = require('../../actions/siteActions');
-
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
-var SiteHeaderShare = React.createClass({
+var SiteContact = React.createClass({
     //---------------------------------------------------------------------------
     // Display Name
     //---------------------------------------------------------------------------
@@ -64,50 +62,44 @@ var SiteHeaderShare = React.createClass({
     //---------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------
-    // Handles
+    // Container Dimensions
     //---------------------------------------------------------------------------
 
-    handleClick: function(e) {
-        e.preventDefault();
-        var active = "contact";
-        var previous = (this.props.site.private.active === "menu" ? this.props.site.private.previous : this.props.site.private.active);
-        var changes = [
-            {"key": "private.active", "value": active},
-            {"key": "private.previous", "value": previous},
-            {"key": "private.SiteHeader.color", "value": "black"},
-            {"key": "private.SiteCoverOverlay.opacity", "value": "0.25"}
-        ];
-        siteActions.changeContent(changes);
-    },
+    //---------------------------------------------------------------------------
+    // Handles
+    //---------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------
     // Style
     //---------------------------------------------------------------------------
 
-    style: function(color, container) {
+    style: function(container) {
         var style = {
-            div: {
-                width: '30vw',
-                padding: '0 3vw 0 0',
+            section: {
+                position: 'fixed',
+                top: '10vh',
+                left: '0',
+                width: '100vw',
+                height: '100vh',
                 display: 'flex',
-                justifyContent: 'flex-end',
-                alignItems: 'center',
-                '@media (max-width: 48em)': {
-                    width: '0'    
-                }
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center'
             },
-            container: {
-                textTransform: 'uppercase',
-                '@media (max-width: 48em)': {
-                    display: 'none'   
-                }
+            header: {
+                margin: '-5vh 0 1.5vh 0',
+                fontSize: '15px',
+                color: 'black',
+                textTransform: 'uppercase'
+            },
+            info: {
+                fontSize: '15px',
+                color: 'rgba(150, 150, 150, 1)'
             },
             a: {
-                color: color,
-                width: '100%',
-                height: '100%',
-                textDecoration: 'none'
-            },
+                textDecoration: 'none',
+                color: 'rgba(150, 150, 150, 1)'
+            }
         };
 
         return style;
@@ -119,17 +111,21 @@ var SiteHeaderShare = React.createClass({
 
     render: function() {
 
-        var {site, ...other} = this.props;
-        var style = this.style(site.private.SiteHeader.color, site.private.container);
+        var {seed, site, ...other} = this.props;
+        var style = this.style(site.private.container);
 
         return (
-            <div id="site-header-share" style={style.div}>
-                <div style={style.container}>
-                    <a href="/contact" style={style.a} onClick={this.handleClick}>
-                        Contact
-                    </a>
+            <section id="site-contact" style={style.section}>
+                <div id="site-contact-header" style={style.header}>
+                    Contact
                 </div>
-            </div>
+                <div id="site-contact-phone" style={style.info}>
+                    PHONE: <a href={"tel: " + seed.public.phone} style={style.a}>{seed.public.phone}</a>
+                </div>
+                <div id="site-contact-email" style={style.info}>
+                    EMAIL: <a href={"mailto: " + seed.public.email} style={style.a}>{seed.public.email}</a>
+                </div>
+            </section>
         )
     }
     
@@ -138,4 +134,4 @@ var SiteHeaderShare = React.createClass({
 //-----------------------------------------------------------------------------
 // Export
 //-----------------------------------------------------------------------------
-module.exports = Radium(SiteHeaderShare);
+module.exports = Radium(SiteContact);

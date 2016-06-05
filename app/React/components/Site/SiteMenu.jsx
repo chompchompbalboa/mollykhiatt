@@ -74,6 +74,7 @@ var SiteMenu = React.createClass({
         var list = [];
         list.push(this.li(0, style, "Bio", "about/bio"));
         list.push(this.li(1, style, "CV", "about/cv"));
+        list.push(this.li(2, style, "Contact", "contact"));
         return list;
     },
 
@@ -115,6 +116,9 @@ var SiteMenu = React.createClass({
         switch(category) {
             case "about":
                 list = this.aboutList(style);
+            break;
+            case "contact":
+                list = this.contactList(style);
             break;
             default:
                 list = this.projectList(category, seed, style);

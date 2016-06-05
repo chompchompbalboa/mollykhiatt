@@ -217,7 +217,6 @@ var SiteProject = React.createClass({
         var {seed, site, ...other} = this.props;
         var project = this.project(seed.public.projects, site.private.url);
         var dimensions = this.containerDimensions(seed.public.projects[project].tiles);
-        console.log(dimensions);
         var tiles = this.tiles(dimensions, seed.public.projects[project].tiles, site);
         var style = this.style(site.private.container, dimensions);
 
