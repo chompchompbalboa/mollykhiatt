@@ -31,6 +31,7 @@ Route::group(['middleware' => ['web']], function () {
     };
 
     Route::group(['domain' => 'admin.mollykhiatt.com'], $admin);
+    Route::group(['domain' => 'admin.mollyhiatt.com'], $admin);
     Route::group(['domain' => 'admin.mollykhiatt.local'], $admin);
 
     /*
@@ -52,5 +53,6 @@ Route::group(['middleware' => ['web']], function () {
     };
 
     Route::group(['domain' => 'mollykhiatt.com'], $site);
+    Route::group(['domain' => 'mollyhiatt.com'], $site);
     Route::group(['domain' => 'mollykhiatt.local'], $site);
 });
