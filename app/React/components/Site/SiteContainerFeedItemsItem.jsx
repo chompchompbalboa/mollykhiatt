@@ -144,7 +144,7 @@ var SiteContainerFeedItemsItem = React.createClass({
                 },
                 ':active': {
                     opacity: '0.7'
-                }
+                },
                 ':hover': {
                     opacity: '0.7'
                 }
