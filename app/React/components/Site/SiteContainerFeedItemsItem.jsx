@@ -142,6 +142,9 @@ var SiteContainerFeedItemsItem = React.createClass({
                 '@media (max-width: 48em)': {
                     alignItems: 'flex-start'
                 },
+                ':active': {
+                    opacity: '0.7'
+                }
                 ':hover': {
                     opacity: '0.7'
                 }
