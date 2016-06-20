@@ -73,8 +73,9 @@ var SiteHeaderShare = React.createClass({
         var previous = (this.props.site.private.active === "menu" ? this.props.site.private.previous : this.props.site.private.active);
         var changes = [
             {"key": "private.active", "value": active},
+            {"key": "private.load", "value": "link"},
             {"key": "private.previous", "value": previous},
-            {"key": "private.SiteHeader.color", "value": "black"},
+            {"key": "private.url", "value": "contact"},
             {"key": "private.SiteCoverOverlay.opacity", "value": "0.25"}
         ];
         siteActions.changeContent(changes);
@@ -119,8 +120,8 @@ var SiteHeaderShare = React.createClass({
 
     render: function() {
 
-        var {site, ...other} = this.props;
-        var style = this.style(site.private.SiteHeader.color, site.private.container);
+        var {color, site, ...other} = this.props;
+        var style = this.style(color, site.private.container);
 
         return (
             <div id="site-header-share" style={style.div}>

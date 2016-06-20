@@ -68,6 +68,21 @@ var SiteHeader = React.createClass({
     //---------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------
+    // Color
+    //---------------------------------------------------------------------------
+
+    color: function(url) {
+        var color;
+        if(url === "") {
+            color = "white";
+        }
+        else {
+            color = "black";
+        }
+        return color;
+    },
+
+    //---------------------------------------------------------------------------
     // Handles
     //---------------------------------------------------------------------------
 
@@ -113,13 +128,14 @@ var SiteHeader = React.createClass({
     render: function() {
 
         var {site, ...other} = this.props;
-        var style = this.style(site.private.container, site.private.SiteHeader.color);
+        var color = this.color(site.private.url);
+        var style = this.style(site.private.container, color);
 
         return (
             <nav id="site-header" style={style.nav}>
-                <SiteHeaderMenu site={site} {...other} />
-                <SiteHeaderName site={site} {...other} />
-                <SiteHeaderShare site={site} {...other} />
+                <SiteHeaderMenu color={color} site={site} {...other} />
+                <SiteHeaderName color={color} site={site} {...other} />
+                <SiteHeaderShare color={color} site={site} {...other} />
             </nav>
         )
     }

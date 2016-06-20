@@ -28,7 +28,7 @@ class ReactController extends Controller
     public function react()
     {
         $action = $this->request->route('action');
-        $data = $this->request->input('data');
+        $data = json_decode($this->request->input('data'));
         $info = $this->request->route('info');
         $response = $this->$action($data, $info);
         return json_encode($response);
@@ -48,12 +48,21 @@ class ReactController extends Controller
     {
         $site = Helper::fetchJSON('/assets/Site/site.json');
         $site->private->container = $this->container;
+        $site->private->url = $this->url($data->url);
         return $site;
     }
     
     //-------------------------------------------------------------------------
     // Private functions
     //-------------------------------------------------------------------------
+
+    private function url($url)
+    {
+        if($url[0] === "/") {
+            $url = substr($url, 1);
+        }
+        return $url;
+    }
 
     
 

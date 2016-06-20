@@ -80,7 +80,8 @@ var SiteHeaderName = React.createClass({
         if(this.props.site.private.active != "menu") {
             var changes = [
                 {"key": "private.active", "value": "home"},
-                {"key": "private.SiteHeader.color", "value": "white"},
+                {"key": "private.load", "value": "link"},
+                {"key": "private.url", "value": ""},
                 {"key": "private.SiteCoverOverlay.opacity", "value": "0.25"}
             ];
             siteActions.changeContent(changes);
@@ -117,8 +118,8 @@ var SiteHeaderName = React.createClass({
 
     render: function() {
 
-        var {seed, site, ...other} = this.props;
-        var style = this.style(site.private.SiteHeader.color, site.private.container);
+        var {color, seed, site, ...other} = this.props;
+        var style = this.style(color, site.private.container);
         var text = this.text(site.private.active, seed.public.name, style);
 
         return (

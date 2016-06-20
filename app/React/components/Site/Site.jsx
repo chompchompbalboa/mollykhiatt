@@ -5,6 +5,8 @@
 var React = require('react');
 var Radium = require('radium');
 
+var siteActions = require('../../actions/siteActions');
+
 var SiteBio = require('./SiteBio.jsx');
 var SiteContact = require('./SiteContact.jsx');
 var SiteCV = require('./SiteCV.jsx');
@@ -50,6 +52,11 @@ var Site = React.createClass({
     // Component Did Mount
     //---------------------------------------------------------------------------
 
+    componentDidMount: function() {
+        this.replaceURL(this.props.site.private.url);
+        window.addEventListener('popstate', this.handlePopState);
+    },
+
     //---------------------------------------------------------------------------
     // Component Will Recieve Props
     //---------------------------------------------------------------------------
@@ -66,6 +73,12 @@ var Site = React.createClass({
     // Component Did Update
     //---------------------------------------------------------------------------
 
+    componentDidUpdate: function() {
+        if(this.props.site.private.load !== "pop") {
+            this.setURL(this.props.site.private.url);
+        }    
+    },
+
     //---------------------------------------------------------------------------
     // Component Will Unmount
     //---------------------------------------------------------------------------
@@ -75,7 +88,8 @@ var Site = React.createClass({
     //---------------------------------------------------------------------------
 
     active: function(seed, site) {
-        switch(site.private.active) {
+        var active = this.activeURL(site.private.url);
+        switch(active) {
             case "bio":
                 return (
                     <SiteBio
@@ -135,9 +149,73 @@ var Site = React.createClass({
         }
     },
 
+    //-------------------------------------------------------------------------
+    // Active URL
+    //-------------------------------------------------------------------------
+
+    activeURL: function(url) {
+        var active;
+        if(url === "") {
+            active = "home";
+        }
+        else {
+            let splitURL = url.split("/");
+            switch(splitURL[0]) {
+                case "bio":
+                    active = "bio";
+                break;
+                case "contact":
+                    active = "contact";
+                break;
+                case "cv":
+                    active = "cv";
+                break;
+                case "film":
+                    active = "film";
+                break;
+                case "menu":
+                    active = "menu";
+                break;
+                default:
+                    active = "project";
+                break;
+            }
+        }
+        return active;
+    },
+
+    //-------------------------------------------------------------------------
+    // Set URL
+    //-------------------------------------------------------------------------
+
+    setURL: function(url) {
+        window.history.pushState({url: url}, "", location.origin + "/" + url);
+    },
+
+    //-------------------------------------------------------------------------
+    // Replace URL
+    //-------------------------------------------------------------------------
+
+    replaceURL: function(url) {
+        window.history.replaceState({url: url}, "", location.origin + "/" + url);
+    },
+
     //---------------------------------------------------------------------------
     // Handles
     //---------------------------------------------------------------------------
+
+    handlePopState: function(e) {
+        var url;
+        if (e.state !== null) {
+            url = e.state.url
+            var changes = [
+                {"key": "private.url", "value": url},
+                {"key": "private.load", "value": "pop"}
+            ];
+            siteActions.changeContent(changes);
+        }
+        return;
+    },
 
     //---------------------------------------------------------------------------
     // Style

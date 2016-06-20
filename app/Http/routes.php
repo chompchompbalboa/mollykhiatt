@@ -41,7 +41,7 @@ Route::group(['middleware' => ['web']], function () {
     */
 
     $site = function() {
-        Route::any('/', [
+        Route::any('/{optional?}', [
             "as" => "site_home",
             "uses" => "SiteController@home",
         ]);
@@ -49,6 +49,11 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('/react/{action}/{info?}', [
             "as" => "site_react",
             "uses" => "SiteReactController@react",
+        ]);
+
+        Route::any('/{optional?}/{optional2?}', [
+            "as" => "site_home",
+            "uses" => "SiteController@home",
         ]);
     };
 

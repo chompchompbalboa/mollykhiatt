@@ -72,8 +72,8 @@ var SiteMenu = React.createClass({
 
     aboutList: function(style) {
         var list = [];
-        list.push(this.li(0, style, "Bio", "about/bio"));
-        list.push(this.li(1, style, "CV", "about/cv"));
+        list.push(this.li(0, style, "Bio", "bio"));
+        list.push(this.li(1, style, "CV", "cv"));
         list.push(this.li(2, style, "Contact", "contact"));
         return list;
     },
@@ -195,6 +195,7 @@ var SiteMenu = React.createClass({
         var active = this.active(url);
         var changes = [
             {"key": "private.active", "value": active},
+            {"key": "private.load", "value": "link"},
             {"key": "private.url", "value": url}
         ];
         siteActions.changeContent(changes);

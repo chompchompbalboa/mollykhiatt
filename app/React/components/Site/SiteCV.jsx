@@ -76,15 +76,18 @@ var SiteCV = React.createClass({
     style: function(container) {
         var style = {
             section: {
-                position: 'fixed',
+                position: 'absolute',
                 top: '10vh',
                 left: '0',
                 width: '100vw',
-                minHeight: '90vh',
+                height: '90vh',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
+                '@media (max-width: 48em)': {
+                    height: '100vh'
+                }
             },
             header: {
                 margin: '2vh 0 1.5vh 0',

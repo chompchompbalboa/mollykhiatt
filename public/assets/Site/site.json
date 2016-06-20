@@ -1,20 +1,13 @@
 {
     "private": {
         "active": "home",
+        "load": "initial",
         "previous": "home",
-        "url": "academic/cantagalo-learning-lab",
         "SiteCoverOverlay": {
             "opacity": "0.25"
         },
         "SiteHeader": {
             "color": "white"
-        },
-        "SiteMenuMobile": {
-            "art": "inactive",
-            "academic": "inactive",
-            "film": "inactive",
-            "photography": "inactive",
-            "professional": "inactive"
         }
     },
     "public": {

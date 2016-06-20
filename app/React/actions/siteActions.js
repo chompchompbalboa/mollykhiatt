@@ -21,7 +21,7 @@ var siteActions = {
     },
 
     fetchSite: function(){
-        this._ajax("react/site", {}, "UPDATE_SITE");
+        this._ajax(window.location.origin + "/react/site", JSON.stringify({url: window.location.pathname}), "UPDATE_SITE");
     },
 
     //-----------------------------------------------------------------------------

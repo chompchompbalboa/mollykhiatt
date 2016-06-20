@@ -21,15 +21,7 @@ var seedActions = {
     },
 
     fetchSeed: function(){
-        this._ajax("react/seed", {}, "UPDATE_SEED");
-    },
-
-    newSeed: function(){
-        this._ajax("react/new", {}, "UPDATE_SEED");
-    },
-
-    saveSeed: function(){
-        this._ajax("react/save", {}, "UPDATE_SEED");
+        this._ajax(window.location.origin + "/react/seed", {}, "UPDATE_SEED");
     },
 
     //-----------------------------------------------------------------------------

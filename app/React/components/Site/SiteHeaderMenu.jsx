@@ -64,21 +64,6 @@ var SiteHeaderMenu = React.createClass({
     //---------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------
-    // Color
-    //---------------------------------------------------------------------------
-
-    color: function(active) {
-        switch (active) {
-            case "home":
-                return "white";
-            break;
-            default:
-                return "black";
-            break;
-        }
-    },
-
-    //---------------------------------------------------------------------------
     // Graphic
     //---------------------------------------------------------------------------
 
@@ -108,11 +93,10 @@ var SiteHeaderMenu = React.createClass({
         e.preventDefault();
         var active = (this.props.site.private.active === "menu" ? this.props.site.private.previous : "menu");
         var previous = (this.props.site.private.active === "menu" ? this.props.site.private.previous : this.props.site.private.active);
-        var color = this.color(active);
         var changes = [
             {"key": "private.active", "value": active},
             {"key": "private.previous", "value": previous},
-            {"key": "private.SiteHeader.color", "value": color},
+            {"key": "private.url", "value": "menu"},
             {"key": "private.SiteCoverOverlay.opacity", "value": "0.25"}
         ];
         siteActions.changeContent(changes);
@@ -191,8 +175,8 @@ var SiteHeaderMenu = React.createClass({
 
     render: function() {
 
-        var {site, ...other} = this.props;
-        var style = this.style(site.private.SiteHeader.color, site.private.container);
+        var {color, site, ...other} = this.props;
+        var style = this.style(color, site.private.container);
         var text = (site.private.active === "menu" ? "Back" : "Menu");
         var graphic = this.graphic(site.private.active, style);
 

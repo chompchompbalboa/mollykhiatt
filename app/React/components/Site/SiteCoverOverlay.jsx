@@ -81,6 +81,7 @@ var SiteCoverOverlay = React.createClass({
         var opacity = ((top/height) / 1.5) + 0.25;
         if(opacity > 0.24 && opacity < 0.75){
             var changes = [
+                {"key": "private.load", "value": "pop"},
                 {"key": "private.SiteCoverOverlay.opacity", "value": opacity}
             ];
             siteActions.changeContent(changes);
