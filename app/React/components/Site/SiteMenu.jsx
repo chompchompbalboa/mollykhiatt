@@ -194,7 +194,6 @@ var SiteMenu = React.createClass({
         e.preventDefault();
         var active = this.active(url);
         var changes = [
-            {"key": "private.active", "value": active},
             {"key": "private.load", "value": "link"},
             {"key": "private.url", "value": url}
         ];

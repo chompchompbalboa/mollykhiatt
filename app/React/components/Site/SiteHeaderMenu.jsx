@@ -91,12 +91,12 @@ var SiteHeaderMenu = React.createClass({
 
     handleClick: function(e) {
         e.preventDefault();
-        var active = (this.props.site.private.active === "menu" ? this.props.site.private.previous : "menu");
-        var previous = (this.props.site.private.active === "menu" ? this.props.site.private.previous : this.props.site.private.active);
+        var url = (this.props.site.private.url === "menu" ? this.props.site.private.previous : "menu");
+        var previous = (this.props.site.private.url === "menu" ? this.props.site.private.previous : this.props.site.private.url);
         var changes = [
-            {"key": "private.active", "value": active},
             {"key": "private.previous", "value": previous},
-            {"key": "private.url", "value": "menu"},
+            {"key": "private.load", "value": "link"},
+            {"key": "private.url", "value": url},
             {"key": "private.SiteCoverOverlay.opacity", "value": "0.25"}
         ];
         siteActions.changeContent(changes);
@@ -129,8 +129,8 @@ var SiteHeaderMenu = React.createClass({
                 height: '100%',
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: (this.props.site.private.active === "menu" ? 'center' : 'space-between'),
-                alignItems: (this.props.site.private.active === "menu" ? 'center' : 'stretch'),
+                justifyContent: (this.props.site.private.url === "menu" ? 'center' : 'space-between'),
+                alignItems: (this.props.site.private.url === "menu" ? 'center' : 'stretch'),
                 '@media (min-width: 48em)': {
                     display: 'none'
                 }
@@ -177,7 +177,7 @@ var SiteHeaderMenu = React.createClass({
 
         var {color, site, ...other} = this.props;
         var style = this.style(color, site.private.container);
-        var text = (site.private.active === "menu" ? "Back" : "Menu");
+        var text = (site.private.url === "menu" ? "Back" : "Menu");
         var graphic = this.graphic(site.private.active, style);
 
         return (

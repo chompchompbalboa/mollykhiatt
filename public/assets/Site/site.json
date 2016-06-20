@@ -1,8 +1,8 @@
 {
     "private": {
-        "active": "home",
+        "active": "",
         "load": "initial",
-        "previous": "home",
+        "previous": "",
         "SiteCoverOverlay": {
             "opacity": "0.25"
         },
