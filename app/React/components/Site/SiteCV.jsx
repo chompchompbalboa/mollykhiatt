@@ -80,18 +80,26 @@ var SiteCV = React.createClass({
                 top: '10vh',
                 left: '0',
                 width: '100vw',
-                height: '90vh',
+                minHeight: '90vh',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
-                alignItems: 'center'
+                alignItems: 'center',
             },
-            img: {
-                margin: '-5vh 0 1.5vh 0',
+            header: {
+                margin: '2vh 0 1.5vh 0',
+                textTransform: 'uppercase',
+                fontSize: '15px'
             },
-            about: {
+            ul: {
+                listStyle: 'none',
+                textAlign: 'center'
+            },
+            li: {
+                margin: '0.5vh 0 0.5vh 0',
+                color: 'rgba(200, 200, 200, 1)',
                 fontSize: '15px',
-                color: 'rgba(150, 150, 150, 1)'
+                whiteSpace: 'nowrap'
             }
         };
 
@@ -109,7 +117,30 @@ var SiteCV = React.createClass({
 
         return (
             <section id="site-cv" style={style.section}>
-                CV
+                <ul style={style.ul}>
+                    <li style={style.header}>Education</li>
+                    <li style={style.li}>MArchD | Oxford School of Arch. | UK</li>
+                    <li style={style.li}>BArch | University of Washington | US</li>
+                </ul>
+                <ul style={style.ul}>
+                    <li style={style.header}>Experience</li>
+                    <li style={style.li}>Krause Architects | UK | 2015</li>
+                    <li style={style.li}>Elkus Manfredi Architects | US | 2014</li>
+                    <li style={style.li}>WilkinsonEyre | UK | 2013</li>
+                    <li style={style.li}>Shigeru Ban Architects | JP | 2012</li>
+                    <li style={style.li}>Johnson Architecture | US | 2011</li>
+                </ul>
+                <ul style={style.ul}>
+                    <li style={style.header}>Software</li>
+                    <li style={style.li}>Revit</li>
+                    <li style={style.li}>Rhino</li>
+                    <li style={style.li}>MicroStation</li>
+                    <li style={style.li}>Adobe Suite</li>
+                    <li style={style.li}>AutoCAD</li>
+                    <li style={style.li}>SketchUp</li>
+                    <li style={style.li}>V-Ray</li>
+                    <li style={style.li}>Grasshopper</li>
+                </ul>
             </section>
         )
     }
