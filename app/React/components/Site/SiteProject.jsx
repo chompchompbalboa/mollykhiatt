@@ -179,6 +179,14 @@ var SiteProject = React.createClass({
     // Handles
     //---------------------------------------------------------------------------
 
+    handleWheel: function(e) {
+        if(Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+            e.preventDefault();
+            this.section.scrollLeft -= (e.deltaX * 1);
+        }
+        console.log(e.deltaX);
+    },
+
     //---------------------------------------------------------------------------
     // Style
     //---------------------------------------------------------------------------
@@ -221,7 +229,7 @@ var SiteProject = React.createClass({
         var style = this.style(site.private.container, dimensions);
 
         return (
-            <section id="site-project" style={style.section}>
+            <section id="site-project" ref={(ref) => this.section = ref} style={style.section} >
                 <div style={style.container}>
                     <SiteProjectDescription dimensions={dimensions} project={project} seed={seed} site={site} {...other} />
                     {tiles}

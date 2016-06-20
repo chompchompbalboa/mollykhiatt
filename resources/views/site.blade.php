@@ -9,6 +9,7 @@
     <script src="https://use.typekit.net/pdn0pwf.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <script src="/js/jquery-2.1.1.min.js"></script>
+    <script src="/js/mousewheel.min.js"></script>
   </head>
   <body>
     <section id="react-container"></section>

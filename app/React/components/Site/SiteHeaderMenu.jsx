@@ -67,8 +67,8 @@ var SiteHeaderMenu = React.createClass({
     // Graphic
     //---------------------------------------------------------------------------
 
-    graphic: function(active, style) {
-        if(active === "menu") {
+    graphic: function(url, style) {
+        if(url === "menu") {
             var graphic = [];
             graphic.push(<span key={'pos'} style={[style.icon_back, style.icon_back_pos]}></span>);
             graphic.push(<span key={'neg'} style={[style.icon_back, style.icon_back_neg]}></span>);
@@ -93,6 +93,7 @@ var SiteHeaderMenu = React.createClass({
         e.preventDefault();
         var url = (this.props.site.private.url === "menu" ? this.props.site.private.previous : "menu");
         var previous = (this.props.site.private.url === "menu" ? this.props.site.private.previous : this.props.site.private.url);
+        console.log(previous);
         var changes = [
             {"key": "private.previous", "value": previous},
             {"key": "private.load", "value": "link"},
@@ -178,7 +179,7 @@ var SiteHeaderMenu = React.createClass({
         var {color, site, ...other} = this.props;
         var style = this.style(color, site.private.container);
         var text = (site.private.url === "menu" ? "Back" : "Menu");
-        var graphic = this.graphic(site.private.active, style);
+        var graphic = this.graphic(site.private.url, style);
 
         return (
             <div id="site-header-menu" style={style.div}>

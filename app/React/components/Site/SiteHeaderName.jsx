@@ -67,8 +67,8 @@ var SiteHeaderName = React.createClass({
     // Text
     //---------------------------------------------------------------------------
 
-    text: function(active, name, style) {
-        return (active === "menu" ? "My Work" : <a href="" style={style.name} onClick={this.handleClick}>{name}</a>);
+    text: function(url, name, style) {
+        return (url === "menu" ? "My Work" : <a href="" style={style.name} onClick={this.handleClick}>{name}</a>);
     },
 
     //---------------------------------------------------------------------------
@@ -79,7 +79,6 @@ var SiteHeaderName = React.createClass({
         e.preventDefault();
         if(this.props.site.private.active != "menu") {
             var changes = [
-                {"key": "private.active", "value": "home"},
                 {"key": "private.load", "value": "link"},
                 {"key": "private.url", "value": ""},
                 {"key": "private.SiteCoverOverlay.opacity", "value": "0.25"}
@@ -120,7 +119,7 @@ var SiteHeaderName = React.createClass({
 
         var {color, seed, site, ...other} = this.props;
         var style = this.style(color, site.private.container);
-        var text = this.text(site.private.active, seed.public.name, style);
+        var text = this.text(site.private.url, seed.public.name, style);
 
         return (
             <div id="site-header-name" style={style.div}>

@@ -65,6 +65,16 @@ var SiteCoverDescription = React.createClass({
     // Handles
     //---------------------------------------------------------------------------
 
+    handleLinkClick: function(e, url) {
+        e.preventDefault();
+        var active = this.active(url);
+        var changes = [
+            {"key": "private.load", "value": "link"},
+            {"key": "private.url", "value": "academic/cantagalo-learning-lab"}
+        ];
+        siteActions.changeContent(changes);
+    },
+
     //---------------------------------------------------------------------------
     // Style
     //---------------------------------------------------------------------------
@@ -107,7 +117,7 @@ var SiteCoverDescription = React.createClass({
         var style = this.style(site.private.container);
 
         return (
-            <section key="section" id="site-cover-description" style={style.section}>
+            <section key="section" id="site-cover-description" style={style.section} onClick={this.handleClick}>
                 <div style={style.name}>Cantagalo Learning Lab</div>
             </section>
         )
