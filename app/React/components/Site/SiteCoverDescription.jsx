@@ -93,6 +93,7 @@ var SiteCoverDescription = React.createClass({
                 justifyContent: 'center',
                 alignItems: 'center',
                 letterSpacing: '1px',
+                textDecoration: 'none',
                 '@media (max-width: 24em)': {
                     flexDirection: 'column',
                 }
@@ -117,9 +118,9 @@ var SiteCoverDescription = React.createClass({
         var style = this.style(site.private.container);
 
         return (
-            <section key="section" id="site-cover-description" style={style.section} onClick={this.handleClick}>
+            <a href="academic/cantagalo-learning-lab" key="section" id="site-cover-description" style={style.section} onClick={this.handleClick}>
                 <div style={style.name}>Cantagalo Learning Lab</div>
-            </section>
+            </a>
         )
     }
     

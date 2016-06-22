@@ -96,6 +96,7 @@ var SiteCoverOverlay = React.createClass({
         var style = {
             div: {
                 zIndex: '99',
+                pointerEvents: 'none',
                 position: 'absolute',
                 top: '0',
                 left: '0',

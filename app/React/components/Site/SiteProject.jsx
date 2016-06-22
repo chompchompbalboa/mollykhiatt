@@ -78,7 +78,7 @@ var SiteProject = React.createClass({
     },
 
     containerDimensionsHeight: function(windowDimensions) {
-        return windowDimensions.height * 0.75;
+        return windowDimensions.height * 0.75 + 20;
     },
 
     containerDimensionsWidth: function(windowDimensions, tiles) {

@@ -154,11 +154,24 @@ var SiteProjectTiles = React.createClass({
 
     style: function(container, dimensions) {
         var style = {
-            section: {
+            wrapper: {
                 position: 'fixed',
-                top: '15vh',
-                left: '5vw',
-                width: '90vw',
+                top: 'calc(15vh + 10px)',
+                left: '0',
+                width: '100vw',
+                height: dimensions.height - 20 + 'px',
+                overflowX: 'hidden',
+                WebkitOverflowScrolling: 'touch',
+                '@media (min-width: 64em)': {
+                    left: '5vw',
+                    width: '90vw'
+                }
+            },
+            section: {
+                position: 'relative',
+                top: '0',
+                left: '0',
+                width: '100%',
                 height: dimensions.height + 'px',
                 overflowX: 'scroll',
                 overflowY: 'hidden',
@@ -166,6 +179,9 @@ var SiteProjectTiles = React.createClass({
                 WebkitOverflowScrolling: 'touch'
             },
             container: {
+                position: 'relative',
+                top: '0',
+                left: '0',
                 height: dimensions.height + 'px',
                 width: dimensions.width.container.width.lg + 'px',
                 display: 'block',
@@ -189,12 +205,14 @@ var SiteProjectTiles = React.createClass({
         var style = this.style(site.private.container, dimensions);
 
         return (
-            <section id="site-project-tiles" ref={(ref) => this.section = ref} style={style.section} >
-                <div style={style.container}>
-                    <SiteProjectDescription dimensions={dimensions} project={project} seed={seed} site={site} {...other} />
-                    {tiles}
-                </div>
-            </section>
+            <div id="site-project-tiles-wrapper" style={style.wrapper}>
+                <section id="site-project-tiles" ref={(ref) => this.section = ref} style={style.section} >
+                    <div style={style.container}>
+                        <SiteProjectDescription dimensions={dimensions} project={project} seed={seed} site={site} {...other} />
+                        {tiles}
+                    </div>
+                </section>
+            </div>
         )
     }
     
