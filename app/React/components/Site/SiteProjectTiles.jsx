@@ -5,6 +5,9 @@
 var React = require('react');
 var Radium = require('radium');
 
+var siteActions = require('../../actions/siteActions');
+
+var SiteProjectDescription = require('./SiteProjectDescription.jsx');
 var SiteProjectTile = require('./SiteProjectTile.jsx');
 
 //-----------------------------------------------------------------------------
@@ -43,6 +46,13 @@ var SiteProjectTiles = React.createClass({
     // Component Did Mount
     //---------------------------------------------------------------------------
 
+    componentDidMount: function() {
+        var current = this.props.site.private.SiteProject.current;
+        if(current !== "0") {
+            this.section.scrollLeft = this.getScrollLeft();
+        }
+    },
+
     //---------------------------------------------------------------------------
     // Component Will Recieve Props
     //---------------------------------------------------------------------------
@@ -59,36 +69,110 @@ var SiteProjectTiles = React.createClass({
     // Component Did Update
     //---------------------------------------------------------------------------
 
+    componentDidUpdate: function() {
+        this.scrollTo(this.getScrollLeft(), 500)
+    },
+
     //---------------------------------------------------------------------------
     // Component Will Unmount
     //---------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------
+    // Ease In Out
+    //---------------------------------------------------------------------------
+
+    easeInOut: function(currentTime, start, change, duration) {
+        currentTime /= duration / 2;
+        if (currentTime < 1) {
+            return change / 2 * currentTime * currentTime + start;
+        }
+        currentTime -= 1;
+        return -change / 2 * (currentTime * (currentTime - 2) - 1) + start;
+    },
+
+    //---------------------------------------------------------------------------
+    // Animate Scroll
+    //---------------------------------------------------------------------------
+
+    animateScroll: function(elapsedTime, start, change, duration, increment) {        
+        elapsedTime += increment;
+        var position = this.easeInOut(elapsedTime, start, change, duration);                        
+        this.section.scrollLeft = position; 
+        if (elapsedTime < duration) {
+            setTimeout(() => {this.animateScroll(elapsedTime, start, change, duration, increment)}, increment);
+        }
+    },
+
+    //---------------------------------------------------------------------------
+    // Get Scroll Left
+    //---------------------------------------------------------------------------
+
+    getScrollLeft: function() {
+        var current = this.props.site.private.SiteProject.current;
+        var scrollLeft = 0;
+        if(current !== "0") {
+            var dimensions = this.props.dimensions;
+            var maxScrollLeft = this.section.scrollWidth - this.section.clientWidth;
+            var containerWidth = Math.floor(dimensions.width.windowDimensions.width * 0.9);
+            var imageWidth = Math.floor(dimensions.width.imageWidths[current]);
+            var imageAdjustment = Math.floor((containerWidth + imageWidth) / 2);
+            var imageLeft = Math.floor(dimensions.width.imageLeftsLg[current]);
+            scrollLeft = imageLeft - imageAdjustment;
+        }
+        return scrollLeft;
+    },
+
+    //---------------------------------------------------------------------------
     // Tiles
     //---------------------------------------------------------------------------
 
-    tiles: function(seed, site) {
-        console.log(seed);
+    tiles: function(dimensions, seed, site) {
         var tiles = [];
         for (var tile in seed) {
             tiles.push(
-                <SiteProjectTile key={tile} site={site} tile={seed[tile]} />
+                <SiteProjectTile key={tile} dimensions={dimensions} site={site} tile={seed[tile]} />
             );
-        }
-        console.log(tiles);
+        };
         return tiles;
     },
 
     //---------------------------------------------------------------------------
-    // Handles
+    // Scroll To
     //---------------------------------------------------------------------------
+
+    scrollTo: function(to, duration) {
+        var start = this.section.scrollLeft,
+            change = to - start,
+            increment = 20;
+
+        this.animateScroll(0, start, change, duration, increment);
+    },
 
     //---------------------------------------------------------------------------
     // Style
     //---------------------------------------------------------------------------
 
-    style: function(container) {
+    style: function(container, dimensions) {
         var style = {
+            section: {
+                position: 'fixed',
+                top: '15vh',
+                left: '5vw',
+                width: '90vw',
+                height: dimensions.height + 'px',
+                overflowX: 'scroll',
+                overflowY: 'hidden',
+                whiteSpace: 'nowrap',
+                WebkitOverflowScrolling: 'touch'
+            },
+            container: {
+                height: dimensions.height + 'px',
+                width: dimensions.width.container.width.lg + 'px',
+                display: 'block',
+                '@media (max-width: 48em)': {
+                    width: dimensions.width.container.width.sm + 'px'
+                }
+            }
         };
 
         return style;
@@ -100,12 +184,17 @@ var SiteProjectTiles = React.createClass({
 
     render: function() {
 
-        var {project, seed, site, ...other} = this.props;
-        var style = this.style(site.private.container);
-        var tiles = this.tiles(seed.public.projects[project].tiles, site);
+        var {dimensions, project, seed, site, ...other} = this.props;
+        var tiles = this.tiles(dimensions, seed.public.projects[project].tiles, site);
+        var style = this.style(site.private.container, dimensions);
 
         return (
-            {tiles}
+            <section id="site-project-tiles" ref={(ref) => this.section = ref} style={style.section} >
+                <div style={style.container}>
+                    <SiteProjectDescription dimensions={dimensions} project={project} seed={seed} site={site} {...other} />
+                    {tiles}
+                </div>
+            </section>
         )
     }
     

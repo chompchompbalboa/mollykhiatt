@@ -64,14 +64,6 @@ var SiteHeaderName = React.createClass({
     //---------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------
-    // Text
-    //---------------------------------------------------------------------------
-
-    text: function(url, name, style) {
-        return (url === "menu" ? "My Work" : <a href="" style={style.name} onClick={this.handleClick}>{name}</a>);
-    },
-
-    //---------------------------------------------------------------------------
     // Handles
     //---------------------------------------------------------------------------
 
@@ -119,11 +111,10 @@ var SiteHeaderName = React.createClass({
 
         var {color, seed, site, ...other} = this.props;
         var style = this.style(color, site.private.container);
-        var text = this.text(site.private.url, seed.public.name, style);
 
         return (
             <div id="site-header-name" style={style.div}>
-                {text}
+                <a href="" style={style.name} onClick={this.handleClick}>{seed.public.name}</a>
             </div>
         )
     }

@@ -8,6 +8,11 @@
         },
         "SiteHeader": {
             "color": "white"
+        },
+        "SiteProject": {
+            "current": "0",
+            "scroll": "false",
+            "scrollLeft": "50"
         }
     },
     "public": {

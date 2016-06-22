@@ -5,10 +5,12 @@
 var React = require('react');
 var Radium = require('radium');
 
+var siteActions = require('../../actions/siteActions');
+
 //-----------------------------------------------------------------------------
 // Module
 //-----------------------------------------------------------------------------
-var SiteProjectDescription = React.createClass({
+var SiteProjectArrows = React.createClass({
     //---------------------------------------------------------------------------
     // Display Name
     //---------------------------------------------------------------------------
@@ -65,48 +67,51 @@ var SiteProjectDescription = React.createClass({
     // Handles
     //---------------------------------------------------------------------------
 
+    handleClick: function(e, direction) {
+        e.preventDefault();
+        var tiles = this.props.seed.public.projects[this.props.project].tiles;
+        var current = Number(this.props.site.private.SiteProject.current);
+        var max = Object.keys(tiles).length;
+        var next = current;
+        if (direction === "right") {
+            next = (current + 1 >= max ? max : current + 1) + "";
+        }
+        else if (direction === "left") {
+            next = (current - 1) + "";
+        }
+        var changes = [
+            {"key": "private.SiteProject.current", "value": next},
+            {"key": "private.load", "value": "pop"}
+        ];
+        siteActions.changeContent(changes);
+    },
+
     //---------------------------------------------------------------------------
     // Style
     //---------------------------------------------------------------------------
 
-    style: function(container, dimensions) {
+    style: function(container, current, max) {
         var style = {
             div: {
-                position: 'relative',
-                marginLeft: dimensions.margin.left + 'px',
-                marginRight: dimensions.margin.right + 'px',
-                display: 'inline-flex',
-                float: 'left',
-                height: '100%',
-                width: dimensions.width.lg + 'px',
-                flexDirection: 'column',
-                justifyContent: 'flex-end',
-                alignItems: 'center',
-                textAlign: 'center',
-                '@media (max-width: 48em)': {
-                    width: dimensions.width.sm + 'px'
+                '@media (max-width: 64em)': {
+                    display: 'none'
                 }
             },
-            title: {
-                textTransform: 'uppercase',
-                fontSize: '16px'
+            arrow: {
+                position: 'fixed',
+                height: '3vw',
+                width: '3vw',
             },
-            subtitle: {
-                margin: '1vh 0 0 0',
-                textTransform: 'uppercase',
-                fontSize: '11px',
-                color: 'rgba(200, 200, 200, 1)'
+            left: {
+                display: (current === 0 ? 'none' : 'block'),
+                top: '47.5vh',
+                left: '0.5vw'
             },
-            span_inner: {
-                margin: '0 0.5vw 0 0.5vw'
-            },
-            description: {
-                margin: '4vh 0 0 0',
-                minHeight: '20vh',
-                textAlign: 'justify',
-                fontFamily: 'Arial',
-                fontSize: '13px',
-                letterSpacing: 'normal'
+            right: {
+                display: (current === max ? 'none' : 'block'),
+                top: '47.5vh',
+                left: '96.5vw',
+                transform: 'rotate(180deg)'
             }
         };
 
@@ -119,20 +124,20 @@ var SiteProjectDescription = React.createClass({
 
     render: function() {
 
-        var {dimensions, project, seed, site, ...other} = this.props;
-        var style = this.style(site.private.container, dimensions.width.description);
+        var {dimensions, project,  seed, site, ...other} = this.props;
+        var tiles = seed.public.projects[project].tiles;
+        var current = Number(this.props.site.private.SiteProject.current);
+        var max = Object.keys(tiles).length;
+        var style = this.style(site.private.container, current, max);
 
         return (
             <div style={style.div}>
-                <div style={style.title}>
-                    {seed.public.projects[project].title}
-                </div>
-                <div style={style.subtitle}>
-                    {seed.public.projects[project].tag}<span style={style.span_inner}>|</span>{seed.public.projects[project].location}
-                </div>
-                <div style={style.description}>
-                    {seed.public.projects[project].description_long}
-                </div>
+                <a href="/" onClick={(event) => this.handleClick(event, "left")}>
+                    <img style={[style.arrow, style.left]} src="/assets/Site/SiteProjectArrows/arrow.png"/>
+                </a>
+                <a href="/" onClick={(event) => this.handleClick(event, "right")}>
+                    <img style={[style.arrow, style.right]} src="/assets/Site/SiteProjectArrows/arrow.png"/>
+                </a>
             </div>
         )
     }
@@ -142,4 +147,4 @@ var SiteProjectDescription = React.createClass({
 //-----------------------------------------------------------------------------
 // Export
 //-----------------------------------------------------------------------------
-module.exports = Radium(SiteProjectDescription);
+module.exports = Radium(SiteProjectArrows);

@@ -93,7 +93,6 @@ var SiteHeaderMenu = React.createClass({
         e.preventDefault();
         var url = (this.props.site.private.url === "menu" ? this.props.site.private.previous : "menu");
         var previous = (this.props.site.private.url === "menu" ? this.props.site.private.previous : this.props.site.private.url);
-        console.log(previous);
         var changes = [
             {"key": "private.previous", "value": previous},
             {"key": "private.load", "value": "link"},

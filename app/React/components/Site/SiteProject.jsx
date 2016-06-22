@@ -5,8 +5,8 @@
 var React = require('react');
 var Radium = require('radium');
 
-var SiteProjectDescription = require('./SiteProjectDescription.jsx');
-var SiteProjectTile = require('./SiteProjectTile.jsx');
+var SiteProjectArrows = require('./SiteProjectArrows.jsx');
+var SiteProjectTiles = require('./SiteProjectTiles.jsx');
 
 //-----------------------------------------------------------------------------
 // Module
@@ -69,42 +69,45 @@ var SiteProject = React.createClass({
     //---------------------------------------------------------------------------
 
     containerDimensions: function(tiles) {
-        var dimensions = this.dimensions();
+        var windowDimensions = this.windowDimensions();
         var container =  {
-            width: this.containerDimensionsWidth(dimensions, tiles),
-            height: this.containerDimensionsHeight(dimensions)
+            width: this.containerDimensionsWidth(windowDimensions, tiles),
+            height: this.containerDimensionsHeight(windowDimensions)
         };
         return container;
     },
 
-    containerDimensionsHeight: function(dimensions) {
-        return dimensions.height * 0.75;
+    containerDimensionsHeight: function(windowDimensions) {
+        return windowDimensions.height * 0.75;
     },
 
-    containerDimensionsWidth: function(dimensions, tiles) {
+    containerDimensionsWidth: function(windowDimensions, tiles) {
         var width = 0;
         var count = 0;
+        var imageLeftsLg = {};
+        var imageLeftsSm = {};
+        var imageWidths = {};
+
+        var descriptionWidthLg = windowDimensions.width * 0.3;
+        var descriptionWidthSm = windowDimensions.width * 0.6;
+        var descriptionMarginLeft = windowDimensions.width * 0.08;
+        var descriptionMarginRight = windowDimensions.width * 0.03;
+        var tilesMargin = windowDimensions.width * 0.05;
+        var containerExtra = windowDimensions.width * 0.01;
+
         for (var tile in tiles) {
             var ratio = Number(tiles[tile].img.width) / Number(tiles[tile].img.height);
-            var height = dimensions.height * 0.75;
-            width = width + (height * ratio);
+            var height = windowDimensions.height * 0.75;
+            var imageWidth = height * ratio;
+            width = width + imageWidth + tilesMargin;
             count = count + 1;
+            imageWidths[count] = imageWidth;
+            imageLeftsLg[count] = descriptionWidthLg + descriptionMarginLeft + descriptionMarginRight + width;
+            imageLeftsSm[count] = descriptionWidthSm + descriptionMarginLeft + descriptionMarginRight + width;
         };
-        // The multiplier for the following two calculations comes from
-        // description container width + margins + 0.01
-        var descriptionWidthLg = dimensions.width * 0.3;
-        var descriptionWidthSm = dimensions.width * 0.6;
-        var descriptionMarginLgLeft = dimensions.width * 0.08;
-        var descriptionMarginLgRight = dimensions.width * 0.03;
-        var descriptionMarginSmLeft = dimensions.width * 0.08;
-        var descriptionMarginSmRight = dimensions.width * 0.03;
-        var tilesMarginLg = dimensions.width * 0.05;
-        var tilesMarginSm = dimensions.width * 0.05
-        var marginWidthLg = count * tilesMarginLg;
-        var marginWidthSm = count * tilesMarginSm;
-        var containerExtra = dimensions.width * 0.01;
-        var containerWidthLg = width + marginWidthLg + descriptionWidthLg + descriptionMarginLgLeft + descriptionMarginLgRight + containerExtra;
-        var containerWidthSm = width + marginWidthSm + descriptionWidthSm + descriptionMarginSmLeft + descriptionMarginSmRight + containerExtra;
+
+        var containerWidthLg = width + descriptionWidthLg + descriptionMarginLeft + descriptionMarginRight + containerExtra;
+        var containerWidthSm = width + descriptionWidthSm + descriptionMarginLeft + descriptionMarginRight + containerExtra;
         return ({
             container: {
                 width: {
@@ -118,36 +121,33 @@ var SiteProject = React.createClass({
                     sm: descriptionWidthSm
                 },
                 margin: {
-                    lg: {
-                        left: descriptionMarginLgLeft,
-                        right: descriptionMarginLgRight
-                    },
-                    sm: {
-                        left: descriptionMarginSmLeft,
-                        right: descriptionMarginSmRight
-                    }
+                    left: descriptionMarginLeft,
+                    right: descriptionMarginRight
                 }
             },
+            imageLeftsLg: imageLeftsLg,
+            imageLeftsSm: imageLeftsSm,
+            imageWidths: imageWidths,
             tiles: {
                 height: height,
                 margin: {
-                    lg: tilesMarginLg,
-                    sm: tilesMarginSm
+                    lg: tilesMargin,
+                    sm: tilesMargin
                 }
-            }
+            },
+            windowDimensions: windowDimensions
         });
     },
 
     //---------------------------------------------------------------------------
-    // Dimensions
+    // Window Dimensions
     //---------------------------------------------------------------------------
 
-    dimensions: function() {
+    windowDimensions: function() {
         var width = window.innerWidth;
         var height = window.innerHeight;
         return {width: width, height: height};
     },
-
 
     //---------------------------------------------------------------------------
     // Project
@@ -162,54 +162,16 @@ var SiteProject = React.createClass({
     },
 
     //---------------------------------------------------------------------------
-    // Tiles
-    //---------------------------------------------------------------------------
-
-    tiles: function(dimensions, seed, site) {
-        var tiles = [];
-        for (var tile in seed) {
-            tiles.push(
-                <SiteProjectTile key={tile} dimensions={dimensions} site={site} tile={seed[tile]} />
-            );
-        };
-        return tiles;
-    },
-
-    //---------------------------------------------------------------------------
     // Handles
     //---------------------------------------------------------------------------
-
-    handleWheel: function(e) {
-        if(Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-            e.preventDefault();
-            this.section.scrollLeft -= (e.deltaX * 1);
-        }
-        console.log(e.deltaX);
-    },
 
     //---------------------------------------------------------------------------
     // Style
     //---------------------------------------------------------------------------
 
-    style: function(container, dimensions) {
+    style: function(container) {
         var style = {
             section: {
-                position: 'fixed',
-                top: '15vh',
-                width: '100vw',
-                height: dimensions.height + 'px',
-                overflowX: 'scroll',
-                overflowY: 'hidden',
-                whiteSpace: 'nowrap',
-                WebkitOverflowScrolling: 'touch'
-            },
-            container: {
-                height: dimensions.height + 'px',
-                width: dimensions.width.container.width.lg + 'px',
-                display: 'block',
-                '@media (max-width: 48em)': {
-                    width: dimensions.width.container.width.sm + 'px'
-                }
             }
         };
 
@@ -225,15 +187,12 @@ var SiteProject = React.createClass({
         var {seed, site, ...other} = this.props;
         var project = this.project(seed.public.projects, site.private.url);
         var dimensions = this.containerDimensions(seed.public.projects[project].tiles);
-        var tiles = this.tiles(dimensions, seed.public.projects[project].tiles, site);
-        var style = this.style(site.private.container, dimensions);
+        var style = this.style(site.private.container);
 
         return (
-            <section id="site-project" ref={(ref) => this.section = ref} style={style.section} >
-                <div style={style.container}>
-                    <SiteProjectDescription dimensions={dimensions} project={project} seed={seed} site={site} {...other} />
-                    {tiles}
-                </div>
+            <section id="site-project" style={style.section} >
+                <SiteProjectArrows dimensions={dimensions} project={project} seed={seed} site={site} {...other} />
+                <SiteProjectTiles dimensions={dimensions} project={project} seed={seed} site={site} {...other} />
             </section>
         )
     }

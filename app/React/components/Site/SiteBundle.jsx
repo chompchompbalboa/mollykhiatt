@@ -107,7 +107,10 @@ var SiteBundle = React.createClass({
     //-------------------------------------------------------------------------
 
     handleResize: function() {
-        this.forceUpdate();
+        var changes = [
+            {"key": "private.load", "value": "pop"}
+        ];
+        siteActions.changeContent(changes);
     },
 
     //-------------------------------------------------------------------------

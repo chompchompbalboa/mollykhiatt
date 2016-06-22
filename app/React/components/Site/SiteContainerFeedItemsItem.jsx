@@ -108,7 +108,8 @@ var SiteContainerFeedItemsItem = React.createClass({
         var changes = [
             {"key": "private.load", "value": "link"},
             {"key": "private.url", "value": url},
-            {"key": "private.SiteCoverOverlay.opacity", "value": "0.25"}
+            {"key": "private.SiteCoverOverlay.opacity", "value": "0.25"},
+            {"key": "private.SiteProject.current", "value": "0"}
         ];
         siteActions.changeContent(changes);
     },

@@ -209,7 +209,6 @@ var Site = React.createClass({
         if (e.state !== null) {
             url = e.state.url
             var previous = (url === "menu" | this.props.site.private.url === "menu" ? this.props.site.private.previous : this.props.site.private.url);
-            console.log(previous)
             var changes = [
                 {"key": "private.previous", "value": previous},
                 {"key": "private.url", "value": url},
