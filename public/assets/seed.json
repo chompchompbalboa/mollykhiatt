@@ -5,9 +5,15 @@ db.seeds.insert(
             "private": "private"
         },
         "public": {
-            "name": "Molly Kay Hiatt",
-            "phone": "+1 206 307 5405",
+            "bio": {
+                "about": "I am currently seeking employment following my Masters at Oxford Brookes University. The focus of my final year was a culmination of education based projects. My final thesis project was a community based learning laboratory in the Cantagalo Favela of Rio De Janeiro. Additional projects included an independent design study of an orphanage in The Gambia and a concept scheme and business plan for a primary school in Seattle, USA.  In practice I hope to further my skills by working in a challenging, collaborative environment with a focus on commercial projects. "
+            },
             "email": "mollykhiatt@gmail.com",
+            "name": "Molly Kay Hiatt",
+            "phone": {
+                "england": "+44 (0) 749 653 1210",
+                "usa": "+1 206 307 5405"
+            },
             "projects": {
                 "1": {
                     "category": "academic",
@@ -184,10 +190,201 @@ db.seeds.insert(
                     "category": "academic",
                     "description_long": "",
                     "description_short": "",
-                    "feed_photo": "/assets/projects/cabin-in-the-woods/(3)Front_Porch.jpg",
-                    "location": "United Kingdom",
+                    "feed_photo": "/assets/projects/student-housing/(2)East_Section.jpg",
+                    "location": "Liverpool, UK",
+                    "order": {
+                        "feed": "2",
+                        "menu": "5"
+                    },
+                    "tiles": {
+                        "1": {
+                            "img": {
+                                "src": "/assets/projects/student-housing/(1)eXTERIOR.jpg",
+                                "width": "940",
+                                "height": "620"
+                            }
+                        },
+                        "2": {
+                            "img": {
+                                "src": "/assets/projects/student-housing/(2)East_Section.jpg",
+                                "width": "1250",
+                                "height": "620"
+                            }
+                        },
+                        "3": {
+                            "img": {
+                                "src": "/assets/projects/student-housing/(3)Site_Context.jpg",
+                                "width": "333",
+                                "height": "620"
+                            }
+                        },
+                        "4": {
+                            "img": {
+                                "src": "/assets/projects/student-housing/(4)Multi-faith room.jpg",
+                                "width": "815",
+                                "height": "620"
+                            }
+                        },
+                        "5": {
+                            "img": {
+                                "src": "/assets/projects/student-housing/(5)South_elevation.jpg",
+                                "width": "687",
+                                "height": "620"
+                            }
+                        }
+                    },
+                    "title": "Liverpool Student Housing",
+                    "tag": "Undergraduate Study Abroad",
+                    "url": "academic/student-housing",
+                    "year": "2011"
+                },
+                "3": {
+                    "category": "academic",
+                    "description_long": "",
+                    "description_short": "",
+                    "feed_photo": "/assets/projects/belltown-elementary/(1)Exterior_View.jpg",
+                    "location": "Seattle, WA",
                     "order": {
                         "feed": "3",
+                        "menu": "3"
+                    },
+                    "tiles": {
+                        "1": {
+                            "img": {
+                                "src": "/assets/projects/belltown-elementary/(1)Exterior_View.jpg",
+                                "width": "959",
+                                "height": "620"
+                            }
+                        },
+                        "2": {
+                            "img": {
+                                "src": "/assets/projects/belltown-elementary/(2) Gym_Entrance.jpg",
+                                "width": "800",
+                                "height": "620"
+                            }
+                        },
+                        "3": {
+                            "img": {
+                                "src": "/assets/projects/belltown-elementary/(3) Floor plans.jpg",
+                                "width": "1300",
+                                "height": "620"
+                            }
+                        },
+                        "4": {
+                            "img": {
+                                "src": "/assets/projects/belltown-elementary/(4)Atrium.jpg",
+                                "width": "887",
+                                "height": "620"
+                            }
+                        },
+                        "5": {
+                            "img": {
+                                "src": "/assets/projects/belltown-elementary/(5)Wall_Construction_Diagram.jpg",
+                                "width": "405",
+                                "height": "620"
+                            }
+                        },
+                        "6": {
+                            "img": {
+                                "src": "/assets/projects/belltown-elementary/(6) Diagrammatic_Studies.jpg",
+                                "width": "977",
+                                "height": "620"
+                            }
+                        },
+                        "7": {
+                            "img": {
+                                "src": "/assets/projects/belltown-elementary/(7)South_Section.jpg",
+                                "width": "500",
+                                "height": "620"
+                            }
+                        },
+                        "8": {
+                            "img": {
+                                "src": "/assets/projects/belltown-elementary/(8)Programmatic_Diagram.jpg",
+                                "width": "347",
+                                "height": "620"
+                            }
+                        },
+                        "9": {
+                            "img": {
+                                "src": "/assets/projects/belltown-elementary/(9)Terrace playground.jpg",
+                                "width": "900",
+                                "height": "620"
+                            }
+                        }
+                    },
+                    "title": "Belltown Elementary",
+                    "tag": "Undergraduate Studio",
+                    "url": "academic/belltown-elementary",
+                    "year": "2012"
+                },
+                "4": {
+                    "category": "academic",
+                    "description_long": "",
+                    "description_short": "",
+                    "feed_photo": "/assets/projects/marine-center/(6)Concept_Sketch and model.jpg",
+                    "location": "Seattle, WA",
+                    "order": {
+                        "feed": "4",
+                        "menu": "4"
+                    },
+                    "tiles": {
+                        "1": {
+                            "img": {
+                                "src": "/assets/projects/marine-center/(1)Street_Entrance.jpg",
+                                "width": "912",
+                                "height": "620"
+                            }
+                        },
+                        "2": {
+                            "img": {
+                                "src": "/assets/projects/marine-center/(2)Skyline.jpg",
+                                "width": "1400",
+                                "height": "620"
+                            }
+                        },
+                        "3": {
+                            "img": {
+                                "src": "/assets/projects/marine-center/(3)First Floor.jpg",
+                                "width": "841",
+                                "height": "457"
+                            }
+                        },
+                        "4": {
+                            "img": {
+                                "src": "/assets/projects/marine-center/(4)Second Floor.jpg",
+                                "width": "841",
+                                "height": "457"
+                            }
+                        },
+                        "5": {
+                            "img": {
+                                "src": "/assets/projects/marine-center/(5)View from Puget Sound.jpg",
+                                "width": "1366",
+                                "height": "620"
+                            }
+                        },
+                        "6": {
+                            "img": {
+                                "src": "/assets/projects/marine-center/(6)Concept_Sketch and model.jpg",
+                                "width": "566",
+                                "height": "620"
+                            }
+                        }
+                    },
+                    "title": "Pier 48 Marine Center",
+                    "tag": "Undergraduate Studio",
+                    "url": "academic/marine-center",
+                    "year": "2012"
+                },
+                "5": {
+                    "category": "academic",
+                    "description_long": "",
+                    "description_short": "",
+                    "feed_photo": "/assets/projects/cabin-in-the-woods/(1) Interior_Entrance.jpg",
+                    "location": "United Kingdom",
+                    "order": {
+                        "feed": "5",
                         "menu": "2"
                     },
                     "tiles": {
@@ -239,183 +436,6 @@ db.seeds.insert(
                     "url": "academic/cabin-in-the-woods",
                     "year": "2015"
                 },
-                "3": {
-                    "category": "academic",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/belltown-elementary/(7)South_Section.jpg",
-                    "location": "Seattle, WA",
-                    "order": {
-                        "feed": "4",
-                        "menu": "3"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/belltown-elementary/(1)Exterior_View.jpg",
-                                "width": "959",
-                                "height": "620"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/belltown-elementary/(2) Gym_Entrance.jpg",
-                                "width": "920",
-                                "height": "620"
-                            }
-                        },
-                        "3": {
-                            "img": {
-                                "src": "/assets/projects/belltown-elementary/(3) Floor plans.jpg",
-                                "width": "955",
-                                "height": "620"
-                            }
-                        },
-                        "4": {
-                            "img": {
-                                "src": "/assets/projects/belltown-elementary/(4)Atrium.jpg",
-                                "width": "887",
-                                "height": "620"
-                            }
-                        },
-                        "5": {
-                            "img": {
-                                "src": "/assets/projects/belltown-elementary/(5)Wall_Construction_Diagram.jpg",
-                                "width": "405",
-                                "height": "620"
-                            }
-                        },
-                        "6": {
-                            "img": {
-                                "src": "/assets/projects/belltown-elementary/(6) Diagrammatic_Studies.jpg",
-                                "width": "977",
-                                "height": "620"
-                            }
-                        },
-                        "7": {
-                            "img": {
-                                "src": "/assets/projects/belltown-elementary/(7)South_Section.jpg",
-                                "width": "1094",
-                                "height": "620"
-                            }
-                        },
-                        "8": {
-                            "img": {
-                                "src": "/assets/projects/belltown-elementary/(8)Programmatic_Diagram.jpg",
-                                "width": "347",
-                                "height": "620"
-                            }
-                        },
-                    },
-                    "title": "Belltown Elementary",
-                    "tag": "Undergraduate Studio",
-                    "url": "academic/belltown-elementary",
-                    "year": "2012"
-                },
-                "4": {
-                    "category": "academic",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/marine-center/(5)Concept_Sketch and model.jpg",
-                    "location": "Seattle, WA",
-                    "order": {
-                        "feed": "5",
-                        "menu": "4"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/marine-center/(1)Street_Entrance.jpg",
-                                "width": "992",
-                                "height": "620"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/marine-center/(2)First Floor.jpg",
-                                "width": "841",
-                                "height": "457"
-                            }
-                        },
-                        "3": {
-                            "img": {
-                                "src": "/assets/projects/marine-center/(3)Second Floor.jpg",
-                                "width": "841",
-                                "height": "457"
-                            }
-                        },
-                        "4": {
-                            "img": {
-                                "src": "/assets/projects/marine-center/(4)View from Puget Sound.jpg",
-                                "width": "1366",
-                                "height": "620"
-                            }
-                        },
-                        "5": {
-                            "img": {
-                                "src": "/assets/projects/marine-center/(5)Concept_Sketch and model.jpg",
-                                "width": "566",
-                                "height": "620"
-                            }
-                        }
-                    },
-                    "title": "Pier 48 Marine Center",
-                    "tag": "Undergraduate Studio",
-                    "url": "academic/marine-center",
-                    "year": "2012"
-                },
-                "5": {
-                    "category": "academic",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/student-housing/(1)East_Section.jpg",
-                    "location": "Liverpool, UK",
-                    "order": {
-                        "feed": "2",
-                        "menu": "5"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/student-housing/(1)East_Section.jpg",
-                                "width": "1250",
-                                "height": "620"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/student-housing/(2)eXTERIOR.jpg",
-                                "width": "1287",
-                                "height": "620"
-                            }
-                        },
-                        "3": {
-                            "img": {
-                                "src": "/assets/projects/student-housing/(3)Site_Context.jpg",
-                                "width": "333",
-                                "height": "620"
-                            }
-                        },
-                        "4": {
-                            "img": {
-                                "src": "/assets/projects/student-housing/(4)Multi-faith room.jpg",
-                                "width": "815",
-                                "height": "620"
-                            }
-                        },
-                        "5": {
-                            "img": {
-                                "src": "/assets/projects/student-housing/(5)South_elevation.jpg",
-                                "width": "687",
-                                "height": "620"
-                            }
-                        }
-                    },
-                    "title": "Liverpool Student Housing",
-                    "tag": "Undergraduate Study Abroad",
-                    "url": "academic/student-housing",
-                    "year": "2011"
-                },
                 "6": {
                     "category": "academic",
                     "description_long": "",
@@ -430,14 +450,14 @@ db.seeds.insert(
                         "1": {
                             "img": {
                                 "src": "/assets/projects/culinary-school/(1)Main_Entrance.jpg",
-                                "width": "1167",
+                                "width": "986",
                                 "height": "620"
                             }
                         },
                         "2": {
                             "img": {
                                 "src": "/assets/projects/culinary-school/(2)Floor_Plans.jpg",
-                                "width": "275",
+                                "width": "350",
                                 "height": "620"
                             }
                         },
@@ -520,7 +540,7 @@ db.seeds.insert(
                         "1": {
                             "img": {
                                 "src": "/assets/projects/photo-studio/(1)Exterior_Entrance.jpg",
-                                "width": "788",
+                                "width": "1030",
                                 "height": "620"
                             }
                         },
@@ -548,7 +568,7 @@ db.seeds.insert(
                     "category": "photography",
                     "description_long": "",
                     "description_short": "",
-                    "feed_photo": "/assets/projects/rio/photography_vidigal.jpg",
+                    "feed_photo": "/assets/projects/rio/Photography_kids_.jpg",
                     "location": "Rio De Janeiro, BR",
                     "order": {
                         "feed": "9",
@@ -690,43 +710,50 @@ db.seeds.insert(
                         "1": {
                             "img": {
                                 "src": "/assets/projects/built/BLD_BLUFF.jpg",
-                                "width": "169",
-                                "height": "212"
+                                "width": "1047",
+                                "height": "1308"
                             }
                         },
                         "2": {
                             "img": {
                                 "src": "/assets/projects/built/BLDG_AFTERNOON.jpg",
-                                "width": "163",
-                                "height": "277"
+                                "width": "1038",
+                                "height": "1740"
                             }
                         },
                         "3": {
                             "img": {
                                 "src": "/assets/projects/built/BLDG_ALLEY.jpg",
-                                "width": "186",
-                                "height": "245"
+                                "width": "1185",
+                                "height": "1533"
                             }
                         },
                         "4": {
                             "img": {
                                 "src": "/assets/projects/built/BLDG_ARCH.jpg",
-                                "width": "182",
-                                "height": "258"
+                                "width": "1131",
+                                "height": "1644"
                             }
                         },
                         "5": {
                             "img": {
                                 "src": "/assets/projects/built/BLDG_BAR.jpg",
-                                "width": "167",
-                                "height": "219"
+                                "width": "1071",
+                                "height": "1371"
                             }
                         },
                         "6": {
                             "img": {
-                                "src": "/assets/projects/built/BLDG_RUE.jpg",
-                                "width": "162",
-                                "height": "246"
+                                "src": "/assets/projects/built/BUILT_6.jpg",
+                                "width": "1226",
+                                "height": "1668"
+                            }
+                        },
+                        "7": {
+                            "img": {
+                                "src": "/assets/projects/built/BUILT_7.jpg",
+                                "width": "1878",
+                                "height": "849"
                             }
                         }
                     },
@@ -749,22 +776,15 @@ db.seeds.insert(
                         "1": {
                             "img": {
                                 "src": "/assets/projects/organic/LANDSCAPE_FIELD.jpg",
-                                "width": "139",
-                                "height": "182"
+                                "width": "1518",
+                                "height": "1152"
                             }
                         },
                         "2": {
                             "img": {
-                                "src": "/assets/projects/organic/LANDSCAPE_BLUFF.jpg",
-                                "width": "360",
-                                "height": "288"
-                            }
-                        },
-                        "3": {
-                            "img": {
-                                "src": "/assets/projects/organic/LANDSCAPE_SAIL.jpg",
-                                "width": "162",
-                                "height": "267"
+                                "src": "/assets/projects/organic/LANDSCAPE_LAVENDER.jpg",
+                                "width": "1095",
+                                "height": "1473"
                             }
                         }
                     },
@@ -829,7 +849,7 @@ db.seeds.insert(
                     "category": "professional",
                     "description_long": "",
                     "description_short": "",
-                    "feed_photo": "/assets/projects/oita-museum/Mixed_To_Organize25.jpg",
+                    "feed_photo": "/assets/projects/oita-museum/Mixed_To_Organize26.jpg",
                     "location": "Oita, JP",
                     "order": {
                         "feed": "14",
@@ -932,6 +952,24 @@ db.seeds.insert(
                     "url": "professional/reo-flats",
                     "year": "2011"
                 }
+            },
+            "films": {
+                "1": {
+                    "location": "United Kingdom",
+                    "order": {
+                        "menu": "1"
+                    },
+                    "embed": {
+                        "width": "560",
+                        "height": "315",
+                        "src": "https://www.youtube.com/embed/a0FeKPrEW10",
+                        "frameborder": "0"
+                    },
+                    "title": "Cabin Essence",
+                    "tag": "Graduate Studio",
+                    "url": "film/cabin-essence",
+                    "year": "2016"
+                }   
             }
         }
     }
