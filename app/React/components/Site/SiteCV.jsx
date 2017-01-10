@@ -130,6 +130,7 @@ var SiteCV = React.createClass({
                     <li style={style.li}>WilkinsonEyre | UK | 2016</li>
                     <li style={style.li}>Krause Architects | UK | 2015</li>
                     <li style={style.li}>Elkus Manfredi Architects | US | 2014</li>
+                    <li style={style.li}>WilkinsonEyre | UK | 2013</li>
                     <li style={style.li}>Shigeru Ban Architects | JP | 2012</li>
                     <li style={style.li}>Johnson Architecture | US | 2011</li>
                 </ul>
