@@ -119,9 +119,6 @@ var SiteContact = React.createClass({
                 <div id="site-contact-header" style={style.header}>
                     Contact
                 </div>
-                <div id="site-contact-phone-england" style={style.info}>
-                    PHONE (UK): <a href={"tel: " + seed.public.phone.england} style={style.a}>{seed.public.phone.england}</a>
-                </div>
                 <div id="site-contact-phone-usa" style={style.info}>
                     PHONE (USA): <a href={"tel: " + seed.public.phone.usa} style={style.a}>{seed.public.phone.usa}</a>
                 </div>

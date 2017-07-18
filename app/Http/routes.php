@@ -3,43 +3,10 @@ Route::group(['middleware' => ['web']], function () {
 
     /*
     |--------------------------------------------------------------------------
-    | Authentication
-    |--------------------------------------------------------------------------
-    */
-
-    //Route::auth();
-
-    //Route::get('/home', 'HomeController@index');
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | Admin
-    |--------------------------------------------------------------------------
-    */
-
-    $admin = function() {
-        Route::any('/', [
-            "as" => "admin_home",
-            "uses" => "AdminController@home",
-        ]);
-
-        Route::post('/react/{action}/{info?}', [
-            "as" => "admin_react",
-            "uses" => "AdminReactController@react",
-        ]);
-    };
-
-    Route::group(['domain' => 'admin.mollykhiatt.com'], $admin);
-    Route::group(['domain' => 'admin.mollyhiatt.com'], $admin);
-    Route::group(['domain' => 'admin.mollykhiatt.local'], $admin);
-
-    /*
-    |--------------------------------------------------------------------------
     | App
     |--------------------------------------------------------------------------
     */
-
+dd('ol');
     $site = function() {
         Route::any('/{optional?}', [
             "as" => "site_home",
@@ -59,5 +26,5 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::group(['domain' => 'mollykhiatt.com'], $site);
     Route::group(['domain' => 'mollyhiatt.com'], $site);
-    Route::group(['domain' => 'mollykhiatt.local'], $site);
+    Route::group(['domain' => 'mollyhiatt.local'], $site);
 });
