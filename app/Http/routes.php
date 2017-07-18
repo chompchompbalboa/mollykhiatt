@@ -6,7 +6,6 @@ Route::group(['middleware' => ['web']], function () {
     | App
     |--------------------------------------------------------------------------
     */
-dd('ol');
     $site = function() {
         Route::any('/{optional?}', [
             "as" => "site_home",
