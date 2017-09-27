@@ -10,7 +10,6 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Helpers\Helper;
 
-use App\Seed;
 use App\Invite;
 
 class SiteController extends Controller

@@ -1,976 +1,975 @@
-db.seeds.insert(
-    {
-        "version": "0.0",
-        "private": {
-            "private": "private"
+
+{
+    "version": "0.0",
+    "private": {
+        "private": "private"
+    },
+    "public": {
+        "bio": {
+            "about": "I am currently seeking employment following my Masters at Oxford Brookes University. The focus of my final year was a culmination of education based projects. My final thesis project was a community based learning laboratory in the Cantagalo Favela of Rio De Janeiro. Additional projects included an independent design study of an orphanage in The Gambia and a concept scheme and business plan for a primary school in Seattle, USA.  In practice I hope to further my skills by working in a challenging, collaborative environment with a focus on commercial projects. "
         },
-        "public": {
-            "bio": {
-                "about": "I am currently seeking employment following my Masters at Oxford Brookes University. The focus of my final year was a culmination of education based projects. My final thesis project was a community based learning laboratory in the Cantagalo Favela of Rio De Janeiro. Additional projects included an independent design study of an orphanage in The Gambia and a concept scheme and business plan for a primary school in Seattle, USA.  In practice I hope to further my skills by working in a challenging, collaborative environment with a focus on commercial projects. "
+        "email": "mollykhiatt@gmail.com",
+        "name": "Molly Kay Hiatt",
+        "phone": {
+            "england": "+44 (0) 749 653 1210",
+            "usa": "+1 206 307 5405"
+        },
+        "projects": {
+            "1": {
+                "category": "academic",
+                "description_long": "",
+                "description_short": "",
+                "feed_photo": "/assets/projects/cantagalo-learning-lab/(8)SECTION_PERSPECTIVE.jpg",
+                "location": "Rio De Janeiro, Br",
+                "order": {
+                    "feed": "1",
+                    "menu": "1"
+                },
+                "tiles": {
+                    "1": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(1)NIGHT_VIEW.jpg",
+                            "width": "922",
+                            "height": "620"
+                        }
+                    },
+                    "2": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(2)BALCONY_VIEW.jpg",
+                            "width": "1100",
+                            "height": "620"
+                        }
+                    },
+                    "3": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(3)SITE_PLAN.jpg",
+                            "width": "600",
+                            "height": "620"
+                        }
+                    },
+                    "4": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(4)SITE_GRID.jpg",
+                            "width": "770",
+                            "height": "620"
+                        }
+                    },
+                    "5": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(5)TOWN_SQUARE.jpg",
+                            "width": "999",
+                            "height": "620"
+                        }
+                    },
+                    "6": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(6)MODEL_IMAGES.jpg",
+                            "width": "1366",
+                            "height": "620"
+                        }
+                    },
+                    "7": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(7)DAY_VIEW.jpg",
+                            "width": "1101",
+                            "height": "620"
+                        }
+                    },
+                    "8": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(8)SECTION_PERSPECTIVE.jpg",
+                            "width": "1169",
+                            "height": "620"
+                        }
+                    },
+                    "9": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(9)LEVEL_ONE.jpg",
+                            "width": "950",
+                            "height": "620"
+                        }
+                    },
+                    "10": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(10)LEVEL_TWO.jpg",
+                            "width": "950",
+                            "height": "620"
+                        }
+                    },
+                    "11": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(11)LEVEL_THREE.jpg",
+                            "width": "950",
+                            "height": "620"
+                        }
+                    },
+                    "12": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(12)LEVEL_FOUR.jpg",
+                            "width": "950",
+                            "height": "620"
+                        }
+                    },
+                    "13": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(13)LEVEL_FIVE.jpg",
+                            "width": "950",
+                            "height": "620"
+                        }
+                    },
+                    "14": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(14)LEVEL_SIX.jpg",
+                            "width": "950",
+                            "height": "620"
+                        }
+                    },
+                    "15": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(15)LEVEL_SEVEN.jpg",
+                            "width": "950",
+                            "height": "620"
+                        }
+                    },
+                    "16": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(16)SITE_MODEL.jpg",
+                            "width": "1153",
+                            "height": "620"
+                        }
+                    },
+                    "17": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(17)DETAIL_MODEL.jpg",
+                            "width": "997",
+                            "height": "620"
+                        }
+                    },
+                    "18": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(18)SITE_SECTION.jpg",
+                            "width": "1366",
+                            "height": "620"
+                        }
+                    },
+                    "19": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(19)SUNSET_PLATFORM.jpg",
+                            "width": "1004",
+                            "height": "620"
+                        }
+                    },
+                    "20": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(20)LEARNING_LAB.jpg",
+                            "width": "1082",
+                            "height": "620"
+                        }
+                    },
+                    "21": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(21)EXPLODED_STRUCTURE.jpg",
+                            "width": "624",
+                            "height": "620"
+                        }
+                    },
+                    "22": {
+                        "img": {
+                            "src": "/assets/projects/cantagalo-learning-lab/(22)MATERIAL_BUILD-UP.jpg",
+                            "width": "782",
+                            "height": "620"
+                        }
+                    }
+                },
+                "title": "Cantagalo Learning Lab",
+                "tag": "Graduate Studio",
+                "url": "academic/cantagalo-learning-lab",
+                "year": "2016"    
             },
-            "email": "mollykhiatt@gmail.com",
-            "name": "Molly Kay Hiatt",
-            "phone": {
-                "england": "+44 (0) 749 653 1210",
-                "usa": "+1 206 307 5405"
+            "2": {
+                "category": "academic",
+                "description_long": "",
+                "description_short": "",
+                "feed_photo": "/assets/projects/student-housing/(2)East_Section.jpg",
+                "location": "Liverpool, UK",
+                "order": {
+                    "feed": "2",
+                    "menu": "5"
+                },
+                "tiles": {
+                    "1": {
+                        "img": {
+                            "src": "/assets/projects/student-housing/(1)eXTERIOR.jpg",
+                            "width": "940",
+                            "height": "620"
+                        }
+                    },
+                    "2": {
+                        "img": {
+                            "src": "/assets/projects/student-housing/(2)East_Section.jpg",
+                            "width": "1250",
+                            "height": "620"
+                        }
+                    },
+                    "3": {
+                        "img": {
+                            "src": "/assets/projects/student-housing/(3)Site_Context.jpg",
+                            "width": "333",
+                            "height": "620"
+                        }
+                    },
+                    "4": {
+                        "img": {
+                            "src": "/assets/projects/student-housing/(4)Multi-faith room.jpg",
+                            "width": "815",
+                            "height": "620"
+                        }
+                    },
+                    "5": {
+                        "img": {
+                            "src": "/assets/projects/student-housing/(5)South_elevation.jpg",
+                            "width": "687",
+                            "height": "620"
+                        }
+                    }
+                },
+                "title": "Liverpool Student Housing",
+                "tag": "Undergraduate Study Abroad",
+                "url": "academic/student-housing",
+                "year": "2011"
             },
-            "projects": {
-                "1": {
-                    "category": "academic",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/cantagalo-learning-lab/(8)SECTION_PERSPECTIVE.jpg",
-                    "location": "Rio De Janeiro, Br",
-                    "order": {
-                        "feed": "1",
-                        "menu": "1"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(1)NIGHT_VIEW.jpg",
-                                "width": "922",
-                                "height": "620"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(2)BALCONY_VIEW.jpg",
-                                "width": "1100",
-                                "height": "620"
-                            }
-                        },
-                        "3": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(3)SITE_PLAN.jpg",
-                                "width": "600",
-                                "height": "620"
-                            }
-                        },
-                        "4": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(4)SITE_GRID.jpg",
-                                "width": "770",
-                                "height": "620"
-                            }
-                        },
-                        "5": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(5)TOWN_SQUARE.jpg",
-                                "width": "999",
-                                "height": "620"
-                            }
-                        },
-                        "6": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(6)MODEL_IMAGES.jpg",
-                                "width": "1366",
-                                "height": "620"
-                            }
-                        },
-                        "7": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(7)DAY_VIEW.jpg",
-                                "width": "1101",
-                                "height": "620"
-                            }
-                        },
-                        "8": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(8)SECTION_PERSPECTIVE.jpg",
-                                "width": "1169",
-                                "height": "620"
-                            }
-                        },
-                        "9": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(9)LEVEL_ONE.jpg",
-                                "width": "950",
-                                "height": "620"
-                            }
-                        },
-                        "10": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(10)LEVEL_TWO.jpg",
-                                "width": "950",
-                                "height": "620"
-                            }
-                        },
-                        "11": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(11)LEVEL_THREE.jpg",
-                                "width": "950",
-                                "height": "620"
-                            }
-                        },
-                        "12": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(12)LEVEL_FOUR.jpg",
-                                "width": "950",
-                                "height": "620"
-                            }
-                        },
-                        "13": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(13)LEVEL_FIVE.jpg",
-                                "width": "950",
-                                "height": "620"
-                            }
-                        },
-                        "14": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(14)LEVEL_SIX.jpg",
-                                "width": "950",
-                                "height": "620"
-                            }
-                        },
-                        "15": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(15)LEVEL_SEVEN.jpg",
-                                "width": "950",
-                                "height": "620"
-                            }
-                        },
-                        "16": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(16)SITE_MODEL.jpg",
-                                "width": "1153",
-                                "height": "620"
-                            }
-                        },
-                        "17": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(17)DETAIL_MODEL.jpg",
-                                "width": "997",
-                                "height": "620"
-                            }
-                        },
-                        "18": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(18)SITE_SECTION.jpg",
-                                "width": "1366",
-                                "height": "620"
-                            }
-                        },
-                        "19": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(19)SUNSET_PLATFORM.jpg",
-                                "width": "1004",
-                                "height": "620"
-                            }
-                        },
-                        "20": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(20)LEARNING_LAB.jpg",
-                                "width": "1082",
-                                "height": "620"
-                            }
-                        },
-                        "21": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(21)EXPLODED_STRUCTURE.jpg",
-                                "width": "624",
-                                "height": "620"
-                            }
-                        },
-                        "22": {
-                            "img": {
-                                "src": "/assets/projects/cantagalo-learning-lab/(22)MATERIAL_BUILD-UP.jpg",
-                                "width": "782",
-                                "height": "620"
-                            }
-                        }
-                    },
-                    "title": "Cantagalo Learning Lab",
-                    "tag": "Graduate Studio",
-                    "url": "academic/cantagalo-learning-lab",
-                    "year": "2016"    
+            "3": {
+                "category": "academic",
+                "description_long": "",
+                "description_short": "",
+                "feed_photo": "/assets/projects/belltown-elementary/(1)Exterior_View.jpg",
+                "location": "Seattle, WA",
+                "order": {
+                    "feed": "3",
+                    "menu": "3"
                 },
-                "2": {
-                    "category": "academic",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/student-housing/(2)East_Section.jpg",
-                    "location": "Liverpool, UK",
-                    "order": {
-                        "feed": "2",
-                        "menu": "5"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/student-housing/(1)eXTERIOR.jpg",
-                                "width": "940",
-                                "height": "620"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/student-housing/(2)East_Section.jpg",
-                                "width": "1250",
-                                "height": "620"
-                            }
-                        },
-                        "3": {
-                            "img": {
-                                "src": "/assets/projects/student-housing/(3)Site_Context.jpg",
-                                "width": "333",
-                                "height": "620"
-                            }
-                        },
-                        "4": {
-                            "img": {
-                                "src": "/assets/projects/student-housing/(4)Multi-faith room.jpg",
-                                "width": "815",
-                                "height": "620"
-                            }
-                        },
-                        "5": {
-                            "img": {
-                                "src": "/assets/projects/student-housing/(5)South_elevation.jpg",
-                                "width": "687",
-                                "height": "620"
-                            }
+                "tiles": {
+                    "1": {
+                        "img": {
+                            "src": "/assets/projects/belltown-elementary/(1)Exterior_View.jpg",
+                            "width": "959",
+                            "height": "620"
                         }
                     },
-                    "title": "Liverpool Student Housing",
-                    "tag": "Undergraduate Study Abroad",
-                    "url": "academic/student-housing",
-                    "year": "2011"
+                    "2": {
+                        "img": {
+                            "src": "/assets/projects/belltown-elementary/(2) Gym_Entrance.jpg",
+                            "width": "800",
+                            "height": "620"
+                        }
+                    },
+                    "3": {
+                        "img": {
+                            "src": "/assets/projects/belltown-elementary/(3) Floor plans.jpg",
+                            "width": "1300",
+                            "height": "620"
+                        }
+                    },
+                    "4": {
+                        "img": {
+                            "src": "/assets/projects/belltown-elementary/(4)Atrium.jpg",
+                            "width": "887",
+                            "height": "620"
+                        }
+                    },
+                    "5": {
+                        "img": {
+                            "src": "/assets/projects/belltown-elementary/(5)Wall_Construction_Diagram.jpg",
+                            "width": "405",
+                            "height": "620"
+                        }
+                    },
+                    "6": {
+                        "img": {
+                            "src": "/assets/projects/belltown-elementary/(6) Diagrammatic_Studies.jpg",
+                            "width": "977",
+                            "height": "620"
+                        }
+                    },
+                    "7": {
+                        "img": {
+                            "src": "/assets/projects/belltown-elementary/(7)South_Section.jpg",
+                            "width": "500",
+                            "height": "620"
+                        }
+                    },
+                    "8": {
+                        "img": {
+                            "src": "/assets/projects/belltown-elementary/(8)Programmatic_Diagram.jpg",
+                            "width": "347",
+                            "height": "620"
+                        }
+                    },
+                    "9": {
+                        "img": {
+                            "src": "/assets/projects/belltown-elementary/(9)Terrace playground.jpg",
+                            "width": "900",
+                            "height": "620"
+                        }
+                    }
                 },
-                "3": {
-                    "category": "academic",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/belltown-elementary/(1)Exterior_View.jpg",
-                    "location": "Seattle, WA",
-                    "order": {
-                        "feed": "3",
-                        "menu": "3"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/belltown-elementary/(1)Exterior_View.jpg",
-                                "width": "959",
-                                "height": "620"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/belltown-elementary/(2) Gym_Entrance.jpg",
-                                "width": "800",
-                                "height": "620"
-                            }
-                        },
-                        "3": {
-                            "img": {
-                                "src": "/assets/projects/belltown-elementary/(3) Floor plans.jpg",
-                                "width": "1300",
-                                "height": "620"
-                            }
-                        },
-                        "4": {
-                            "img": {
-                                "src": "/assets/projects/belltown-elementary/(4)Atrium.jpg",
-                                "width": "887",
-                                "height": "620"
-                            }
-                        },
-                        "5": {
-                            "img": {
-                                "src": "/assets/projects/belltown-elementary/(5)Wall_Construction_Diagram.jpg",
-                                "width": "405",
-                                "height": "620"
-                            }
-                        },
-                        "6": {
-                            "img": {
-                                "src": "/assets/projects/belltown-elementary/(6) Diagrammatic_Studies.jpg",
-                                "width": "977",
-                                "height": "620"
-                            }
-                        },
-                        "7": {
-                            "img": {
-                                "src": "/assets/projects/belltown-elementary/(7)South_Section.jpg",
-                                "width": "500",
-                                "height": "620"
-                            }
-                        },
-                        "8": {
-                            "img": {
-                                "src": "/assets/projects/belltown-elementary/(8)Programmatic_Diagram.jpg",
-                                "width": "347",
-                                "height": "620"
-                            }
-                        },
-                        "9": {
-                            "img": {
-                                "src": "/assets/projects/belltown-elementary/(9)Terrace playground.jpg",
-                                "width": "900",
-                                "height": "620"
-                            }
-                        }
-                    },
-                    "title": "Belltown Elementary",
-                    "tag": "Undergraduate Studio",
-                    "url": "academic/belltown-elementary",
-                    "year": "2012"
-                },
-                "4": {
-                    "category": "academic",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/marine-center/(6)Concept_Sketch and model.jpg",
-                    "location": "Seattle, WA",
-                    "order": {
-                        "feed": "4",
-                        "menu": "4"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/marine-center/(1)Street_Entrance.jpg",
-                                "width": "912",
-                                "height": "620"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/marine-center/(2)Skyline.jpg",
-                                "width": "1400",
-                                "height": "620"
-                            }
-                        },
-                        "3": {
-                            "img": {
-                                "src": "/assets/projects/marine-center/(3)First Floor.jpg",
-                                "width": "841",
-                                "height": "457"
-                            }
-                        },
-                        "4": {
-                            "img": {
-                                "src": "/assets/projects/marine-center/(4)Second Floor.jpg",
-                                "width": "841",
-                                "height": "457"
-                            }
-                        },
-                        "5": {
-                            "img": {
-                                "src": "/assets/projects/marine-center/(5)View from Puget Sound.jpg",
-                                "width": "1366",
-                                "height": "620"
-                            }
-                        },
-                        "6": {
-                            "img": {
-                                "src": "/assets/projects/marine-center/(6)Concept_Sketch and model.jpg",
-                                "width": "566",
-                                "height": "620"
-                            }
-                        }
-                    },
-                    "title": "Pier 48 Marine Center",
-                    "tag": "Undergraduate Studio",
-                    "url": "academic/marine-center",
-                    "year": "2012"
-                },
-                "5": {
-                    "category": "academic",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/cabin-in-the-woods/(1) Interior_Entrance.jpg",
-                    "location": "United Kingdom",
-                    "order": {
-                        "feed": "5",
-                        "menu": "2"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/cabin-in-the-woods/(1) Interior_Entrance.jpg",
-                                "width": "2002",
-                                "height": "1074"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/cabin-in-the-woods/(2)Interior_Room.jpg",
-                                "width": "1293",
-                                "height": "878"
-                            }
-                        },
-                        "3": {
-                            "img": {
-                                "src": "/assets/projects/cabin-in-the-woods/(3)Front_Porch.jpg",
-                                "width": "425",
-                                "height": "647"
-                            }
-                        },
-                        "4": {
-                            "img": {
-                                "src": "/assets/projects/cabin-in-the-woods/Cabin_In the woods.jpg",
-                                "width": "501",
-                                "height": "285"
-                            }
-                        },
-                        "5": {
-                            "img": {
-                                "src": "/assets/projects/cabin-in-the-woods/Cabin_skylight.jpg",
-                                "width": "1320",
-                                "height": "1776"
-                            }
-                        },
-                        "6": {
-                            "img": {
-                                "src": "/assets/projects/cabin-in-the-woods/car lights_distance.jpg",
-                                "width": "429",
-                                "height": "210"
-                            }
-                        }
-                    },
-                    "title": "Cabin in the Woods",
-                    "tag": "Graduate Studio",
-                    "url": "academic/cabin-in-the-woods",
-                    "year": "2015"
-                },
-                "6": {
-                    "category": "academic",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/culinary-school/(5)Site_Materials.jpg",
-                    "location": "Seattle, WA",
-                    "order": {
-                        "feed": "6",
-                        "menu": "6"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/culinary-school/(1)Main_Entrance.jpg",
-                                "width": "986",
-                                "height": "620"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/culinary-school/(2)Floor_Plans.jpg",
-                                "width": "350",
-                                "height": "620"
-                            }
-                        },
-                        "3": {
-                            "img": {
-                                "src": "/assets/projects/culinary-school/(3)Interior_Views.jpg",
-                                "width": "595",
-                                "height": "620"
-                            }
-                        },
-                        "4": {
-                            "img": {
-                                "src": "/assets/projects/culinary-school/(4)Exploded Diagram.jpg",
-                                "width": "284",
-                                "height": "620"
-                            }
-                        },
-                        "5": {
-                            "img": {
-                                "src": "/assets/projects/culinary-school/(5)Site_Materials.jpg",
-                                "width": "699",
-                                "height": "620"
-                            }
-                        }
-                    },
-                    "title": "Capitol Hill Culinary",
-                    "tag": "Undergraduate Studio",
-                    "url": "academic/culinary-school",
-                    "year": "2012"
-                },
-                "7": {
-                    "category": "academic",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/shelter/(1)Shelter_entrance.jpg",
-                    "location": "Seattle, WA",
-                    "order": {
-                        "feed": "7",
-                        "menu": "7"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/shelter/(1)Shelter_entrance.jpg",
-                                "width": "847",
-                                "height": "620"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/shelter/(2)Interior and elevation.jpg",
-                                "width": "483",
-                                "height": "620"
-                            }
-                        },
-                        "3": {
-                            "img": {
-                                "src": "/assets/projects/shelter/(3)Physical model.jpg",
-                                "width": "604",
-                                "height": "620"
-                            }
-                        }
-                    },
-                    "title": "Forest Hill Storm Shelter",
-                    "tag": "Undergraduate Studio",
-                    "url": "academic/shelter",
-                    "year": "2012"
-                },
-                "8": {
-                    "category": "academic",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/photo-studio/(1)Exterior_Entrance.jpg",
-                    "location": "Seattle, WA",
-                    "order": {
-                        "feed": "8",
-                        "menu": "8"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/photo-studio/(1)Exterior_Entrance.jpg",
-                                "width": "1030",
-                                "height": "620"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/photo-studio/(2)Interior_Views.jpg",
-                                "width": "463",
-                                "height": "620"
-                            }
-                        },
-                        "3": {
-                            "img": {
-                                "src": "/assets/projects/photo-studio/(3)Section and Roof plan.jpg",
-                                "width": "570",
-                                "height": "620"
-                            }
-                        }
-                    },
-                    "title": "Ballard Photo Studio",
-                    "tag": "Undergraduate Studio",
-                    "url": "academic/photo-studio",
-                    "year": "2012"
-                },
-                "9": {
-                    "category": "photography",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/rio/Photography_kids_.jpg",
-                    "location": "Rio De Janeiro, BR",
-                    "order": {
-                        "feed": "9",
-                        "menu": "1"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/rio/Photography_favela_dog.jpg",
-                                "width": "768",
-                                "height": "1137"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/rio/Photography_graffiti.jpg",
-                                "width": "1137",
-                                "height": "768"
-                            }
-                        },
-                        "3": {
-                            "img": {
-                                "src": "/assets/projects/rio/Photography_kids_.jpg",
-                                "width": "1137",
-                                "height": "768"
-                            }
-                        },
-                        "4": {
-                            "img": {
-                                "src": "/assets/projects/rio/photography_mist.jpg",
-                                "width": "1228",
-                                "height": "1818"
-                            }
-                        },
-                        "5": {
-                            "img": {
-                                "src": "/assets/projects/rio/photography_mototaxi 2.jpg",
-                                "width": "1818",
-                                "height": "1228"
-                            }
-                        },
-                        "6": {
-                            "img": {
-                                "src": "/assets/projects/rio/Photography_mototaxi.jpg",
-                                "width": "1818",
-                                "height": "1228"
-                            }
-                        },
-                        "7": {
-                            "img": {
-                                "src": "/assets/projects/rio/photography_rochina.jpg",
-                                "width": "1818",
-                                "height": "1228"
-                            }
-                        },
-                        "8": {
-                            "img": {
-                                "src": "/assets/projects/rio/photography_vidigal.jpg",
-                                "width": "1818",
-                                "height": "1228"
-                            }
-                        },
-                        "9": {
-                            "img": {
-                                "src": "/assets/projects/rio/Photography_workers.jpg",
-                                "width": "768",
-                                "height": "1137"
-                            }
-                        },
-                        "10": {
-                            "img": {
-                                "src": "/assets/projects/rio/photograpy_vidogal_view.jpg",
-                                "width": "1818",
-                                "height": "1228"
-                            }
-                        }
-                    },
-                    "title": "Rio",
-                    "tag": "Graduate Studio",
-                    "url": "photography/rio",
-                    "year": "2016"
-                },
-                "10": {
-                    "category": "photography",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/portrait/RED.jpg",
-                    "location": "London, UK",
-                    "order": {
-                        "feed": "10",
-                        "menu": "2"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/portrait/RED.jpg",
-                                "width": "2136",
-                                "height": "2977"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/portrait/PURPLE.jpg",
-                                "width": "2101",
-                                "height": "2977"
-                            }
-                        },
-                        "3": {
-                            "img": {
-                                "src": "/assets/projects/portrait/BRICK.jpg",
-                                "width": "1965",
-                                "height": "2921"
-                            }
-                        },
-                        "4": {
-                            "img": {
-                                "src": "/assets/projects/portrait/YELLOW.jpg",
-                                "width": "2277",
-                                "height": "2921"
-                            }
-                        }
-                    },
-                    "title": "Portrait",
-                    "tag": "Color Study",
-                    "url": "photography/portrait",
-                    "year": "2013"
-                },
-                "11": {
-                    "category": "art",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/built/BLDG_BAR.jpg",
-                    "location": "Assorted Locations",
-                    "order": {
-                        "feed": "11",
-                        "menu": "1"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/built/BLD_BLUFF.jpg",
-                                "width": "1047",
-                                "height": "1308"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/built/BLDG_AFTERNOON.jpg",
-                                "width": "1038",
-                                "height": "1740"
-                            }
-                        },
-                        "3": {
-                            "img": {
-                                "src": "/assets/projects/built/BLDG_ALLEY.jpg",
-                                "width": "1185",
-                                "height": "1533"
-                            }
-                        },
-                        "4": {
-                            "img": {
-                                "src": "/assets/projects/built/BLDG_ARCH.jpg",
-                                "width": "1131",
-                                "height": "1644"
-                            }
-                        },
-                        "5": {
-                            "img": {
-                                "src": "/assets/projects/built/BLDG_BAR.jpg",
-                                "width": "1071",
-                                "height": "1371"
-                            }
-                        },
-                        "6": {
-                            "img": {
-                                "src": "/assets/projects/built/BUILT_6.jpg",
-                                "width": "1226",
-                                "height": "1668"
-                            }
-                        },
-                        "7": {
-                            "img": {
-                                "src": "/assets/projects/built/BUILT_7.jpg",
-                                "width": "1878",
-                                "height": "849"
-                            }
-                        }
-                    },
-                    "title": "Built",
-                    "tag": "Pastels",
-                    "url": "art/built",
-                    "year": "2006-2012"
-                },
-                "12": {
-                    "category": "art",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/organic/LANDSCAPE_FIELD.jpg",
-                    "location": "Assorted Locations",
-                    "order": {
-                        "feed": "12",
-                        "menu": "2"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/organic/LANDSCAPE_FIELD.jpg",
-                                "width": "1518",
-                                "height": "1152"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/organic/LANDSCAPE_LAVENDER.jpg",
-                                "width": "1095",
-                                "height": "1473"
-                            }
-                        }
-                    },
-                    "title": "Organic",
-                    "tag": "Pastels",
-                    "url": "art/organic",
-                    "year": "2006-2012"
-                },
-                "13": {
-                    "category": "professional",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/gambia-orphanage/(2)_Floorplans.jpg",
-                    "location": "Gambia",
-                    "order": {
-                        "feed": "13",
-                        "menu": "1"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/gambia-orphanage/(1)Community Mosque.jpg",
-                                "width": "1025",
-                                "height": "620"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/gambia-orphanage/(2)_Floorplans.jpg",
-                                "width": "790",
-                                "height": "620"
-                            }
-                        },
-                        "3": {
-                            "img": {
-                                "src": "/assets/projects/gambia-orphanage/(3)South_Entrance.jpg",
-                                "width": "855",
-                                "height": "620"
-                            }
-                        },
-                        "4": {
-                            "img": {
-                                "src": "/assets/projects/gambia-orphanage/(4)Master_Plan.jpg",
-                                "width": "356",
-                                "height": "620"
-                            }
-                        },
-                        "5": {
-                            "img": {
-                                "src": "/assets/projects/gambia-orphanage/(5)Classroom Floor Plan.jpg",
-                                "width": "520",
-                                "height": "620"
-                            }
-                        }
-                    },
-                    "title": "Gambia Orphanage",
-                    "tag": "Graduate Studio",
-                    "url": "professional/gambia-orphanage",
-                    "year": "2016"
-                },
-                "14": {
-                    "category": "professional",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/oita-museum/Mixed_To_Organize26.jpg",
-                    "location": "Oita, JP",
-                    "order": {
-                        "feed": "14",
-                        "menu": "1"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/oita-museum/Mixed_To_Organize24.jpg",
-                                "width": "955",
-                                "height": "620"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/oita-museum/Mixed_To_Organize25.jpg",
-                                "width": "443",
-                                "height": "620"
-                            }
-                        },
-                        "3": {
-                            "img": {
-                                "src": "/assets/projects/oita-museum/Mixed_To_Organize26.jpg",
-                                "width": "947",
-                                "height": "620"
-                            }
-                        }
-                    },
-                    "title": "Oita Museum",
-                    "tag": "Professional",
-                    "url": "professional/oita-museum",
-                    "year": "2013"
-                },
-                "15": {
-                    "category": "professional",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/olympia-brewery/(1)Olympia_Brewery.jpg",
-                    "location": "Olympia, WA",
-                    "order": {
-                        "feed": "15",
-                        "menu": "1"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/olympia-brewery/(1)Olympia_Brewery.jpg",
-                                "width": "892",
-                                "height": "620"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/olympia-brewery/(2)Brewery entrance.jpg",
-                                "width": "1253",
-                                "height": "620"
-                            }
-                        }
-                    },
-                    "title": "Olympia Brewery",
-                    "tag": "Professional",
-                    "url": "professional/olympia-brewery",
-                    "year": "2013"
-                },
-                "16": {
-                    "category": "professional",
-                    "description_long": "",
-                    "description_short": "",
-                    "feed_photo": "/assets/projects/reo-flats/(1)_15th_Street_View.jpg",
-                    "location": "Seattle, WA",
-                    "order": {
-                        "feed": "16",
-                        "menu": "1"
-                    },
-                    "tiles": {
-                        "1": {
-                            "img": {
-                                "src": "/assets/projects/reo-flats/(1)_15th_Street_View.jpg",
-                                "width": "900",
-                                "height": "620"
-                            }
-                        },
-                        "2": {
-                            "img": {
-                                "src": "/assets/projects/reo-flats/(2)Exterior views.jpg",
-                                "width": "374",
-                                "height": "620"
-                            }
-                        },
-                        "3": {
-                            "img": {
-                                "src": "/assets/projects/reo-flats/(3)Interior_Shell.jpg",
-                                "width": "773",
-                                "height": "620"
-                            }
-                        }
-                    },
-                    "title": "REO Flats",
-                    "tag": "Professional",
-                    "url": "professional/reo-flats",
-                    "year": "2011"
-                }
+                "title": "Belltown Elementary",
+                "tag": "Undergraduate Studio",
+                "url": "academic/belltown-elementary",
+                "year": "2012"
             },
-            "films": {
-                "1": {
-                    "location": "United Kingdom",
-                    "order": {
-                        "menu": "1"
+            "4": {
+                "category": "academic",
+                "description_long": "",
+                "description_short": "",
+                "feed_photo": "/assets/projects/marine-center/(6)Concept_Sketch and model.jpg",
+                "location": "Seattle, WA",
+                "order": {
+                    "feed": "4",
+                    "menu": "4"
+                },
+                "tiles": {
+                    "1": {
+                        "img": {
+                            "src": "/assets/projects/marine-center/(1)Street_Entrance.jpg",
+                            "width": "912",
+                            "height": "620"
+                        }
                     },
-                    "embed": {
-                        "width": "560",
-                        "height": "315",
-                        "src": "https://www.youtube.com/embed/a0FeKPrEW10",
-                        "frameborder": "0"
+                    "2": {
+                        "img": {
+                            "src": "/assets/projects/marine-center/(2)Skyline.jpg",
+                            "width": "1400",
+                            "height": "620"
+                        }
                     },
-                    "title": "Cabin Essence",
-                    "tag": "Graduate Studio",
-                    "url": "film/cabin-essence",
-                    "year": "2016"
-                }   
+                    "3": {
+                        "img": {
+                            "src": "/assets/projects/marine-center/(3)First Floor.jpg",
+                            "width": "841",
+                            "height": "457"
+                        }
+                    },
+                    "4": {
+                        "img": {
+                            "src": "/assets/projects/marine-center/(4)Second Floor.jpg",
+                            "width": "841",
+                            "height": "457"
+                        }
+                    },
+                    "5": {
+                        "img": {
+                            "src": "/assets/projects/marine-center/(5)View from Puget Sound.jpg",
+                            "width": "1366",
+                            "height": "620"
+                        }
+                    },
+                    "6": {
+                        "img": {
+                            "src": "/assets/projects/marine-center/(6)Concept_Sketch and model.jpg",
+                            "width": "566",
+                            "height": "620"
+                        }
+                    }
+                },
+                "title": "Pier 48 Marine Center",
+                "tag": "Undergraduate Studio",
+                "url": "academic/marine-center",
+                "year": "2012"
+            },
+            "5": {
+                "category": "academic",
+                "description_long": "",
+                "description_short": "",
+                "feed_photo": "/assets/projects/cabin-in-the-woods/(1) Interior_Entrance.jpg",
+                "location": "United Kingdom",
+                "order": {
+                    "feed": "5",
+                    "menu": "2"
+                },
+                "tiles": {
+                    "1": {
+                        "img": {
+                            "src": "/assets/projects/cabin-in-the-woods/(1) Interior_Entrance.jpg",
+                            "width": "2002",
+                            "height": "1074"
+                        }
+                    },
+                    "2": {
+                        "img": {
+                            "src": "/assets/projects/cabin-in-the-woods/(2)Interior_Room.jpg",
+                            "width": "1293",
+                            "height": "878"
+                        }
+                    },
+                    "3": {
+                        "img": {
+                            "src": "/assets/projects/cabin-in-the-woods/(3)Front_Porch.jpg",
+                            "width": "425",
+                            "height": "647"
+                        }
+                    },
+                    "4": {
+                        "img": {
+                            "src": "/assets/projects/cabin-in-the-woods/Cabin_In the woods.jpg",
+                            "width": "501",
+                            "height": "285"
+                        }
+                    },
+                    "5": {
+                        "img": {
+                            "src": "/assets/projects/cabin-in-the-woods/Cabin_skylight.jpg",
+                            "width": "1320",
+                            "height": "1776"
+                        }
+                    },
+                    "6": {
+                        "img": {
+                            "src": "/assets/projects/cabin-in-the-woods/car lights_distance.jpg",
+                            "width": "429",
+                            "height": "210"
+                        }
+                    }
+                },
+                "title": "Cabin in the Woods",
+                "tag": "Graduate Studio",
+                "url": "academic/cabin-in-the-woods",
+                "year": "2015"
+            },
+            "6": {
+                "category": "academic",
+                "description_long": "",
+                "description_short": "",
+                "feed_photo": "/assets/projects/culinary-school/(5)Site_Materials.jpg",
+                "location": "Seattle, WA",
+                "order": {
+                    "feed": "6",
+                    "menu": "6"
+                },
+                "tiles": {
+                    "1": {
+                        "img": {
+                            "src": "/assets/projects/culinary-school/(1)Main_Entrance.jpg",
+                            "width": "986",
+                            "height": "620"
+                        }
+                    },
+                    "2": {
+                        "img": {
+                            "src": "/assets/projects/culinary-school/(2)Floor_Plans.jpg",
+                            "width": "350",
+                            "height": "620"
+                        }
+                    },
+                    "3": {
+                        "img": {
+                            "src": "/assets/projects/culinary-school/(3)Interior_Views.jpg",
+                            "width": "595",
+                            "height": "620"
+                        }
+                    },
+                    "4": {
+                        "img": {
+                            "src": "/assets/projects/culinary-school/(4)Exploded Diagram.jpg",
+                            "width": "284",
+                            "height": "620"
+                        }
+                    },
+                    "5": {
+                        "img": {
+                            "src": "/assets/projects/culinary-school/(5)Site_Materials.jpg",
+                            "width": "699",
+                            "height": "620"
+                        }
+                    }
+                },
+                "title": "Capitol Hill Culinary",
+                "tag": "Undergraduate Studio",
+                "url": "academic/culinary-school",
+                "year": "2012"
+            },
+            "7": {
+                "category": "academic",
+                "description_long": "",
+                "description_short": "",
+                "feed_photo": "/assets/projects/shelter/(1)Shelter_entrance.jpg",
+                "location": "Seattle, WA",
+                "order": {
+                    "feed": "7",
+                    "menu": "7"
+                },
+                "tiles": {
+                    "1": {
+                        "img": {
+                            "src": "/assets/projects/shelter/(1)Shelter_entrance.jpg",
+                            "width": "847",
+                            "height": "620"
+                        }
+                    },
+                    "2": {
+                        "img": {
+                            "src": "/assets/projects/shelter/(2)Interior and elevation.jpg",
+                            "width": "483",
+                            "height": "620"
+                        }
+                    },
+                    "3": {
+                        "img": {
+                            "src": "/assets/projects/shelter/(3)Physical model.jpg",
+                            "width": "604",
+                            "height": "620"
+                        }
+                    }
+                },
+                "title": "Forest Hill Storm Shelter",
+                "tag": "Undergraduate Studio",
+                "url": "academic/shelter",
+                "year": "2012"
+            },
+            "8": {
+                "category": "academic",
+                "description_long": "",
+                "description_short": "",
+                "feed_photo": "/assets/projects/photo-studio/(1)Exterior_Entrance.jpg",
+                "location": "Seattle, WA",
+                "order": {
+                    "feed": "8",
+                    "menu": "8"
+                },
+                "tiles": {
+                    "1": {
+                        "img": {
+                            "src": "/assets/projects/photo-studio/(1)Exterior_Entrance.jpg",
+                            "width": "1030",
+                            "height": "620"
+                        }
+                    },
+                    "2": {
+                        "img": {
+                            "src": "/assets/projects/photo-studio/(2)Interior_Views.jpg",
+                            "width": "463",
+                            "height": "620"
+                        }
+                    },
+                    "3": {
+                        "img": {
+                            "src": "/assets/projects/photo-studio/(3)Section and Roof plan.jpg",
+                            "width": "570",
+                            "height": "620"
+                        }
+                    }
+                },
+                "title": "Ballard Photo Studio",
+                "tag": "Undergraduate Studio",
+                "url": "academic/photo-studio",
+                "year": "2012"
+            },
+            "9": {
+                "category": "photography",
+                "description_long": "",
+                "description_short": "",
+                "feed_photo": "/assets/projects/rio/Photography_kids_.jpg",
+                "location": "Rio De Janeiro, BR",
+                "order": {
+                    "feed": "9",
+                    "menu": "1"
+                },
+                "tiles": {
+                    "1": {
+                        "img": {
+                            "src": "/assets/projects/rio/Photography_favela_dog.jpg",
+                            "width": "768",
+                            "height": "1137"
+                        }
+                    },
+                    "2": {
+                        "img": {
+                            "src": "/assets/projects/rio/Photography_graffiti.jpg",
+                            "width": "1137",
+                            "height": "768"
+                        }
+                    },
+                    "3": {
+                        "img": {
+                            "src": "/assets/projects/rio/Photography_kids_.jpg",
+                            "width": "1137",
+                            "height": "768"
+                        }
+                    },
+                    "4": {
+                        "img": {
+                            "src": "/assets/projects/rio/photography_mist.jpg",
+                            "width": "1228",
+                            "height": "1818"
+                        }
+                    },
+                    "5": {
+                        "img": {
+                            "src": "/assets/projects/rio/photography_mototaxi 2.jpg",
+                            "width": "1818",
+                            "height": "1228"
+                        }
+                    },
+                    "6": {
+                        "img": {
+                            "src": "/assets/projects/rio/Photography_mototaxi.jpg",
+                            "width": "1818",
+                            "height": "1228"
+                        }
+                    },
+                    "7": {
+                        "img": {
+                            "src": "/assets/projects/rio/photography_rochina.jpg",
+                            "width": "1818",
+                            "height": "1228"
+                        }
+                    },
+                    "8": {
+                        "img": {
+                            "src": "/assets/projects/rio/photography_vidigal.jpg",
+                            "width": "1818",
+                            "height": "1228"
+                        }
+                    },
+                    "9": {
+                        "img": {
+                            "src": "/assets/projects/rio/Photography_workers.jpg",
+                            "width": "768",
+                            "height": "1137"
+                        }
+                    },
+                    "10": {
+                        "img": {
+                            "src": "/assets/projects/rio/photograpy_vidogal_view.jpg",
+                            "width": "1818",
+                            "height": "1228"
+                        }
+                    }
+                },
+                "title": "Rio",
+                "tag": "Graduate Studio",
+                "url": "photography/rio",
+                "year": "2016"
+            },
+            "10": {
+                "category": "photography",
+                "description_long": "",
+                "description_short": "",
+                "feed_photo": "/assets/projects/portrait/RED.jpg",
+                "location": "London, UK",
+                "order": {
+                    "feed": "10",
+                    "menu": "2"
+                },
+                "tiles": {
+                    "1": {
+                        "img": {
+                            "src": "/assets/projects/portrait/RED.jpg",
+                            "width": "2136",
+                            "height": "2977"
+                        }
+                    },
+                    "2": {
+                        "img": {
+                            "src": "/assets/projects/portrait/PURPLE.jpg",
+                            "width": "2101",
+                            "height": "2977"
+                        }
+                    },
+                    "3": {
+                        "img": {
+                            "src": "/assets/projects/portrait/BRICK.jpg",
+                            "width": "1965",
+                            "height": "2921"
+                        }
+                    },
+                    "4": {
+                        "img": {
+                            "src": "/assets/projects/portrait/YELLOW.jpg",
+                            "width": "2277",
+                            "height": "2921"
+                        }
+                    }
+                },
+                "title": "Portrait",
+                "tag": "Color Study",
+                "url": "photography/portrait",
+                "year": "2013"
+            },
+            "11": {
+                "category": "art",
+                "description_long": "",
+                "description_short": "",
+                "feed_photo": "/assets/projects/built/BLDG_BAR.jpg",
+                "location": "Assorted Locations",
+                "order": {
+                    "feed": "11",
+                    "menu": "1"
+                },
+                "tiles": {
+                    "1": {
+                        "img": {
+                            "src": "/assets/projects/built/BLD_BLUFF.jpg",
+                            "width": "1047",
+                            "height": "1308"
+                        }
+                    },
+                    "2": {
+                        "img": {
+                            "src": "/assets/projects/built/BLDG_AFTERNOON.jpg",
+                            "width": "1038",
+                            "height": "1740"
+                        }
+                    },
+                    "3": {
+                        "img": {
+                            "src": "/assets/projects/built/BLDG_ALLEY.jpg",
+                            "width": "1185",
+                            "height": "1533"
+                        }
+                    },
+                    "4": {
+                        "img": {
+                            "src": "/assets/projects/built/BLDG_ARCH.jpg",
+                            "width": "1131",
+                            "height": "1644"
+                        }
+                    },
+                    "5": {
+                        "img": {
+                            "src": "/assets/projects/built/BLDG_BAR.jpg",
+                            "width": "1071",
+                            "height": "1371"
+                        }
+                    },
+                    "6": {
+                        "img": {
+                            "src": "/assets/projects/built/BUILT_6.jpg",
+                            "width": "1226",
+                            "height": "1668"
+                        }
+                    },
+                    "7": {
+                        "img": {
+                            "src": "/assets/projects/built/BUILT_7.jpg",
+                            "width": "1878",
+                            "height": "849"
+                        }
+                    }
+                },
+                "title": "Built",
+                "tag": "Pastels",
+                "url": "art/built",
+                "year": "2006-2012"
+            },
+            "12": {
+                "category": "art",
+                "description_long": "",
+                "description_short": "",
+                "feed_photo": "/assets/projects/organic/LANDSCAPE_FIELD.jpg",
+                "location": "Assorted Locations",
+                "order": {
+                    "feed": "12",
+                    "menu": "2"
+                },
+                "tiles": {
+                    "1": {
+                        "img": {
+                            "src": "/assets/projects/organic/LANDSCAPE_FIELD.jpg",
+                            "width": "1518",
+                            "height": "1152"
+                        }
+                    },
+                    "2": {
+                        "img": {
+                            "src": "/assets/projects/organic/LANDSCAPE_LAVENDER.jpg",
+                            "width": "1095",
+                            "height": "1473"
+                        }
+                    }
+                },
+                "title": "Organic",
+                "tag": "Pastels",
+                "url": "art/organic",
+                "year": "2006-2012"
+            },
+            "13": {
+                "category": "professional",
+                "description_long": "",
+                "description_short": "",
+                "feed_photo": "/assets/projects/gambia-orphanage/(2)_Floorplans.jpg",
+                "location": "Gambia",
+                "order": {
+                    "feed": "13",
+                    "menu": "1"
+                },
+                "tiles": {
+                    "1": {
+                        "img": {
+                            "src": "/assets/projects/gambia-orphanage/(1)Community Mosque.jpg",
+                            "width": "1025",
+                            "height": "620"
+                        }
+                    },
+                    "2": {
+                        "img": {
+                            "src": "/assets/projects/gambia-orphanage/(2)_Floorplans.jpg",
+                            "width": "790",
+                            "height": "620"
+                        }
+                    },
+                    "3": {
+                        "img": {
+                            "src": "/assets/projects/gambia-orphanage/(3)South_Entrance.jpg",
+                            "width": "855",
+                            "height": "620"
+                        }
+                    },
+                    "4": {
+                        "img": {
+                            "src": "/assets/projects/gambia-orphanage/(4)Master_Plan.jpg",
+                            "width": "356",
+                            "height": "620"
+                        }
+                    },
+                    "5": {
+                        "img": {
+                            "src": "/assets/projects/gambia-orphanage/(5)Classroom Floor Plan.jpg",
+                            "width": "520",
+                            "height": "620"
+                        }
+                    }
+                },
+                "title": "Gambia Orphanage",
+                "tag": "Graduate Studio",
+                "url": "professional/gambia-orphanage",
+                "year": "2016"
+            },
+            "14": {
+                "category": "professional",
+                "description_long": "",
+                "description_short": "",
+                "feed_photo": "/assets/projects/oita-museum/Mixed_To_Organize26.jpg",
+                "location": "Oita, JP",
+                "order": {
+                    "feed": "14",
+                    "menu": "1"
+                },
+                "tiles": {
+                    "1": {
+                        "img": {
+                            "src": "/assets/projects/oita-museum/Mixed_To_Organize24.jpg",
+                            "width": "955",
+                            "height": "620"
+                        }
+                    },
+                    "2": {
+                        "img": {
+                            "src": "/assets/projects/oita-museum/Mixed_To_Organize25.jpg",
+                            "width": "443",
+                            "height": "620"
+                        }
+                    },
+                    "3": {
+                        "img": {
+                            "src": "/assets/projects/oita-museum/Mixed_To_Organize26.jpg",
+                            "width": "947",
+                            "height": "620"
+                        }
+                    }
+                },
+                "title": "Oita Museum",
+                "tag": "Professional",
+                "url": "professional/oita-museum",
+                "year": "2013"
+            },
+            "15": {
+                "category": "professional",
+                "description_long": "",
+                "description_short": "",
+                "feed_photo": "/assets/projects/olympia-brewery/(1)Olympia_Brewery.jpg",
+                "location": "Olympia, WA",
+                "order": {
+                    "feed": "15",
+                    "menu": "1"
+                },
+                "tiles": {
+                    "1": {
+                        "img": {
+                            "src": "/assets/projects/olympia-brewery/(1)Olympia_Brewery.jpg",
+                            "width": "892",
+                            "height": "620"
+                        }
+                    },
+                    "2": {
+                        "img": {
+                            "src": "/assets/projects/olympia-brewery/(2)Brewery entrance.jpg",
+                            "width": "1253",
+                            "height": "620"
+                        }
+                    }
+                },
+                "title": "Olympia Brewery",
+                "tag": "Professional",
+                "url": "professional/olympia-brewery",
+                "year": "2013"
+            },
+            "16": {
+                "category": "professional",
+                "description_long": "",
+                "description_short": "",
+                "feed_photo": "/assets/projects/reo-flats/(1)_15th_Street_View.jpg",
+                "location": "Seattle, WA",
+                "order": {
+                    "feed": "16",
+                    "menu": "1"
+                },
+                "tiles": {
+                    "1": {
+                        "img": {
+                            "src": "/assets/projects/reo-flats/(1)_15th_Street_View.jpg",
+                            "width": "900",
+                            "height": "620"
+                        }
+                    },
+                    "2": {
+                        "img": {
+                            "src": "/assets/projects/reo-flats/(2)Exterior views.jpg",
+                            "width": "374",
+                            "height": "620"
+                        }
+                    },
+                    "3": {
+                        "img": {
+                            "src": "/assets/projects/reo-flats/(3)Interior_Shell.jpg",
+                            "width": "773",
+                            "height": "620"
+                        }
+                    }
+                },
+                "title": "REO Flats",
+                "tag": "Professional",
+                "url": "professional/reo-flats",
+                "year": "2011"
             }
+        },
+        "films": {
+            "1": {
+                "location": "United Kingdom",
+                "order": {
+                    "menu": "1"
+                },
+                "embed": {
+                    "width": "560",
+                    "height": "315",
+                    "src": "https://www.youtube.com/embed/a0FeKPrEW10",
+                    "frameborder": "0"
+                },
+                "title": "Cabin Essence",
+                "tag": "Graduate Studio",
+                "url": "film/cabin-essence",
+                "year": "2016"
+            }   
         }
     }
-)
+}

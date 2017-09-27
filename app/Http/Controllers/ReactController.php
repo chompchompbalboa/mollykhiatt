@@ -11,7 +11,6 @@ use App\Http\Controllers\Controller;
 
 use App\Helpers\Helper;
 
-use App\Models\Seed;
 
 class ReactController extends Controller
 {
@@ -19,10 +18,9 @@ class ReactController extends Controller
     // Constructor
     //-------------------------------------------------------------------------
 
-    public function __construct(Request $request, Seed $seed)
+    public function __construct(Request $request)
     {
         $this->request = $request;
-        $this->seed = $seed;
     }
 
     public function react()
@@ -40,7 +38,7 @@ class ReactController extends Controller
 
     public function seed($data, $info)
     {
-        $seed = Seed::orderBy('version', 'desc')->first();
+        $seed = Helper::fetchJSON('/assets/seed.json');
         return $seed;
     }
 

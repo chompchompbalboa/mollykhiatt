@@ -11,7 +11,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\ReactController;
 use App\Helpers\Helper;
 
-use App\Seed;
 use App\Invite;
 
 class SiteReactController extends ReactController
