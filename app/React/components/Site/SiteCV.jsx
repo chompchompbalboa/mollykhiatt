@@ -127,6 +127,7 @@ var SiteCV = React.createClass({
                 </ul>
                 <ul style={style.ul}>
                     <li style={style.header}>Experience</li>
+                    <li style={style.li}>Hassell | UK | 2018</li>
                     <li style={style.li}>Hassell | AUS | 2017</li>
                     <li style={style.li}>WilkinsonEyre | UK | 2016</li>
                     <li style={style.li}>Krause Architects | UK | 2015</li>
