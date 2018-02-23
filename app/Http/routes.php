@@ -25,5 +25,6 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::group(['domain' => 'mollykhiatt.com'], $site);
     Route::group(['domain' => 'mollyhiatt.com'], $site);
+    Route::group(['domain' => 'mollyworth.com'], $site);
     Route::group(['domain' => 'mollyhiatt.local'], $site);
 });
