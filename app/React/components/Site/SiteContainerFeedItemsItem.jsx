@@ -155,7 +155,7 @@ var SiteContainerFeedItemsItem = React.createClass({
             },
             title: {
                 margin: '16px 0 0 0',
-                fontFamily: 'futura-pt',
+                fontFamily: 'Raleway',
                 fontSize: '16px',
                 fontWeight: '300',
                 color: 'gray',
@@ -164,7 +164,7 @@ var SiteContainerFeedItemsItem = React.createClass({
             description: {
                 margin: '4px 0 0 0',
                 textAlign: (column === "left" ? 'right' : 'left'),
-                fontFamily: 'futura-pt',
+                fontFamily: 'Raleway',
                 textTransform: 'uppercase',
                 '@media (max-width: 48em)': {
                     textAlign: 'left'

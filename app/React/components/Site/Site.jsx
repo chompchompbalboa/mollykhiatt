@@ -229,7 +229,7 @@ var Site = React.createClass({
                 zIndex: '0',
                 position: 'relative',
                 width: Number(container.width.sm) * 100 + 'vw',
-                fontFamily: 'brandon-grotesque',
+                fontFamily: 'Raleway',
                 '@media (min-width: 48em) and (max-width: 64em)': {
                     width: Number(container.width.md) * 100 + 'vw'
                 },
