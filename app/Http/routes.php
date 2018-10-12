@@ -1,30 +1,20 @@
 <?php
+
 Route::group(['middleware' => ['web']], function () {
 
-    /*
-    |--------------------------------------------------------------------------
-    | App
-    |--------------------------------------------------------------------------
-    */
-    $site = function() {
-        Route::any('/{optional?}', [
-            "as" => "site_home",
-            "uses" => "SiteController@home",
-        ]);
+  $site = function() {
 
-        Route::post('/react/{action}/{info?}', [
-            "as" => "site_react",
-            "uses" => "SiteReactController@react",
-        ]);
+    Route::get('/data/seed', 'DataController@seed');
+    Route::get('/data/site', 'DataController@site');
 
-        Route::any('/{optional?}/{optional2?}', [
-            "as" => "site_home",
-            "uses" => "SiteController@home",
-        ]);
-    };
+    Route::get('/{optional?}/{optional2?}', function() {
+      return view('site');
+    });
 
-    Route::group(['domain' => 'mollykhiatt.com'], $site);
-    Route::group(['domain' => 'mollyhiatt.com'], $site);
-    Route::group(['domain' => 'mollyworth.com'], $site);
-    Route::group(['domain' => 'mollyhiatt.local'], $site);
+  };
+  Route::group(['domain' => 'mollykhiatt.com'], $site);
+  Route::group(['domain' => 'mollyhiatt.com'], $site);
+  Route::group(['domain' => 'mollyworth.com'], $site);
+  Route::group(['domain' => 'mollyhiatt.local'], $site);
+
 });

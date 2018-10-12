@@ -12,6 +12,6 @@
   </head>
   <body>
     <section id="react-container"></section>
-    <script src="{{ $bundle }}"></script>
+    <script src="/js/site-index.js"></script>
   </body>
 </html>
