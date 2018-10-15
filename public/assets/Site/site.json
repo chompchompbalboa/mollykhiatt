@@ -1,21 +1,13 @@
 {
-    "private": {
-        "active": "",
-        "load": "initial",
-        "previous": "",
-        "SiteCoverOverlay": {
-            "opacity": "0.25"
-        },
-        "SiteHeader": {
-            "color": "white"
-        },
-        "SiteProject": {
-            "current": "0",
-            "scroll": "false",
-            "scrollLeft": "50"
-        }
-    },
-    "public": {
-        "site": "site"
-    }
+  "SiteCoverOverlay": {
+    "opacity": "0.25"
+  },
+  "SiteHeader": {
+    "color": "white"
+  },
+  "SiteProject": {
+    "current": "0",
+    "scroll": "false",
+    "scrollLeft": "50"
+  }
 }

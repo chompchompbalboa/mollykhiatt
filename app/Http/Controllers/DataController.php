@@ -30,17 +30,7 @@ class DataController extends Controller
   */
   public function site()
   {
-    $data = json_decode($this->request->input('data'));
-    $site = json_decode(file_get_contents(getcwd().'/assets/Site/site.json'));
-    $site->container = [
-      'width' => [
-        'sm'=> '1',
-        'md'=> '1',
-        'lg'=> '1'
-      ]
-    ];
-    $site->url = $data->url[0] === "/" ? substr($data->url, 1) : $data->url;
-    return json_encode($site);
+    return file_get_contents(getcwd().'/assets/Site/site.json');
   }
 
 }
