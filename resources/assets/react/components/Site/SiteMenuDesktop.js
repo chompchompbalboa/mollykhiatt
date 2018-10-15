@@ -22,21 +22,21 @@ const SiteMenuDesktop = ({ categories: { about, academic, art, film, photography
       </ColumnOne>
       <ColumnTwo>
         <SiteMenuDesktopCategory
-          category="Academic"
+          category="academic"
           height="100%"
           listItems={academic}/>
       </ColumnTwo>
       <ColumnThree>
         <SiteMenuDesktopCategory
-          category="Professional"
+          category="professional"
           listItems={professional}/>
         <SiteMenuDesktopCategory
-          category="Film"
+          category="film"
           listItems={film}/>
       </ColumnThree>
       <ColumnFour>
         <SiteMenuDesktopCategory
-          category="About"
+          category="about"
           height="100%"
           listItems={about}/>
       </ColumnFour>
