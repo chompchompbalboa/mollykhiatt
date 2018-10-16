@@ -9,9 +9,9 @@ import styled from 'styled-components'
 //-----------------------------------------------------------------------------
 // Component
 //-----------------------------------------------------------------------------
-const SiteFilm = ({ location, seed: { projects } }) => {
+const SiteFilm = ({ location: { pathname }, seed: { projects } }) => {
 
-  const film = _.find(projects, project => {return "/" + project.href === location.pathname})
+  const film = _.find(projects, project => {return "/" + project.href === pathname})
   
   const heightToWidthRatio = film.embed.height / film.embed.width
   const iframeDimensions = {

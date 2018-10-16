@@ -8,7 +8,8 @@ import styled from 'styled-components'
 // Component
 //-----------------------------------------------------------------------------
 const SiteCV = () => (
-  <Container id="site-cv">
+  <Container
+    id="site-cv">
     <List>
       <ListHeader>Education</ListHeader>
       <ListItem>MArchD | Oxford School of Arch. | UK</ListItem>

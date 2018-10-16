@@ -58,10 +58,10 @@ const LeftArrow = styled(Arrow)`
 `
 
 const RightArrow = styled(Arrow)`
-display: ${props => props.visible ? "block" : "none"};
-top: 47.5vh;
-left: 96.5vw;
-transform: rotate(180deg);
+  display: ${props => props.visible ? "block" : "none"};
+  top: 47.5vh;
+  left: 96.5vw;
+  transform: rotate(180deg);
 `
 
 export default SiteProjectArrows

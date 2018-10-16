@@ -21,19 +21,20 @@ const SiteHeaderMenu = ({ fontColor, history, isMenuActive }) => {
   }
 
   return (
-    <Container id="site-header-menu">
+    <Container
+      id="site-header-menu">
       <LinkContainer
         onClick={() => handleClick()}>
-          <MobileLink>
-            <Icon
-              icon={icon}
-              color={fontColor}
-              size="30px"/>
-          </MobileLink>
-          <DesktopLink
-            color={fontColor}>
-            {text}
-          </DesktopLink>
+        <MobileLink>
+          <Icon
+            icon={icon}
+            color={fontColor}
+            size="30px"/>
+        </MobileLink>
+        <DesktopLink
+          color={fontColor}>
+          {text}
+        </DesktopLink>
       </LinkContainer>
     </Container>
   )

@@ -11,11 +11,11 @@ import styled from 'styled-components'
 const SiteBio = ({ seed: { about } }) => (
   <Container 
     id="site-bio">
-      <Headshot 
-        src="assets/Site/SiteBio/about.jpg"/>
-      <About>
-          {about}
-      </About>
+    <Headshot 
+      src="assets/Site/SiteBio/about.jpg"/>
+    <About>
+        {about}
+    </About>
   </Container>
 )
 
@@ -68,17 +68,17 @@ margin: 0 7vw 0 0;
 `
 
 const About = styled.div`
-width: 50vw;
-textAlign: justify;
-fontSize: 15px;
-color: black;
-@media (max-width: 48em) {
-    width: 80vw;
-    margin: 0 0 4vh 0;
-};
-@media (min-width: 48em) and (max-width: 64em) {
-    margin: 0 4vw 0 0;
-} 
+  width: 50vw;
+  text-align: justify;
+  font-size: 15px;
+  color: black;
+  @media (max-width: 48em) {
+      width: 80vw;
+      margin: 0 0 4vh 0;
+  };
+  @media (min-width: 48em) and (max-width: 64em) {
+      margin: 0 4vw 0 0;
+  } 
 `
 
 export default SiteBio

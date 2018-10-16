@@ -47,11 +47,10 @@ export default class SiteMenuDesktopCategory extends Component {
                   key={index}>
                   <StyledLink
                     to={listItem.href}>
-                  {listItem.title}
+                    {listItem.title}
                   </StyledLink>
                 </ListItem>
-              )
-            })}
+            )})}
           </List>
         </ListContainer>
       </Container>

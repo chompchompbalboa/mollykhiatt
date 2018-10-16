@@ -24,22 +24,11 @@ export default class SiteProjectTiles extends Component {
     this.scrollTo(this.getScrollLeft(), 500)
   }
 
-  easeInOut = (currentTime, start, change, duration) => {
-    currentTime /= duration / 2
-    if (currentTime < 1) {
-      return change / 2 * currentTime * currentTime + start
-    }
-    currentTime -= 1
-    return -change / 2 * (currentTime * (currentTime - 2) - 1) + start
-  }
-
-  animateScroll = (elapsedTime, start, change, duration, increment) => {        
-    elapsedTime += increment
-    var position = this.easeInOut(elapsedTime, start, change, duration)                       
-    this.section.scrollLeft = position
-    if (elapsedTime < duration) {
-        setTimeout(() => {this.animateScroll(elapsedTime, start, change, duration, increment)}, increment)
-    }
+  scrollTo = (to, duration) => {
+    const start = this.section.scrollLeft
+    const change = to - start
+    const increment = 20
+    this.animateScroll(0, start, change, duration, increment)
   }
 
   getScrollLeft = () => {
@@ -58,11 +47,22 @@ export default class SiteProjectTiles extends Component {
     return scrollLeft;
   }
 
-  scrollTo = (to, duration) => {
-    const start = this.section.scrollLeft
-    const change = to - start
-    const increment = 20
-    this.animateScroll(0, start, change, duration, increment)
+  easeInOut = (currentTime, start, change, duration) => {
+    currentTime /= duration / 2
+    if (currentTime < 1) {
+      return change / 2 * currentTime * currentTime + start
+    }
+    currentTime -= 1
+    return -change / 2 * (currentTime * (currentTime - 2) - 1) + start
+  }
+
+  animateScroll = (elapsedTime, start, change, duration, increment) => {        
+    elapsedTime += increment
+    var position = this.easeInOut(elapsedTime, start, change, duration)                       
+    this.section.scrollLeft = position
+    if (elapsedTime < duration) {
+        setTimeout(() => {this.animateScroll(elapsedTime, start, change, duration, increment)}, increment)
+    }
   }
 
   render() {
@@ -75,7 +75,7 @@ export default class SiteProjectTiles extends Component {
         id="site-project-tiles-wrapper"
         dimensions={dimensions}>
         <ScrollContainer 
-          innerRef={(ref) => this.section = ref}
+          innerRef={(c) => this.section = c}
           dimensions={dimensions}>
           <TilesContainer
             dimensions={dimensions}>
@@ -122,9 +122,10 @@ const ScrollContainer = styled.div`
   width: 100%;
   height: ${props => props.dimensions.height + "px"};
   overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
   webkit-overflow-scrolling: touch;
+  @media (min-width: 64em) {
+    overflow-y: hidden;
+  }
 `
 
 const TilesContainer = styled.div`

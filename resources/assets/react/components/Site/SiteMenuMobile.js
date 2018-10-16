@@ -133,12 +133,12 @@ const ListHeader = styled.li`
 
 const StyledListItem = styled.li`
   margin: 1.5vh 0 1.5vh 0;
-  fontSize: 0.9em;
+  font-size: 0.9em;
   color: rgba(200, 200, 200, 1);
 `
 
 const StyledLink = styled(Link)`
-  textDecoration: none;
+  text-decoration: none;
   color: rgba(200, 200, 200, 1);
 `
 

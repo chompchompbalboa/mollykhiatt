@@ -2,7 +2,7 @@
 // Imports
 //-----------------------------------------------------------------------------
 import React from 'react'
-import { shape, string } from 'prop-types'
+import { object, shape, string } from 'prop-types'
 import { withRouter } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -41,6 +41,7 @@ const SiteHeader = ({ history, location: { pathname } }) => {
 // Props
 //-----------------------------------------------------------------------------
 SiteHeader.propTypes = {
+  history: object.isRequired,
   location: shape({
     pathname: string.isRequired
   }).isRequired

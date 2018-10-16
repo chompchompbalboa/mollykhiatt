@@ -10,7 +10,7 @@ import styled from 'styled-components'
 //-----------------------------------------------------------------------------
 const SiteHomeCoverDescription = () => (
   <StyledLink
-  to="academic/cantagalo-learning-lab">
+    to="academic/cantagalo-learning-lab">
     <Description>
       Cantagalo Learning Lab
     </Description>

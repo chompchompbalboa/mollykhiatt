@@ -63,17 +63,17 @@ SiteMenuDesktop.propTypes = {
 const Container = styled.div`
   display: none;
   @media (min-width: 64em){
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      backface-visibility: hidden;
-      top: 10vh;
-      left: 0;
-      width: 100vw;
-      min-height: 90vh;
-      font-size: 18px;
-      text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    backface-visibility: hidden;
+    top: 10vh;
+    left: 0;
+    width: 100vw;
+    min-height: 90vh;
+    font-size: 18px;
+    text-transform: uppercase;
   }
 `
 
