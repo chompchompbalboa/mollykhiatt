@@ -107,7 +107,7 @@ const Container = styled.div`
   width: 100vw;
   height: ${props => props.dimensions.height - 20 + "px"};
   overflow-x: hidden;
-  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
   @media (min-width: 64em) {
     left: 5vw;
     width: 90vw;
@@ -122,7 +122,7 @@ const ScrollContainer = styled.div`
   height: ${props => props.dimensions.height + "px"};
   overflow-x: scroll;
   overflow-y: hidden;
-  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
 `
 
 const TilesContainer = styled.div`
