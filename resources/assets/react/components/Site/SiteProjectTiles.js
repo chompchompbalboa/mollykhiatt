@@ -107,6 +107,7 @@ const Container = styled.div`
   width: 100vw;
   height: ${props => props.dimensions.height - 20 + "px"};
   overflow-x: hidden;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   @media (min-width: 64em) {
     left: 5vw;
